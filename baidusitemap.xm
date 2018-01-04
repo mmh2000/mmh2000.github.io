@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://mmh.ac.cn/2018/01/04/%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95/</loc>
-    <lastmod>2018-01-04T08:14:19.307Z</lastmod>
+    <lastmod>2018-01-04T12:45:46.544Z</lastmod>
     <data>
         <display>
         <title>平面几何</title>
