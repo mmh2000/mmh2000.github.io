@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://mmh.ac.cn/about/index.html</loc>
+    
+    <lastmod>2018-01-04T01:49:08.354Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://mmh.ac.cn/2018/01/04/K-D%20Tree/</loc>
     
     <lastmod>2018-01-04T01:13:30.911Z</lastmod>
@@ -128,7 +135,7 @@
   </url>
   
   <url>
-    <loc>http://mmh.ac.cn/assets/demo/jiugongge_demo.html</loc>
+    <loc>http://mmh.ac.cn/assets/demo/pre_css3_demo/demo.html</loc>
     
     <lastmod>2017-07-28T03:51:08.000Z</lastmod>
     
@@ -142,14 +149,14 @@
   </url>
   
   <url>
-    <loc>http://mmh.ac.cn/assets/demo/pre_css3_demo/demo.html</loc>
+    <loc>http://mmh.ac.cn/assets/demo/jiugongge_demo2.html</loc>
     
     <lastmod>2017-07-28T03:51:08.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://mmh.ac.cn/assets/demo/jiugongge_demo2.html</loc>
+    <loc>http://mmh.ac.cn/assets/demo/jiugongge_demo.html</loc>
     
     <lastmod>2017-07-28T03:51:08.000Z</lastmod>
     
@@ -163,14 +170,14 @@
   </url>
   
   <url>
-    <loc>http://mmh.ac.cn/assets/demo/mediator/demo.html</loc>
+    <loc>http://mmh.ac.cn/assets/demo/gift/index.html</loc>
     
     <lastmod>2017-07-28T03:51:08.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://mmh.ac.cn/assets/demo/gift/index.html</loc>
+    <loc>http://mmh.ac.cn/assets/demo/mediator/demo.html</loc>
     
     <lastmod>2017-07-28T03:51:08.000Z</lastmod>
     
