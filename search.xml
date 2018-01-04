@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title><![CDATA[生成树]]></title>
+      <url>/2017/12/29/%E7%94%9F%E6%88%90%E6%A0%91/</url>
+      <content type="html"><![CDATA[<p> 联通图$G$的生成树是包含$G$中所有顶点的极小连通子图</p>
+<h2 id="最小生成树"><a href="#最小生成树" class="headerlink" title="最小生成树"></a>最小生成树</h2><h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><ul>
+<li><p>切割性质：在各边边权均不相同时，对于连接图$G$中两个非空点集的最短边$e$，$G$的任意$MST$一定包含$e$</p>
+</li>
+<li><p>回路性质：在各边边权均不相同时，对于图$G$中的任意回路的最长边$e$，$G$的任意$MST$一定不包含$e$</p>
+</li>
+</ul>
+<a id="more"></a>
+<h3 id="Kruskal算法"><a href="#Kruskal算法" class="headerlink" title="Kruskal算法"></a>Kruskal算法</h3><p>贪心地将边从小到大加入</p>
+<h3 id="Prim算法"><a href="#Prim算法" class="headerlink" title="Prim算法"></a>Prim算法</h3><p>$Dijkstra$算法的变形<br>可以处理负权边</p>
+<h3 id="增量最小生成树"><a href="#增量最小生成树" class="headerlink" title="增量最小生成树"></a>增量最小生成树</h3><p>在$MST$中新加入边$e=(u,v)$后，图中恰好包含一个环<br>根据回路性质，删掉$max(e,MST$中$(u,v))$即可</p>
+<h3 id="最小瓶颈生成树"><a href="#最小瓶颈生成树" class="headerlink" title="最小瓶颈生成树"></a>最小瓶颈生成树</h3><p>最小化最大边权值<br>$MST$就是一颗最小瓶颈生成树</p>
+<h3 id="次小生成树"><a href="#次小生成树" class="headerlink" title="次小生成树"></a>次小生成树</h3><p>次小生成树可以由$MST$加一条边再删一条边得到</p>
+<p>$dfs$预处理可以做到$O(n^2)$</p>
+<h2 id="最小树形图"><a href="#最小树形图" class="headerlink" title="最小树形图"></a>最小树形图</h2><h3 id="朱刘算法"><a href="#朱刘算法" class="headerlink" title="朱刘算法"></a>朱刘算法</h3><h2 id="斯坦纳树"><a href="#斯坦纳树" class="headerlink" title="斯坦纳树"></a>斯坦纳树</h2><p>给定图$G$中若干关键点，使得它们联通</p>
+<h3 id="最小斯坦纳树"><a href="#最小斯坦纳树" class="headerlink" title="最小斯坦纳树"></a>最小斯坦纳树</h3><h2 id="生成树计数"><a href="#生成树计数" class="headerlink" title="生成树计数"></a>生成树计数</h2><h3 id="矩阵树定理"><a href="#矩阵树定理" class="headerlink" title="矩阵树定理"></a>矩阵树定理</h3><h3 id="prufer序列"><a href="#prufer序列" class="headerlink" title="prufer序列"></a>prufer序列</h3><h3 id="prufer序列-1"><a href="#prufer序列-1" class="headerlink" title="prufer序列"></a>prufer序列</h3>]]></content>
+      
+        <categories>
+            
+            <category> 笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 图论 </tag>
+            
+            <tag> 生成树 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[大路]]></title>
+      <url>/2017/12/29/%E5%A4%A7%E8%B7%AF/</url>
+      <content type="html"><![CDATA[<h2 id="最短路"><a href="#最短路" class="headerlink" title="最短路"></a>最短路</h2><a id="more"></a>
+<h3 id="Floyd"><a href="#Floyd" class="headerlink" title="Floyd"></a>Floyd</h3><h3 id="Dijkstra"><a href="#Dijkstra" class="headerlink" title="Dijkstra"></a>Dijkstra</h3><h3 id="Spfa"><a href="#Spfa" class="headerlink" title="Spfa"></a>Spfa</h3><h2 id="距离"><a href="#距离" class="headerlink" title="距离"></a>距离</h2><p><strong>欧几里得距离</strong>：两点间的真实距离<br><strong>曼哈顿距离</strong>：各维坐标差绝对值的和，各维度独立，可以分开处理<br><strong>切比雪夫距离</strong>：各维坐标差绝对值的最大值，坐标系旋转$45°$可以和曼哈顿距离互相转化<br><strong>汉明距离</strong>：两个字符串不同的位数</p>
+<p><a href="https://wenku.baidu.com/view/fa7a264459eef8c75fbfb374.html" target="_blank" rel="noopener">各种距离</a></p>
+<h2 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h2>]]></content>
+      
+        <categories>
+            
+            <category> 笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 图论 </tag>
+            
+            <tag> 路径 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[线性代数]]></title>
+      <url>/2017/12/28/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</url>
+      <content type="html"><![CDATA[<h2 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h2><p>矩阵是一个向量集,描述一个线性变换</p>
+<a id="more"></a>
+<h3 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h3><ul>
+<li>加减：对应元素相加减</li>
+<li>数乘：每个元素乘一个数</li>
+<li>转置：将矩阵的行列交换</li>
+<li><p>乘法：$A:m \times n$ 矩阵，$B:n \times p$ 矩阵，$C=AB:m \times p$ 矩阵<br> $C_{ij}=\sum\limits_{k=1}^{n}A_{ik}B_{kj}$</p>
+<p>结合律：$(AB)C=A(BC)$<br>左分配律：$(A+B)C=AC+BC$<br>右分配律：$C(A+B)=CA+CB$<br>不满足交换律</p>
+</li>
+</ul>
+<h3 id="特殊的矩阵"><a href="#特殊的矩阵" class="headerlink" title="特殊的矩阵"></a>特殊的矩阵</h3><p>单位矩阵$E$</p>
+<p>$<br> \left[<br> \begin{matrix}<br>   1 &amp; 0 &amp; 0 \\\<br>   0 &amp; 1 &amp; 0 \\\<br>   0 &amp; 0 &amp; 1<br>  \end{matrix}<br>  \right]<br>$          </p>
+<p>若$AB=E$，则$A$、$B$互为逆矩阵</p>
+<p>循环矩阵</p>
+<p>$<br> \left[<br> \begin{matrix}<br>   1 &amp; 2 &amp; 3 \\\<br>   3 &amp; 1 &amp; 2 \\\<br>   2 &amp; 3 &amp; 1<br> \end{matrix}<br> \right]<br>$      </p>
+<ol>
+<li>循环矩阵的线性运算及乘积仍是循环矩阵</li>
+<li>满足乘法交换律：$AB=BA$</li>
+<li>循环矩阵的逆仍是循环矩阵</li>
+</ol>
+<h3 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h3><p>对$n$阶方阵</p>
+<p>$<br>\left[<br>\begin{matrix}<br>  a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n}\\<br>  a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n}\\<br>  \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\<br>  a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn}\\<br>\end{matrix}<br>\right]<br>$ $=\sum\limits_{j_1…j_n}^{}(-1)^{r(j_1…j_n)}a_{1j_1}…a_{nj_n}$</p>
+<p>其中$j_1…j_n$为n元排列<br>$r(j_1…j_n)$表示其中的逆序对个数</p>
+<h3 id="特征值与特征向量"><a href="#特征值与特征向量" class="headerlink" title="特征值与特征向量"></a>特征值与特征向量</h3>]]></content>
+      
+        <categories>
+            
+            <category> 笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 数学 </tag>
+            
+            <tag> 线性代数 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[字符串基础]]></title>
+      <url>/2017/12/28/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9F%BA%E7%A1%80/</url>
+      <content type="html"><![CDATA[<h2 id="字符串哈希"><a href="#字符串哈希" class="headerlink" title="字符串哈希"></a>字符串哈希</h2><p>$hash(i)=(hash(i-1)*B+s[i])$%$P$<br>$B$：进制数 参考：$457,251,2333,149,373$<br>$P$：模数 参考：$987654323,666666667,23456789$</p>
+<a id="more"></a>
+<h3 id="姿势"><a href="#姿势" class="headerlink" title="姿势"></a>姿势</h3><p>双模、自然溢出<br>从$i$开始长为$len$子串的哈希值：$hash(i+len-1)-hash(i-1)*fac(len)$<br>$hash$+二分求$LCP$</p>
+<h2 id="KMP算法"><a href="#KMP算法" class="headerlink" title="KMP算法"></a>KMP算法</h2><p>在文本串$S$中匹配模板串$T$</p>
+<h3 id="next-函数"><a href="#next-函数" class="headerlink" title="next()函数"></a>next()函数</h3><p>$next(i)$表示状态$i$失配后应转移到的状态<br>具体来说，$next(i)$表示前$i$位串的前缀和后缀的最长匹配（不包括$i$）<br>预处理$next()$相当于$T$自我匹配<br>性质：若$next(i)!=0$，且$i$%$(i-next(i))=0$，则字符串前$i$位循环，循环节长度为$i-next(i)$，循环次数为$i/(i-next(i))$</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getnext</span><span class="params">()</span></span>&#123;<span class="comment">//start with 1</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>,j=<span class="number">0</span>;i&lt;=m;i++)&#123;</span><br><span class="line">        <span class="keyword">while</span>(j&amp;&amp;p[i]!=p[j+<span class="number">1</span>]) j=nex[j];</span><br><span class="line">        <span class="keyword">if</span>(p[i]==p[j+<span class="number">1</span>]) j++;</span><br><span class="line">        nex[i]=j;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">kmp</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>,j=<span class="number">0</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="keyword">while</span>(j&amp;&amp;s[i]!=p[j+<span class="number">1</span>]) j=nex[j];</span><br><span class="line">        <span class="keyword">if</span>(s[i]==p[j+<span class="number">1</span>]) j++;</span><br><span class="line">        <span class="keyword">if</span>(j==m) ans.push_back(i-m+<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="扩展KMP算法"><a href="#扩展KMP算法" class="headerlink" title="扩展KMP算法"></a>扩展KMP算法</h2><p>对文本串$S$和模板串$T$，记$ext(i)$表示$Suffix(S,i)$与$T$的$LCP$长度</p>
+<h3 id="next-函数-1"><a href="#next-函数-1" class="headerlink" title="next()函数"></a>next()函数</h3><p>$next(i)$表示$Suffix(T,i)$与$T$的$LCP$长度</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getnext</span><span class="params">()</span></span>&#123;<span class="comment">//start with 1</span></span><br><span class="line">    <span class="keyword">int</span> mx=mxp=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        mxp=mxp&gt;i?mxp:i;</span><br><span class="line">        nex[i]=min(mxp-i,nex[i+<span class="number">1</span>-mx]);</span><br><span class="line">        <span class="keyword">while</span>(T[nex[i]+<span class="number">1</span>]==T[nex[i]+i]) nex[i]++;</span><br><span class="line">        <span class="keyword">if</span>(i+nex[i]&gt;mxp) mx=i;</span><br><span class="line">        mxp=mx+nex[mx];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">exkmp</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> mx=mxp=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        mxp=mxp&gt;i?mxp:i;</span><br><span class="line">        ext[i]=min(mxp-i,nex[i+<span class="number">1</span>-mx]);</span><br><span class="line">        <span class="keyword">while</span>(T[ext[i]+<span class="number">1</span>]==S[ext[i]+i]) ext[i]++;</span><br><span class="line">        <span class="keyword">if</span>(i+ext[i]&gt;mxp) mx=i;</span><br><span class="line">        mxp=mx+ext[mx];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Trie树"><a href="#Trie树" class="headerlink" title="Trie树"></a>Trie树</h2><p>让$LCP$相同的字符串共用结点，并在叶子结点上附加信息</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> idx s[i]-<span class="meta-string">'a'</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> v=<span class="number">1</span>)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x=<span class="number">0</span>,len=<span class="built_in">strlen</span>(s);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(!c[x][idx]) c[x][idx]=++tot;</span><br><span class="line">        x=c[x][idx];</span><br><span class="line">    &#125;</span><br><span class="line">    dang[x]=v;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="AC自动机"><a href="#AC自动机" class="headerlink" title="AC自动机"></a>AC自动机</h2><p>在文本串$S$中匹配模板串集合$T={T_1,T_2,…,T_k}$<br>将模板串集合$T$建成一颗$Trie$树</p>
+<h3 id="转移函数"><a href="#转移函数" class="headerlink" title="转移函数"></a>转移函数</h3><p>$trans(x,c)$为从状态$x$沿字符$c$的$Trie$边走到的点<br>$fail(x)$，失配函数，指向的点$y$满足：$str(y)$为$str(x)$的最长后缀</p>
+<h3 id="构造"><a href="#构造" class="headerlink" title="构造"></a>构造</h3><p>按$bfs$序构造<br>假设已经得到了$fail(u)$，有$v=trans(u,c)$，现在求$fail(v)$<br>只需要从$u$的后缀中找到第一个有$c$的出边的点</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getfail</span><span class="params">()</span></span>&#123;  </span><br><span class="line">    l=<span class="number">0</span>,q[r=<span class="number">1</span>]=<span class="number">0</span>,fail[<span class="number">0</span>]=<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">while</span>(l!=r)&#123;  </span><br><span class="line">        <span class="keyword">int</span> x=q[++l];  </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">26</span>;i++)  </span><br><span class="line">            <span class="keyword">if</span>(c[x][i]) q[++r]=c[x][i],fail[c[x][i]]=!x?<span class="number">0</span>:c[fail[x]][i];  </span><br><span class="line">            <span class="keyword">else</span> c[x][i]=!x?<span class="number">0</span>:c[fail[x]][i];   </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="最小表示法"><a href="#最小表示法" class="headerlink" title="最小表示法"></a>最小表示法</h2><p>对于一个环状字符串，将其断开可以得到n个串，其中字典序最小的串称为最小表示</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">mr</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i=<span class="number">0</span>,j=<span class="number">1</span>,k=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(i&lt;n&amp;&amp;j&lt;n)&#123;</span><br><span class="line">        <span class="keyword">for</span>(;k&lt;n&amp;&amp;s[i+k]==s[j+k];k++);</span><br><span class="line">        <span class="keyword">if</span>(k==n) <span class="keyword">return</span> i;</span><br><span class="line">        <span class="keyword">if</span>(s[i+k]&gt;s[j+k]) i+=k+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> j+=k+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(i==j) j++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> min(i,j);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      
+        <categories>
+            
+            <category> 笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 字符串 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[noip2017滚粗记]]></title>
+      <url>/2017/12/28/noip2017%E6%BB%9A%E7%B2%97%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<p>Day -INF</p>
+<p>停课了……</p>
+<a id="more"></a>
+<p>Day0</p>
+<p>早上打了最后一场模拟赛（为接下来的滚粗埋下了伏笔）</p>
+<p>看了加油视频……rp++++<br>拍了奇♂怪的合影……</p>
+<p>复习了一些奇怪的东西~~~rp++?</p>
+<p>Day1</p>
+<p>还是熟悉的RZYZ……</p>
+<p>tty和杜教进行了亲切的交流……</p>
+<p>宿舍只有5人……下铺……rp++</p>
+<p>GG……</p>
+<p>来到老干部活动中心？突然兴奋</p>
+<p>Day2</p>
+<p>看T1 sx题(GG)<br>T2 sx题(GG)<br>T3 毒瘤数据结构</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 游记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> noip </tag>
+            
+            <tag> 滚粗 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[后缀姐妹花]]></title>
+      <url>/2017/12/26/%E5%90%8E%E7%BC%80%E5%A7%90%E5%A6%B9%E8%8A%B1/</url>
+      <content type="html"><![CDATA[<h2 id="后缀数组"><a href="#后缀数组" class="headerlink" title="后缀数组"></a>后缀数组</h2><p>$sa(i)$：排第$i$名的后缀<br>$rank(i)$：$Suffix(i)$在所有后缀中的名次</p>
+<a id="more"></a>
+<h3 id="倍增法"><a href="#倍增法" class="headerlink" title="倍增法"></a>倍增法</h3><p>对每个字符开始的长度为$2^k$的子字符串进行排序，求出$rank()$，当$2^k&gt;n$后，此时的$rank()$便是最后的结果<br>每一次排序利用上次两个长度为$2^{k-1}$的字符串的$rank()$作为第一、第二关键字，进行基数排序</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> *r,<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> l)</span></span>&#123;<span class="keyword">return</span> (r[a]==r[b])&amp;&amp;(r[a+l]==r[b+l]);&#125;<span class="comment">//比较第一、二关键字</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DA</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> m=<span class="number">128</span>)</span></span>&#123;<span class="comment">//n+1并人工添加一个较小的字符以避免cmp越界 </span></span><br><span class="line">    <span class="keyword">int</span> i,k,p,*x=rk,*y=rk2;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;m;i++) c[i]=<span class="number">0</span>;<span class="comment">//对长度为1的字符串基数排序</span></span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++) c[x[i]=s[i]]++;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;m;i++) c[i]+=c[i<span class="number">-1</span>];</span><br><span class="line">    <span class="keyword">for</span>(i=n<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--) sa[--c[x[i]]]=i;</span><br><span class="line">    <span class="keyword">for</span>(k=<span class="number">1</span>,p=<span class="number">1</span>;p&lt;n;k&lt;&lt;=<span class="number">1</span>,m=p)&#123;<span class="comment">//max(rank())&lt;p</span></span><br><span class="line">        <span class="keyword">for</span>(p=<span class="number">0</span>,i=n-k;i&lt;n;i++) y[p++]=i;<span class="comment">//不存在第二关键字的排在前面</span></span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++) <span class="keyword">if</span>(sa[i]&gt;=k) y[p++]=sa[i]-k;<span class="comment">//利用上一次求得的SA对第二关键字排序</span></span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;m;i++) c[i]=<span class="number">0</span>;<span class="comment">//对第一关键字基数排序</span></span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++) c[x[y[i]]]++;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;m;i++) c[i]+=c[i<span class="number">-1</span>];</span><br><span class="line">        <span class="keyword">for</span>(i=n<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--) sa[--c[x[y[i]]]]=y[i];</span><br><span class="line">        swap(x,y),p=<span class="number">1</span>,x[sa[<span class="number">0</span>]]=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;n;i++) x[sa[i]]=cmp(y,sa[i<span class="number">-1</span>],sa[i],k)?p<span class="number">-1</span>:p++;</span><br><span class="line">    &#125;<span class="comment">//rank()保存在x数组中，p=不同的字符串个数</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="LCP"><a href="#LCP" class="headerlink" title="LCP"></a>LCP</h3><p>$height(i)$：$LCP(Suffix(sa[i]),Suffix(sa[i-1]))$<br>$h(i)$：$height(rank[i])$<br>性质：</p>
+<h4 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h4><p>性质：$h(i) \geq h(i-1)-1$，逐一计算即可</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">calh</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j,k=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++) rk[sa[i]]=i;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;height[rk[i++]]=k)</span><br><span class="line">        <span class="keyword">for</span>(k?k--:<span class="number">0</span>,j=sa[rk[i]<span class="number">-1</span>];s[i+k]==s[j+k];k++);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">RMQ</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) f[i][<span class="number">0</span>]=height[i];  </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=<span class="number">20</span>;j++)  </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i+(<span class="number">1</span>&lt;&lt;j)<span class="number">-1</span>&lt;=n;i++)  </span><br><span class="line">            f[i][j]=min(f[i][j<span class="number">-1</span>],f[i+(<span class="number">1</span>&lt;&lt;(j<span class="number">-1</span>))][j<span class="number">-1</span>]);  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">lcp</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x=rk[a],y=rk[b];</span><br><span class="line">    <span class="keyword">if</span>(x&gt;y) swap(x,y);x++;</span><br><span class="line">    <span class="keyword">int</span> k=<span class="built_in">log</span>(y-x+<span class="number">1</span>)/<span class="built_in">log</span>(<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">return</span> min(f[x][k],f[y-(<span class="number">1</span>&lt;&lt;k)+<span class="number">1</span>][k]);  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="后缀自动机"><a href="#后缀自动机" class="headerlink" title="后缀自动机"></a>后缀自动机</h2><h3 id="确定性有限状态自动机"><a href="#确定性有限状态自动机" class="headerlink" title="确定性有限状态自动机"></a>确定性有限状态自动机</h3><p>$DFA$由以下$5$部分组成</p>
+<ul>
+<li>$alpha$：字符集</li>
+<li>$state$：状态集合</li>
+<li>$init$：初始状态集合</li>
+<li>$end$：终止状态集合</li>
+<li>$trans$：状态转移函数</li>
+</ul>
+<p>$DFA$的功能是识别字符串<br>$SAM$本质上是一个$DFA$，可以识别$S$的所有子串</p>
+<h3 id="最简状态表示"><a href="#最简状态表示" class="headerlink" title="最简状态表示"></a>最简状态表示</h3><p>现在需要把$S$建成$SAM$<br>考虑最简单的实现方式：将每个后缀插入一颗$Trie$树<br>但是这样太$naive$了，我们考虑合并状态</p>
+<h4 id="right"><a href="#right" class="headerlink" title="right()"></a>right()</h4><p>对于$S$的一个子串$s1$，$right(s1)=s1$在$S$中所有出现的结束位置集合<br>将所有$right()$集相同的状态合并</p>
+<h4 id="新的状态"><a href="#新的状态" class="headerlink" title="新的状态"></a>新的状态</h4><p>考虑其与原先暴力表示状态的不同</p>
+<ul>
+<li>代表的子串：新的状态代表的子串为右端点相同，长度递增的多种子串，记长度区间为$[min(x),max(x)]$</li>
+<li>结论：状态的$right()$集合可以构成一个树形结构的关系，称其为$fail$树<br> 其中状态$x$在树上的父亲$fa$满足：$right(fa)\nsupseteqq right(x)$，且$|right(fa)|$最小，并有$min(x)=max(fail(x))+1$</li>
+<li>状态数：可以证明是线性的</li>
+<li>性质：一个子串的出现次数，就是其对应状态的$right()$集大小</li>
+</ul>
+<h4 id="转移函数"><a href="#转移函数" class="headerlink" title="转移函数"></a>转移函数</h4><p>$trans(x,str)$为从状态$x$读入字符串$str$后到达的状态<br>记$ST(str)=trans(init,str)$</p>
+<h3 id="构造"><a href="#构造" class="headerlink" title="构造"></a>构造</h3><h4 id="增量法"><a href="#增量法" class="headerlink" title="增量法"></a>增量法</h4><p>让新加入的子串都被状态代表，而且$trans$边能够正确转移</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> c=a[x],np=++tot,p=last;last=np;</span><br><span class="line">    step[np]=x;</span><br><span class="line">    <span class="keyword">for</span>(;p&amp;&amp;!ch[p][c];p=fail[p]) ch[p][c]=np;</span><br><span class="line">    <span class="keyword">if</span>(!p) fail[np]=root; <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">int</span> q=ch[p][c];</span><br><span class="line">        <span class="keyword">if</span>(step[p]+<span class="number">1</span>==step[q]) fail[np]=q; <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">int</span> nq=++tot;step[nq]=step[p]+<span class="number">1</span>;</span><br><span class="line">            <span class="built_in">memcpy</span>(ch[nq],ch[q],<span class="keyword">sizeof</span>(ch[q]));</span><br><span class="line">            fail[nq]=fail[q],fail[np]=fail[q]=nq;</span><br><span class="line">            <span class="keyword">for</span>(;ch[p][c]==q;p=fail[p]) ch[p][c]=nq;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+        <categories>
+            
+            <category> 笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 字符串 </tag>
+            
+            <tag> 数据结构 </tag>
+            
+            <tag> 后缀 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[线性规划]]></title>
+      <url>/2017/12/23/%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92/</url>
+      <content type="html"><![CDATA[<p>最大化或最小化一个受限于一组有限的线性约束的线性函数</p>
+<a id="more"></a>
+<h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><h3 id="标准型"><a href="#标准型" class="headerlink" title="标准型"></a>标准型</h3><p>最大化$\quad \sum\limits_{j=1}^{n} c_jx_j$</p>
+<p>满足约束$~$ $\sum\limits_{j=1}^{n} a_{ij}x_j \le b_i,\ i=1,2,…,m$</p>
+<p>$~$ $~$ $~$ $~$ $~$ $~$ $~$ $x_j \ge 0,\ j=1,2,…,n$</p>
+<h4 id="转化"><a href="#转化" class="headerlink" title="转化"></a>转化</h4><ul>
+<li>若目标函数要求取最小值，可以取相反数变成取最大值</li>
+<li>对于限制条件$f(x_1,x_2,…,x_n)\geq b$，可以用不等式$-f(x_1,x_2,…,x_n)\leq -b$描述</li>
+<li>对于限制条件$f(x_1,x_2,…,x_n)=b$，可以用两个不等式$f(x_1,x_2,…,x_n)\leq b$，$f(x_1,x_2,…,x_n)\geq b$描述</li>
+<li>对于无限制的变量$x$，可以将其拆成两个非负变量$x_0$，$x_1$，使得$x=x_0-x_1$</li>
+</ul>
+<h3 id="松弛型"><a href="#松弛型" class="headerlink" title="松弛型"></a>松弛型</h3><p>最大化$\quad \sum\limits_{j=1}^{n} c_jx_j$</p>
+<p>满足约束$~$ $x_{i+n}=b_i - \sum\limits_{j=1}^{n} a_{ij}x_j,~i=1,2,…,m$<br>$~$ $~$ $~$ $~$ $~$ $~$ $~$ $x_j \ge 0,\ j=1,2,…,n+m$</p>
+<p><strong>基变量</strong>：等式左侧的所有变量<br><strong>非基变量</strong>：等式右侧的所有变量</p>
+<h2 id="单纯性法"><a href="#单纯性法" class="headerlink" title="单纯性法"></a>单纯性法</h2><p>通过变量的代换，实现在解空间内沿着边界朝着目标函数增大的方向移动</p>
+<p><strong>基本解</strong>：非基变量值为$0$，基变量值为$b_i$<br><strong>可行解</strong>：使得$m$个限制条件能够满足的一组非基变量</p>
+<h3 id="转轴"><a href="#转轴" class="headerlink" title="转轴"></a>转轴</h3><p>选择一个基变量$X_l$，将其与非基变量$X_e$互换<br>根据$Bland$法则，选择系数大于$0$且标号最小的非基变量</p>
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>如果基本解不是可行解，即存在$b_i&lt;0$<br>在所有$bi&lt;0$的约束中随机选一个作为$xl$，再随机选一个$a_{le}&lt;0$的作为$x_e$，然后$Pivot(l,e)$后$b_i$就变正了</p>
+<h2 id="对偶性"><a href="#对偶性" class="headerlink" title="对偶性"></a>对偶性</h2>]]></content>
+      
+        <categories>
+            
+            <category> 笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[各种图]]></title>
+      <url>/2017/12/21/%E5%90%84%E7%A7%8D%E5%9B%BE/</url>
+      <content type="html"><![CDATA[<h2 id="有向无环图"><a href="#有向无环图" class="headerlink" title="有向无环图"></a>有向无环图</h2><p>如果一个有向图无法从某个顶点出发经过若干条边回到该点，则这个图是一个有向无环图<br>$DAG$的生成树个数等于入度非零节点的入度积</p>
+<h3 id="拓扑排序"><a href="#拓扑排序" class="headerlink" title="拓扑排序"></a>拓扑排序</h3><p>$DAG$顶点的线性序列</p>
+<a id="more"></a>
+<h2 id="补图"><a href="#补图" class="headerlink" title="补图"></a>补图</h2><p>将完全图去除图$G$的边集后得到的图</p>
+<h2 id="反向图"><a href="#反向图" class="headerlink" title="反向图"></a>反向图</h2><p>将有向图$G$的边反向后得到的图</p>
+<h2 id="分层图"><a href="#分层图" class="headerlink" title="分层图"></a>分层图</h2><h2 id="平面图-amp-对偶图"><a href="#平面图-amp-对偶图" class="headerlink" title="平面图&amp;对偶图"></a>平面图&amp;对偶图</h2><h2 id="竞赛图"><a href="#竞赛图" class="headerlink" title="竞赛图"></a>竞赛图</h2><p>将一个完全无向图的边定向后得到的有向图</p>
+<h3 id="兰道定理"><a href="#兰道定理" class="headerlink" title="兰道定理"></a>兰道定理</h3><p>比分序列：把竞赛图每一个点的出度从小到大排列得到的序列<br>一个长度为$n$的序列$s$$(s_1≤s_2≤…≤s_n,n≥1)$是合法的比分序列当且仅当</p>
+<script type="math/tex; mode=display">{\forall}1\leq k \leq n~,~\sum\limits_{i=1}^{k}s_i \geq {k\choose2}</script><p>特别地，当$k=n$时式子取等号</p>
+<h2 id="区间图-amp-弦图-amp-完美图"><a href="#区间图-amp-弦图-amp-完美图" class="headerlink" title="区间图&amp;弦图&amp;完美图"></a>区间图&amp;弦图&amp;完美图</h2><h2 id="仙人掌图"><a href="#仙人掌图" class="headerlink" title="仙人掌图"></a>仙人掌图</h2>]]></content>
+      
+        <categories>
+            
+            <category> 笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 图论 </tag>
+            
+            <tag> 理性愉悦 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[图的连通性]]></title>
+      <url>/2017/12/21/%E5%9B%BE%E7%9A%84%E8%BF%9E%E9%80%9A%E6%80%A7/</url>
+      <content type="html"><![CDATA[<h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><h3 id="联通分量"><a href="#联通分量" class="headerlink" title="联通分量"></a>联通分量</h3><p>在无向图中，可达关系满足自反性，对称性和传递性，是一个等价关系<br>从等价关系可以定义等价类，把相互可达的节点称为一个联通分量</p>
+<a id="more"></a>
+<h2 id="无向图"><a href="#无向图" class="headerlink" title="无向图"></a>无向图</h2><h3 id="割点和桥"><a href="#割点和桥" class="headerlink" title="割点和桥"></a>割点和桥</h3><p>如果删除某个点$x$后，$G$的联通分量数目增加，称$x$为图的割点<br>如果删除某条边$E$后，$G$的联通分量数目增加，称$E$为图的桥</p>
+<p>$x$为割点的条件<br>$x$是dfs树的根，且x有两个及以上子节点<br>$x$非根，且$x$存在子节点$v$，满足$low[v]\geq dfn[x]$</p>
+<p>$E=(u,v)$为桥的条件<br>$E$不存在重边<br>满足$low[v]&gt; dfn[x]$</p>
+<h3 id="点双联通分量"><a href="#点双联通分量" class="headerlink" title="点双联通分量"></a>点双联通分量</h3><p>若$G$中无割点，称$G$为点双连通图。$G$中任意两点间存在至少两条不经过重复点的路径<br>若$G$中无桥，称$G$为边双连通图。$G$中任意两点间存在至少两条不经过重复边的路径<br>除了桥外，每条边恰好属于一个边双联通分量，但不同点双联通分量可能会有公共点，可以证明公共点最多只有一个且为割点</p>
+<h2 id="有向图"><a href="#有向图" class="headerlink" title="有向图"></a>有向图</h2><h3 id="强连通分量"><a href="#强连通分量" class="headerlink" title="强连通分量"></a>强连通分量</h3><p>若$G$中任意两点可达，称$G$为强连通图<br>对$SCC$缩点后原图变为$DAG$</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 图论 </tag>
+            
+            <tag> 连通性 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[欧几里得相关]]></title>
+      <url>/2017/12/19/%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%9B%B8%E5%85%B3/</url>
+      <content type="html"><![CDATA[<h2 id="欧几里得算法"><a href="#欧几里得算法" class="headerlink" title="欧几里得算法"></a>欧几里得算法</h2><p>不断将两数规模变小，直到能直接判断解<br>依据：$gcd(a,b)=gcd(b,a$%$b)，gcd(a,0)=a$<br>递归次数最多的是斐波那契数$f(n)$和$f(n-1)$</p>
+<p>$O(logn)$</p>
+<a id="more"></a>
+<h2 id="扩展欧几里得算法"><a href="#扩展欧几里得算法" class="headerlink" title="扩展欧几里得算法"></a>扩展欧几里得算法</h2><p>记$d=gcd(a,b)$，求出$ax+by=d$的一组解$(x,y)$，保证满足$|x|+|y|$最小<br>其任意解为$(x+kb’,y-ka’)$，$a’=a/d$，$b’=b/d$，$k$取任意整数<br>对于一般的线性方程$ax+by=c$，若$!(d|c)$则无解，否则$x \times \frac{c}{d}$，$y \times \frac{c}{d}$即可</p>
+<p>$O(logn)$</p>
+<h2 id="类欧几里得算法"><a href="#类欧几里得算法" class="headerlink" title="类欧几里得算法"></a>类欧几里得算法</h2><h3 id="形式1"><a href="#形式1" class="headerlink" title="形式1"></a>形式1</h3><p>$f(a,b,c,n)=\sum\limits_{i=0}^n \lfloor \frac{ai+b}{c}\rfloor$</p>
+<p>当$a\geq c$或$b \geq  c$时<br>$f(a,b,c,n)=$$\frac{n(n+1)}{2}\lfloor\frac{a}{c}\rfloor+(n+1)\lfloor\frac{b}{c}\rfloor+f(a$%$c,b$%$c,c,n)$</p>
+<p>当$a&lt;c$且$b&lt;c$时<br>令$m= \lfloor \frac{an+b}{c}\rfloor$<br>$f(a,b,c,n)=$$nm-f(c,c-b-1,a,m-1)$</p>
+<p><a href="http://blog.csdn.net/WorldWide_D/article/details/54730588" target="_blank" rel="noopener">推导</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> 笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 数学 </tag>
+            
+            <tag> 数论 </tag>
+            
+            <tag> 欧几里得 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[网络流]]></title>
+      <url>/2017/12/19/%E7%BD%91%E7%BB%9C%E6%B5%81/</url>
+      <content type="html"><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>$V$：点集 $E$：边集</p>
+<p>$G=(V,E)$：图</p>
+<p>$S$：源点  $T$：汇点</p>
+<p>对于每条边$(u,v)$，有容量$c(u,v)$和流量$f(u,v)$，满足$0\leq f(u,v) \leq c(u,v)$</p>
+<a id="more"></a>
+<h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><p>$1、$容量限制：$f(u,v)&lt;=c(u,v)$</p>
+<p>$2、$反对称性：$f(u,v)=-f(v,u)$</p>
+<p>$3、$流量平衡：$\sum f(u,i)=\sum f(i,v)$</p>
+<p>满足以上三个性质，称为可行流</p>
+<h3 id="最大流"><a href="#最大流" class="headerlink" title="最大流"></a>最大流</h3><p>流量最大的可行流</p>
+<h4 id="残量网络"><a href="#残量网络" class="headerlink" title="残量网络"></a>残量网络</h4><p>定义残量网络的流量$r(u,v)=c(u,v)-f(u,v)$</p>
+<p>即一条弧还能流过的流量</p>
+<h4 id="增广路"><a href="#增广路" class="headerlink" title="增广路"></a>增广路</h4><p>残量网络中一条由$S$到$T$的路径</p>
+<h5 id="增广路定理：设-flow-是-G-的一个可行流，若不存在增广路，-flow-即为最大流"><a href="#增广路定理：设-flow-是-G-的一个可行流，若不存在增广路，-flow-即为最大流" class="headerlink" title="增广路定理：设$flow$是$G$的一个可行流，若不存在增广路，$flow$即为最大流"></a>增广路定理：设$flow$是$G$的一个可行流，若不存在增广路，$flow$即为最大流</h5><h4 id="前向弧-amp-后向弧"><a href="#前向弧-amp-后向弧" class="headerlink" title="前向弧&amp;后向弧"></a>前向弧&amp;后向弧</h4><p>分别表示残量网络与退流网络</p>
+<h4 id="增流-amp-退流"><a href="#增流-amp-退流" class="headerlink" title="增流&amp;退流"></a>增流&amp;退流</h4><p>推进和修正流量</p>
+<h4 id="last"><a href="#last" class="headerlink" title="last"></a>last</h4><p>最大流的正确性依赖于它的每一条 $S-T$ 流都与一种实际方案一一对应</p>
+<h3 id="Isap算法"><a href="#Isap算法" class="headerlink" title="Isap算法"></a>Isap算法</h3><h4 id="marks"><a href="#marks" class="headerlink" title="marks"></a>marks</h4><p>$1.d[i]$：$i$到$T$的最短距离，可以$bfs$预处理(似乎没有并什么用)<br>$2.GAP$优化：当$S$和$T$不联通时不存在增广路，可以直接退出循环<br>$num[x]$表示$d[i]=x$的节点数量，初始化$num[0]=$总节点数<br>$3.$当前弧优化：保存一个点已经尝试过的邻接边<br>之前处理过的邻接边是不需要重新处理的(残量网络中的边只会越来越少)<br>$last[i]$表示当前弧的编号</p>
+<h4 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h4><p>上界：$O(n^2m)$<br>容量均为1：$O(min(n^{2/3},m^{1/2})*m)$<br>二分图：$O(\sqrt{n} m)$</p>
+<p><a href="http://www.renfei.org/blog/isap.html" target="_blank" rel="noopener">详解</a></p>
+<h3 id="费用流"><a href="#费用流" class="headerlink" title="费用流"></a>费用流</h3><p>每条边除流量限制外还有费用$c$，每流一个单位流量就要增加$c$的费用</p>
+<p>一般是最小费用最大流或最小费用可行流</p>
+<p>$spfa$单/多路增广</p>
+<h3 id="最小割"><a href="#最小割" class="headerlink" title="最小割"></a>最小割</h3><h4 id="割"><a href="#割" class="headerlink" title="割"></a>割</h4><p>边集$C$使得$V$中的点分为两部分</p>
+<h4 id="割的容量"><a href="#割的容量" class="headerlink" title="割的容量"></a>割的容量</h4><p>割中弧的流量总和</p>
+<h4 id="最大流最小割定理"><a href="#最大流最小割定理" class="headerlink" title="最大流最小割定理"></a>最大流最小割定理</h4><p>一个$S-T$流的最大流等于其$S-T$最小割的容量</p>
+<h4 id="判定"><a href="#判定" class="headerlink" title="判定"></a>判定</h4><p>跑出最大流后，在残量网络上跑$Tarjan$，求$SCC$</p>
+<ul>
+<li>一条满流边$(u,v)$可以出现在最小割集中，当且仅当$u$,$v$不在一个$SCC$中</li>
+<li>一条满流边$(u,v)$必定出现在最小割集中，当且仅当$u$与$S$在一个$SCC$里，并且$v$与$T$在一个$SCC$里</li>
+<li>易知$S$与$T$一定不在一个$SCC$中</li>
+</ul>
+<h4 id="最小割树"><a href="#最小割树" class="headerlink" title="最小割树"></a>最小割树</h4><p>任意两点之间的最小割，不同的只有$n-1$个，它们构成一个最小割树</p>
+<p>定理$1$：$mincut(a,b)\geq min${$mincut(a,c_1),mincut(c_1,c_2),…,mincut(c_k,b)$}<br>定理$2$：令$(s,t)$是$(u,v)$在树上简单路径的所有边中$mincut$最小的，那么$mincut(u,v)=mincut(s,t)$</p>
+<h5 id="求解方法"><a href="#求解方法" class="headerlink" title="求解方法"></a>求解方法</h5><ul>
+<li>随便找两个点作为$S$和$T$，跑$mincut$</li>
+<li>dfs划分出$S$集和$T$集，更新答案</li>
+<li>递归处理$S$集和$T$集</li>
+</ul>
+<h2 id="上下界网络流"><a href="#上下界网络流" class="headerlink" title="上下界网络流"></a>上下界网络流</h2><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><ul>
+<li><p>无源汇<br>除$S$、$T$都要求满足流量平衡</p>
+</li>
+<li><p>有源汇<br>所有点都要求满足流量平衡</p>
+</li>
+</ul>
+<h3 id="无源汇可行流"><a href="#无源汇可行流" class="headerlink" title="无源汇可行流"></a>无源汇可行流</h3><h4 id="建图"><a href="#建图" class="headerlink" title="建图"></a>建图</h4><ul>
+<li>建立附加源点$ss$和附加汇点$tt$</li>
+<li>连边：$(u,v,up-down)$</li>
+<li>记$d(i)=\sum down(x,i)-\sum down(i,y)$</li>
+<li>若$d(i)&gt;0$，连边$(ss,i,d(i))$，否则连边$(i,tt,-d(i))$</li>
+</ul>
+<h4 id="求解方法-1"><a href="#求解方法-1" class="headerlink" title="求解方法"></a>求解方法</h4><ul>
+<li>跑$ss$到$tt$的最大流</li>
+<li>若满流，那么一定存在一种可行流 </li>
+<li>此时，原图中每一条边的流量应为新图中对应的边的流量$+down$</li>
+</ul>
+<h3 id="有源汇可行流"><a href="#有源汇可行流" class="headerlink" title="有源汇可行流"></a>有源汇可行流</h3><h4 id="建图-1"><a href="#建图-1" class="headerlink" title="建图"></a>建图</h4><ul>
+<li>在原图中添加一条边$(T,S)$，流量限制为$[0,INF]$，即让$S$和$T$也满足流量平衡条件，改造成无源汇的网络流图</li>
+</ul>
+<h4 id="求解方法-2"><a href="#求解方法-2" class="headerlink" title="求解方法"></a>求解方法</h4><ul>
+<li>同无源汇可行流</li>
+</ul>
+<h3 id="有源汇最大流"><a href="#有源汇最大流" class="headerlink" title="有源汇最大流"></a>有源汇最大流</h3><h4 id="建图-2"><a href="#建图-2" class="headerlink" title="建图"></a>建图</h4><ul>
+<li>同有源汇可行流</li>
+</ul>
+<h4 id="求解方法-3"><a href="#求解方法-3" class="headerlink" title="求解方法"></a>求解方法</h4><ul>
+<li>跑有源汇可行流</li>
+<li>再跑一次$S$到$T$的最大流，即为答案</li>
+</ul>
+<h3 id="有源汇最小流"><a href="#有源汇最小流" class="headerlink" title="有源汇最小流"></a>有源汇最小流</h3><h4 id="建图-3"><a href="#建图-3" class="headerlink" title="建图"></a>建图</h4><ul>
+<li>同无源汇可行流</li>
+</ul>
+<h4 id="求解方法-4"><a href="#求解方法-4" class="headerlink" title="求解方法"></a>求解方法</h4><ul>
+<li>跑$ss$到$tt$的最大流</li>
+<li>添加$(T,S)$，流量限制为$[0,INF]$</li>
+<li>再跑一次$ss$到$tt$的最大流，判断是否存在可行流</li>
+<li>答案即为$(T,S)$的实际流量</li>
+</ul>
+<h3 id="有源汇最小费用可行流"><a href="#有源汇最小费用可行流" class="headerlink" title="有源汇最小费用可行流"></a>有源汇最小费用可行流</h3><h4 id="建图-4"><a href="#建图-4" class="headerlink" title="建图"></a>建图</h4><ul>
+<li>建立附加源点$ss$和附加汇点$tt$</li>
+<li>连边：$(u,v,up-down,cost)$</li>
+<li>记$d(i)=\sum down(x,i)-\sum down(i,y)$</li>
+<li>若$d(i)&gt;0$，连边$(ss,i,d(i),0)$，否则连边$(i,tt,-d(i),0)$</li>
+<li>添加$(T,S)$，流量限制为$[0,INF]$，费用为$0$</li>
+</ul>
+<h4 id="求解方法-5"><a href="#求解方法-5" class="headerlink" title="求解方法"></a>求解方法</h4><ul>
+<li>跑$ss$到$tt$的最小费用最大流</li>
+<li>答案即为（求出的费用+每条边的$down*cost$）</li>
+</ul>
+<h2 id="建模"><a href="#建模" class="headerlink" title="建模"></a>建模</h2><ol>
+<li><p>多源多汇<br>增加超级源汇$S’$和$T’$<br>连边：$(S’,S,INF),(T,T’,INF)$</p>
+</li>
+<li><p>结点容量<br>设结点$x$的结点容量为$c$<br>将结点$x$拆成$x_{in}$和$x_{out}$<br>连边：$(x_{in},x_{out},c)$<br>把到达$x$的弧改为到达$x_{in}$,从$x$出发的弧改为从$x_{out}$出发</p>
+</li>
+<li><p>最大权闭合子图<br>从带点权图$G$中选出一个子图，对于$V$中任意一个结点，其后续节点都在$V$中，最大化$V$的权值和<br>连边：$(S,i,c_i),c_i&gt;0$，$(i,T,-c_i),c_i&lt;0$，$(u,v,INF)$<br>$ans=$正权点和-最小割</p>
+</li>
+<li><p>最大密度子图<br>从$G$中选出一个子图，最大化$\frac{|E|}{|V|}$<br>考虑$01$分数规划，二分答案为$k$<br>将边作为左侧顶点，权为$1$：点作为右侧顶点，权为$-k$<br>根据边和点的依赖关系转化成最大权闭合子图，$ans&gt;0$则增大$l$</p>
+</li>
+<li><p>最小割建图<br>先累加所有收益，再最小化舍弃值<br>一般拆成$S$集和$T$集考虑，对应两种选择。这样就会带来冲突，也就是需要割的边<br>$check$不同情况，检验建图正确性</p>
+</li>
+</ol>
+<p><a href="http://www.cppblog.com/MatoNo1/archive/2012/05/11/174440.aspx" target="_blank" rel="noopener">Tips</a></p>
+<h2 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h2><ul>
+<li><p>枚举&amp;二分答案</p>
+</li>
+<li><p>合并流量<br>将起点终点相同的边流量累加起来</p>
+</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> 笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 图论 </tag>
+            
+            <tag> 网络流 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[二分图]]></title>
+      <url>/2017/12/19/%E4%BA%8C%E5%88%86%E5%9B%BE/</url>
+      <content type="html"><![CDATA[<p>把无向图$G$划分为两个不相交顶点集$U$和$V$，使得每一条边都分别连接$U$、$V$ 中的顶点，即不含有奇环的图</p>
+<a id="more"></a>
+<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h3 id="二分图判定"><a href="#二分图判定" class="headerlink" title="二分图判定"></a>二分图判定</h3><p>非联通图是二分图当且仅当其每个联通分量都是二分图</p>
+<h3 id="匹配"><a href="#匹配" class="headerlink" title="匹配"></a>匹配</h3><p>边集$E$满足其中任意两条边没有公共顶点</p>
+<h3 id="最大匹配"><a href="#最大匹配" class="headerlink" title="最大匹配"></a>最大匹配</h3><p>所有匹配中所含匹配边数最多的匹配</p>
+<h3 id="完备匹配"><a href="#完备匹配" class="headerlink" title="完备匹配"></a>完备匹配</h3><p>某个匹配中所有的顶点都是匹配点</p>
+<h3 id="最大权匹配"><a href="#最大权匹配" class="headerlink" title="最大权匹配"></a>最大权匹配</h3><p>带权二分图所有匹配中权值最大的匹配</p>
+<h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><h3 id="最小点覆盖"><a href="#最小点覆盖" class="headerlink" title="最小点覆盖"></a>最小点覆盖</h3><p>选出一个点集，使每条边都有顶点在其中，且点数最少<br>最小点覆盖=最大匹配</p>
+<h3 id="最小边覆盖"><a href="#最小边覆盖" class="headerlink" title="最小边覆盖"></a>最小边覆盖</h3><p>选出一个边集，使每个顶点都有边在其中，且边数最少<br>最小边覆盖=二分图点数-最大匹配</p>
+<h3 id="最大点独立集"><a href="#最大点独立集" class="headerlink" title="最大点独立集"></a>最大点独立集</h3><p>选出一个点集，使所有点之间两两无边，且点数最多<br>最大点独立集=二分图点数-最大匹配</p>
+<h3 id="最小路径覆盖"><a href="#最小路径覆盖" class="headerlink" title="最小路径覆盖"></a>最小路径覆盖</h3><p>在有向图$G$中用最少的不相交路径把图中所有点覆盖<br>拆点建二分图：对于$(x,y)$，连边$(x_1,y_2)$<br>最小路径覆盖=二分图点数-最大匹配</p>
+<h3 id="最小链覆盖"><a href="#最小链覆盖" class="headerlink" title="最小链覆盖"></a>最小链覆盖</h3><p>在有向图$G$中用最少的路径把图中所有点覆盖<br>对$DAG$求出传递闭包后，问题转化为最小路径覆盖<br>最小链覆盖=二分图点数-最大匹配</p>
+<h3 id="最长反链"><a href="#最长反链" class="headerlink" title="最长反链"></a>最长反链</h3><p>反链：点集$V$，对于$\forall (u,v)\in V$，满足$u$不能到达$v$且$v$不能到达$u$</p>
+<p>$Dilworth$定理：最长反链=最小链覆盖</p>
+<h3 id="最大团"><a href="#最大团" class="headerlink" title="最大团"></a>最大团</h3><p>选出一个点集，使所有点之间两两有边，且点数最多<br>最大团=补图的最大点独立集</p>
+<p>以上推广到带权形式也是类似的</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 图论 </tag>
+            
+            <tag> 二分图 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[noip2016酱油记]]></title>
+      <url>/2016/05/08/noip2016%E9%85%B1%E6%B2%B9%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<h3 id="Day-INF"><a href="#Day-INF" class="headerlink" title="Day -INF"></a>Day -INF</h3><p>大概前一个月开始翘部分晚自习，后来出去培训了一周，在校学习了一周，一共停课了两周，<del>每天都有新的收获，感觉信心满满</del>……变得更弱了</p>
+<a id="more"></a>
+<h3 id="Day-0"><a href="#Day-0" class="headerlink" title="Day 0"></a>Day 0</h3><p>似乎是中午出发的，反正到日照一中已经很晚了……到了之后排了n长时间的队抽考场……抽之前希望在本校考（考点除了日照一中还有曲阜师范大学），抽完后发现在曲师，rp—，跟本校神犇连号，rp—……不过本校在曲师的人比较多，有教练带队……去宿舍只有上铺了……rp—，第一次睡上铺……<br>表示不会爬梯子……rp-=INF</p>
+<h3 id="Day-0-5"><a href="#Day-0-5" class="headerlink" title="Day 0.5"></a>Day 0.5</h3><p>似乎看了看板子……反正非常颓……宿舍有人说话……差不多12点睡的觉</p>
+<h3 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h3><p>考场环境就不描述了，反正没出什么意外……<br>打开压缩包对着题目名字猜内容……rp—<br>密码为什么这么复杂啊……rp—<br>坐在menci斜对面，太强啦！，rp—</p>
+<p>开始看题，第一题为什么这么长啊，花了很长时间读完后发现是sb题……<br>开始看第二题……瞬间吓尿了……完全不可做啊……这才是T2啊……<br>于是发现暴力lca只有25分，我当时lca还不太熟，感觉还需要调，就准备写20分特判……<br>看第三题发现是期望……感觉心态崩了……啥也不会……振作了一下后，发现28分不需要概率知识……</p>
+<p>定下了100+20+28的目标，然后就码码码，但是我太弱了，T1还调试了一会……<br>完成计划后我又YY了一波T2的链部分分做法，GG<br>最后检查了一下出考场了</p>
+<p>出考场后发现T3直接输出了int……丢掉了28分……心态再次爆炸</p>
+<h3 id="Day-1-5"><a href="#Day-1-5" class="headerlink" title="Day 1.5"></a>Day 1.5</h3><p>舍友都出去颓了……我大概睡到了3点……睡醒后在校园里游荡，水SDOI群……<br>去洗了个澡冷静了一下……晚上仍然颓颓颓</p>
+<h3 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h3><p>在去考场的车上我复习了一下数论……我记得复习了一周以前刚学的杨辉三角……</p>
+<p>看到T1秒想杨辉三角……似乎组合数我只学过这一个东西……<br>我看到T2范围这么大肯定不可做，于是看了看暴力分，我居然开始YY set做法……发现堆就可以了……其实堆暴力能过65，但是我连时间戳都不会打……只写了最暴力的25……我还花了一些时间脑补了一下隔几个输出是为什么……<br>T3完全不会，感觉要爆零……</p>
+<p>看到T2、T3都这么神，我决定花大部分时间肛T1，争取A掉……我大概脑补了1个多小时，终于调好了……发现最后几组数据需要二维前缀和，我觉得我不太会就没加，然后写完T2 25分和T3 乱搞后大概还有半个小时</p>
+<p>这时我去检查了一下T1，然后改错了……</p>
+<p>我发现我的考试策略是非常正确的，<del>就是我太弱了……</del></p>
+<p>回去的路上感觉只有200+（建立在T1能拿大部分分的基础上），感觉心情比较低落，毕竟以前1=最低也要300分</p>
+<h3 id="Day-INF-1"><a href="#Day-INF-1" class="headerlink" title="Day INF"></a>Day INF</h3><p>上了几天课后期中考，翘掉考试去补课……补课期间某天晚上听说menci测的民间成绩我190……我看了一下程序发现day2T1挂掉了……过了几天出成绩了……<br>最后是100+20+0+25+25+5，成功滚粗</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 游记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> noip </tag>
+            
+            <tag> 滚粗 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+  
+  
+</search>

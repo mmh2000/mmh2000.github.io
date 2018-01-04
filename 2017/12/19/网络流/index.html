@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.cn/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|17:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|Source Code Pro:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="图论,网络流," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="mmh" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="概念$V$：点集 $E$：边集 $G=(V,E)$：图 $S$：源点  $T$：汇点 对于每条边$(u,v)$，有容量$c(u,v)$和流量$f(u,v)$，满足$0\leq f(u,v) \leq c(u,v)$">
+<meta name="keywords" content="图论,网络流">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网络流">
+<meta property="og:url" content="http://mmh.ac.cn/2017/12/19/网络流/index.html">
+<meta property="og:site_name" content="mmh">
+<meta property="og:description" content="概念$V$：点集 $E$：边集 $G=(V,E)$：图 $S$：源点  $T$：汇点 对于每条边$(u,v)$，有容量$c(u,v)$和流量$f(u,v)$，满足$0\leq f(u,v) \leq c(u,v)$">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-01-02T00:39:27.323Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="网络流">
+<meta name="twitter:description" content="概念$V$：点集 $E$：边集 $G=(V,E)$：图 $S$：源点  $T$：汇点 对于每条边$(u,v)$，有容量$c(u,v)$和流量$f(u,v)$，满足$0\leq f(u,v) \leq c(u,v)$">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://mmh.ac.cn/2017/12/19/网络流/"/>
+
+
+
+
+
+  <title>网络流 | mmh</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">mmh</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">orz</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://mmh.ac.cn/2017/12/19/网络流/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mmh">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mmh">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">网络流</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-19T15:48:00+08:00">
+                2017-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 浏览
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,508
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>$V$：点集 $E$：边集</p>
+<p>$G=(V,E)$：图</p>
+<p>$S$：源点  $T$：汇点</p>
+<p>对于每条边$(u,v)$，有容量$c(u,v)$和流量$f(u,v)$，满足$0\leq f(u,v) \leq c(u,v)$</p>
+<a id="more"></a>
+<h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><p>$1、$容量限制：$f(u,v)&lt;=c(u,v)$</p>
+<p>$2、$反对称性：$f(u,v)=-f(v,u)$</p>
+<p>$3、$流量平衡：$\sum f(u,i)=\sum f(i,v)$</p>
+<p>满足以上三个性质，称为可行流</p>
+<h3 id="最大流"><a href="#最大流" class="headerlink" title="最大流"></a>最大流</h3><p>流量最大的可行流</p>
+<h4 id="残量网络"><a href="#残量网络" class="headerlink" title="残量网络"></a>残量网络</h4><p>定义残量网络的流量$r(u,v)=c(u,v)-f(u,v)$</p>
+<p>即一条弧还能流过的流量</p>
+<h4 id="增广路"><a href="#增广路" class="headerlink" title="增广路"></a>增广路</h4><p>残量网络中一条由$S$到$T$的路径</p>
+<h5 id="增广路定理：设-flow-是-G-的一个可行流，若不存在增广路，-flow-即为最大流"><a href="#增广路定理：设-flow-是-G-的一个可行流，若不存在增广路，-flow-即为最大流" class="headerlink" title="增广路定理：设$flow$是$G$的一个可行流，若不存在增广路，$flow$即为最大流"></a>增广路定理：设$flow$是$G$的一个可行流，若不存在增广路，$flow$即为最大流</h5><h4 id="前向弧-amp-后向弧"><a href="#前向弧-amp-后向弧" class="headerlink" title="前向弧&amp;后向弧"></a>前向弧&amp;后向弧</h4><p>分别表示残量网络与退流网络</p>
+<h4 id="增流-amp-退流"><a href="#增流-amp-退流" class="headerlink" title="增流&amp;退流"></a>增流&amp;退流</h4><p>推进和修正流量</p>
+<h4 id="last"><a href="#last" class="headerlink" title="last"></a>last</h4><p>最大流的正确性依赖于它的每一条 $S-T$ 流都与一种实际方案一一对应</p>
+<h3 id="Isap算法"><a href="#Isap算法" class="headerlink" title="Isap算法"></a>Isap算法</h3><h4 id="marks"><a href="#marks" class="headerlink" title="marks"></a>marks</h4><p>$1.d[i]$：$i$到$T$的最短距离，可以$bfs$预处理(似乎没有并什么用)<br>$2.GAP$优化：当$S$和$T$不联通时不存在增广路，可以直接退出循环<br>$num[x]$表示$d[i]=x$的节点数量，初始化$num[0]=$总节点数<br>$3.$当前弧优化：保存一个点已经尝试过的邻接边<br>之前处理过的邻接边是不需要重新处理的(残量网络中的边只会越来越少)<br>$last[i]$表示当前弧的编号</p>
+<h4 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h4><p>上界：$O(n^2m)$<br>容量均为1：$O(min(n^{2/3},m^{1/2})*m)$<br>二分图：$O(\sqrt{n} m)$</p>
+<p><a href="http://www.renfei.org/blog/isap.html" target="_blank" rel="noopener">详解</a></p>
+<h3 id="费用流"><a href="#费用流" class="headerlink" title="费用流"></a>费用流</h3><p>每条边除流量限制外还有费用$c$，每流一个单位流量就要增加$c$的费用</p>
+<p>一般是最小费用最大流或最小费用可行流</p>
+<p>$spfa$单/多路增广</p>
+<h3 id="最小割"><a href="#最小割" class="headerlink" title="最小割"></a>最小割</h3><h4 id="割"><a href="#割" class="headerlink" title="割"></a>割</h4><p>边集$C$使得$V$中的点分为两部分</p>
+<h4 id="割的容量"><a href="#割的容量" class="headerlink" title="割的容量"></a>割的容量</h4><p>割中弧的流量总和</p>
+<h4 id="最大流最小割定理"><a href="#最大流最小割定理" class="headerlink" title="最大流最小割定理"></a>最大流最小割定理</h4><p>一个$S-T$流的最大流等于其$S-T$最小割的容量</p>
+<h4 id="判定"><a href="#判定" class="headerlink" title="判定"></a>判定</h4><p>跑出最大流后，在残量网络上跑$Tarjan$，求$SCC$</p>
+<ul>
+<li>一条满流边$(u,v)$可以出现在最小割集中，当且仅当$u$,$v$不在一个$SCC$中</li>
+<li>一条满流边$(u,v)$必定出现在最小割集中，当且仅当$u$与$S$在一个$SCC$里，并且$v$与$T$在一个$SCC$里</li>
+<li>易知$S$与$T$一定不在一个$SCC$中</li>
+</ul>
+<h4 id="最小割树"><a href="#最小割树" class="headerlink" title="最小割树"></a>最小割树</h4><p>任意两点之间的最小割，不同的只有$n-1$个，它们构成一个最小割树</p>
+<p>定理$1$：$mincut(a,b)\geq min${$mincut(a,c_1),mincut(c_1,c_2),…,mincut(c_k,b)$}<br>定理$2$：令$(s,t)$是$(u,v)$在树上简单路径的所有边中$mincut$最小的，那么$mincut(u,v)=mincut(s,t)$</p>
+<h5 id="求解方法"><a href="#求解方法" class="headerlink" title="求解方法"></a>求解方法</h5><ul>
+<li>随便找两个点作为$S$和$T$，跑$mincut$</li>
+<li>dfs划分出$S$集和$T$集，更新答案</li>
+<li>递归处理$S$集和$T$集</li>
+</ul>
+<h2 id="上下界网络流"><a href="#上下界网络流" class="headerlink" title="上下界网络流"></a>上下界网络流</h2><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><ul>
+<li><p>无源汇<br>除$S$、$T$都要求满足流量平衡</p>
+</li>
+<li><p>有源汇<br>所有点都要求满足流量平衡</p>
+</li>
+</ul>
+<h3 id="无源汇可行流"><a href="#无源汇可行流" class="headerlink" title="无源汇可行流"></a>无源汇可行流</h3><h4 id="建图"><a href="#建图" class="headerlink" title="建图"></a>建图</h4><ul>
+<li>建立附加源点$ss$和附加汇点$tt$</li>
+<li>连边：$(u,v,up-down)$</li>
+<li>记$d(i)=\sum down(x,i)-\sum down(i,y)$</li>
+<li>若$d(i)&gt;0$，连边$(ss,i,d(i))$，否则连边$(i,tt,-d(i))$</li>
+</ul>
+<h4 id="求解方法-1"><a href="#求解方法-1" class="headerlink" title="求解方法"></a>求解方法</h4><ul>
+<li>跑$ss$到$tt$的最大流</li>
+<li>若满流，那么一定存在一种可行流 </li>
+<li>此时，原图中每一条边的流量应为新图中对应的边的流量$+down$</li>
+</ul>
+<h3 id="有源汇可行流"><a href="#有源汇可行流" class="headerlink" title="有源汇可行流"></a>有源汇可行流</h3><h4 id="建图-1"><a href="#建图-1" class="headerlink" title="建图"></a>建图</h4><ul>
+<li>在原图中添加一条边$(T,S)$，流量限制为$[0,INF]$，即让$S$和$T$也满足流量平衡条件，改造成无源汇的网络流图</li>
+</ul>
+<h4 id="求解方法-2"><a href="#求解方法-2" class="headerlink" title="求解方法"></a>求解方法</h4><ul>
+<li>同无源汇可行流</li>
+</ul>
+<h3 id="有源汇最大流"><a href="#有源汇最大流" class="headerlink" title="有源汇最大流"></a>有源汇最大流</h3><h4 id="建图-2"><a href="#建图-2" class="headerlink" title="建图"></a>建图</h4><ul>
+<li>同有源汇可行流</li>
+</ul>
+<h4 id="求解方法-3"><a href="#求解方法-3" class="headerlink" title="求解方法"></a>求解方法</h4><ul>
+<li>跑有源汇可行流</li>
+<li>再跑一次$S$到$T$的最大流，即为答案</li>
+</ul>
+<h3 id="有源汇最小流"><a href="#有源汇最小流" class="headerlink" title="有源汇最小流"></a>有源汇最小流</h3><h4 id="建图-3"><a href="#建图-3" class="headerlink" title="建图"></a>建图</h4><ul>
+<li>同无源汇可行流</li>
+</ul>
+<h4 id="求解方法-4"><a href="#求解方法-4" class="headerlink" title="求解方法"></a>求解方法</h4><ul>
+<li>跑$ss$到$tt$的最大流</li>
+<li>添加$(T,S)$，流量限制为$[0,INF]$</li>
+<li>再跑一次$ss$到$tt$的最大流，判断是否存在可行流</li>
+<li>答案即为$(T,S)$的实际流量</li>
+</ul>
+<h3 id="有源汇最小费用可行流"><a href="#有源汇最小费用可行流" class="headerlink" title="有源汇最小费用可行流"></a>有源汇最小费用可行流</h3><h4 id="建图-4"><a href="#建图-4" class="headerlink" title="建图"></a>建图</h4><ul>
+<li>建立附加源点$ss$和附加汇点$tt$</li>
+<li>连边：$(u,v,up-down,cost)$</li>
+<li>记$d(i)=\sum down(x,i)-\sum down(i,y)$</li>
+<li>若$d(i)&gt;0$，连边$(ss,i,d(i),0)$，否则连边$(i,tt,-d(i),0)$</li>
+<li>添加$(T,S)$，流量限制为$[0,INF]$，费用为$0$</li>
+</ul>
+<h4 id="求解方法-5"><a href="#求解方法-5" class="headerlink" title="求解方法"></a>求解方法</h4><ul>
+<li>跑$ss$到$tt$的最小费用最大流</li>
+<li>答案即为（求出的费用+每条边的$down*cost$）</li>
+</ul>
+<h2 id="建模"><a href="#建模" class="headerlink" title="建模"></a>建模</h2><ol>
+<li><p>多源多汇<br>增加超级源汇$S’$和$T’$<br>连边：$(S’,S,INF),(T,T’,INF)$</p>
+</li>
+<li><p>结点容量<br>设结点$x$的结点容量为$c$<br>将结点$x$拆成$x_{in}$和$x_{out}$<br>连边：$(x_{in},x_{out},c)$<br>把到达$x$的弧改为到达$x_{in}$,从$x$出发的弧改为从$x_{out}$出发</p>
+</li>
+<li><p>最大权闭合子图<br>从带点权图$G$中选出一个子图，对于$V$中任意一个结点，其后续节点都在$V$中，最大化$V$的权值和<br>连边：$(S,i,c_i),c_i&gt;0$，$(i,T,-c_i),c_i&lt;0$，$(u,v,INF)$<br>$ans=$正权点和-最小割</p>
+</li>
+<li><p>最大密度子图<br>从$G$中选出一个子图，最大化$\frac{|E|}{|V|}$<br>考虑$01$分数规划，二分答案为$k$<br>将边作为左侧顶点，权为$1$：点作为右侧顶点，权为$-k$<br>根据边和点的依赖关系转化成最大权闭合子图，$ans&gt;0$则增大$l$</p>
+</li>
+<li><p>最小割建图<br>先累加所有收益，再最小化舍弃值<br>一般拆成$S$集和$T$集考虑，对应两种选择。这样就会带来冲突，也就是需要割的边<br>$check$不同情况，检验建图正确性</p>
+</li>
+</ol>
+<p><a href="http://www.cppblog.com/MatoNo1/archive/2012/05/11/174440.aspx" target="_blank" rel="noopener">Tips</a></p>
+<h2 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h2><ul>
+<li><p>枚举&amp;二分答案</p>
+</li>
+<li><p>合并流量<br>将起点终点相同的边流量累加起来</p>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/图论/" rel="tag"># 图论</a>
+          
+            <a href="/tags/网络流/" rel="tag"># 网络流</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/19/二分图/" rel="next" title="二分图">
+                <i class="fa fa-chevron-left"></i> 二分图
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/19/欧几里得相关/" rel="prev" title="欧几里得相关">
+                欧几里得相关 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="mmh" />
+            
+              <p class="site-author-name" itemprop="name">mmh</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/mmh2000" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://blog.csdn.net/mmh2000" target="_blank" title="csdn">
+                    
+                      <i class="fa fa-fw fa-crosshairs"></i>csdn</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://example.com/" title="Title" target="_blank">Title</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质"><span class="nav-number">2.</span> <span class="nav-text">性质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#最大流"><span class="nav-number">2.1.</span> <span class="nav-text">最大流</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#残量网络"><span class="nav-number">2.1.1.</span> <span class="nav-text">残量网络</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#增广路"><span class="nav-number">2.1.2.</span> <span class="nav-text">增广路</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#增广路定理：设-flow-是-G-的一个可行流，若不存在增广路，-flow-即为最大流"><span class="nav-number">2.1.2.1.</span> <span class="nav-text">增广路定理：设$flow$是$G$的一个可行流，若不存在增广路，$flow$即为最大流</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#前向弧-amp-后向弧"><span class="nav-number">2.1.3.</span> <span class="nav-text">前向弧&后向弧</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#增流-amp-退流"><span class="nav-number">2.1.4.</span> <span class="nav-text">增流&退流</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#last"><span class="nav-number">2.1.5.</span> <span class="nav-text">last</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Isap算法"><span class="nav-number">2.2.</span> <span class="nav-text">Isap算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#marks"><span class="nav-number">2.2.1.</span> <span class="nav-text">marks</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#时间复杂度"><span class="nav-number">2.2.2.</span> <span class="nav-text">时间复杂度</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#费用流"><span class="nav-number">2.3.</span> <span class="nav-text">费用流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最小割"><span class="nav-number">2.4.</span> <span class="nav-text">最小割</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#割"><span class="nav-number">2.4.1.</span> <span class="nav-text">割</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#割的容量"><span class="nav-number">2.4.2.</span> <span class="nav-text">割的容量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#最大流最小割定理"><span class="nav-number">2.4.3.</span> <span class="nav-text">最大流最小割定理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#判定"><span class="nav-number">2.4.4.</span> <span class="nav-text">判定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#最小割树"><span class="nav-number">2.4.5.</span> <span class="nav-text">最小割树</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#求解方法"><span class="nav-number">2.4.5.1.</span> <span class="nav-text">求解方法</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上下界网络流"><span class="nav-number">3.</span> <span class="nav-text">上下界网络流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分类"><span class="nav-number">3.1.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#无源汇可行流"><span class="nav-number">3.2.</span> <span class="nav-text">无源汇可行流</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#建图"><span class="nav-number">3.2.1.</span> <span class="nav-text">建图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#求解方法-1"><span class="nav-number">3.2.2.</span> <span class="nav-text">求解方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有源汇可行流"><span class="nav-number">3.3.</span> <span class="nav-text">有源汇可行流</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#建图-1"><span class="nav-number">3.3.1.</span> <span class="nav-text">建图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#求解方法-2"><span class="nav-number">3.3.2.</span> <span class="nav-text">求解方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有源汇最大流"><span class="nav-number">3.4.</span> <span class="nav-text">有源汇最大流</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#建图-2"><span class="nav-number">3.4.1.</span> <span class="nav-text">建图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#求解方法-3"><span class="nav-number">3.4.2.</span> <span class="nav-text">求解方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有源汇最小流"><span class="nav-number">3.5.</span> <span class="nav-text">有源汇最小流</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#建图-3"><span class="nav-number">3.5.1.</span> <span class="nav-text">建图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#求解方法-4"><span class="nav-number">3.5.2.</span> <span class="nav-text">求解方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有源汇最小费用可行流"><span class="nav-number">3.6.</span> <span class="nav-text">有源汇最小费用可行流</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#建图-4"><span class="nav-number">3.6.1.</span> <span class="nav-text">建图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#求解方法-5"><span class="nav-number">3.6.2.</span> <span class="nav-text">求解方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建模"><span class="nav-number">4.</span> <span class="nav-text">建模</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#技巧"><span class="nav-number">5.</span> <span class="nav-text">技巧</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">mmh</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">6.8k</span>
+  
+</div>
+
+
+<!-- 
+--> 
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i> 您是第
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      位来到新大陆的勇士!
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i> 总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
