@@ -3,6 +3,49 @@
   
     
     <entry>
+      <title><![CDATA[K-D Tree]]></title>
+      <url>/2018/01/04/K-D%20Tree/</url>
+      <content type="html"><![CDATA[<p>$K-D$  $Tree$是一种分割$k$维数据空间的数据结构，主要应用于多维空间关键数据的搜索</p>
+<a id="more"></a>
+<h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><h3 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h3><p>$K-D$  $Tree$中的一个节点储存了一个$K$维空间域和一个$K$维的点坐标</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">d:点各维坐标 mi:空间各维坐标的min mx:空间各维坐标的max c:左右儿子</span><br></pre></td></tr></table></figure>
+<p>以下以$2-D$  $Tree$为例</p>
+<h3 id="构树"><a href="#构树" class="headerlink" title="构树"></a>构树</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> cmin(a,b) (a&gt;b?a=b:a)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> cmax(a,b) (a&lt;b?a=b:a)</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">abc</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> ww[<span class="number">2</span>];</span><br><span class="line">    <span class="keyword">int</span>&amp; <span class="keyword">operator</span>[](<span class="keyword">int</span> x)&#123;<span class="keyword">return</span> ww[x];&#125; </span><br><span class="line">&#125;a[N];</span><br><span class="line"> </span><br><span class="line"><span class="keyword">bool</span> <span class="keyword">operator</span> &lt;(abc x,abc y)&#123;<span class="keyword">return</span> x[D]&lt;y[D];&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">2</span>;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(c[x][<span class="number">0</span>]) cmin(mi[x][i],mi[c[x][<span class="number">0</span>]][i]),cmax(mx[x][i],mx[c[x][<span class="number">0</span>]][i]);</span><br><span class="line">        <span class="keyword">if</span>(c[x][<span class="number">1</span>]) cmin(mi[x][i],mi[c[x][<span class="number">1</span>]][i]),cmax(mx[x][i],mx[c[x][<span class="number">1</span>]][i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> x)</span><span class="comment">//循环选取维度 </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    D=x;<span class="keyword">int</span> m=l+r&gt;&gt;<span class="number">1</span>;</span><br><span class="line">    nth_element(a+l,a+m,a+r+<span class="number">1</span>);<span class="comment">//使用某一维坐标的中位数作为切分点 </span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">2</span>;i++) d[m][i]=mi[m][i]=mx[m][i]=a[m][i];</span><br><span class="line">    <span class="keyword">if</span>(l&lt;m) c[m][<span class="number">0</span>]=build(l,m<span class="number">-1</span>,x^<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">if</span>(r&gt;m) c[m][<span class="number">1</span>]=build(m+<span class="number">1</span>,r,x^<span class="number">1</span>);</span><br><span class="line">    update(m);<span class="keyword">return</span> m;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="估价"><a href="#估价" class="headerlink" title="估价"></a>估价</h3><p>算出目标点到当前查询区域距离的下界或上界</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//now:需估价的矩形区域 P:目标点</span></span><br><span class="line"><span class="comment">//曼哈顿最小</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">2</span>;i++)&#123;</span><br><span class="line">    ret+=max(mi[now][i]-P[i],<span class="number">0</span>);</span><br><span class="line">    ret+=max(P[i]-mx[now][i],<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//曼哈顿最大</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//欧几里得最小</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//欧几里得最大</span></span><br></pre></td></tr></table></figure>
+<h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> &amp;now,<span class="keyword">int</span> x)</span></span>&#123;<span class="comment">//同平衡树</span></span><br><span class="line">    <span class="keyword">if</span>(!now)&#123;now=++n;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">2</span>;i++) d[now][i]=mi[now][i]=mx[now][i]=P[i];<span class="keyword">return</span> ;&#125;</span><br><span class="line">    <span class="keyword">int</span> tmp=P[x]&gt;=d[now][x];</span><br><span class="line">    insert(c[now][tmp],x^<span class="number">1</span>);</span><br><span class="line">    update(now);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Dis</span><span class="params">(<span class="keyword">int</span> now)</span></span>&#123;<span class="keyword">return</span> <span class="built_in">abs</span>(d[now][<span class="number">0</span>]-P[<span class="number">0</span>])+<span class="built_in">abs</span>(d[now][<span class="number">1</span>]-P[<span class="number">1</span>]);&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> tmp=Dis(x),dl[<span class="number">2</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">2</span>;i++) dl[i]=c[x][i]?getdis(c[x][i]):INF;<span class="comment">//估价函数，走较优的子树</span></span><br><span class="line">    cmin(ans,tmp);tmp=dl[<span class="number">0</span>]&gt;=dl[<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">if</span>(dl[tmp]&lt;ans) query(c[x][tmp]),tmp^=<span class="number">1</span>;<span class="comment">//不能更新答案直接跳过</span></span><br><span class="line">    <span class="keyword">if</span>(dl[tmp]&lt;ans) query(c[x][tmp]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      
+        <categories>
+            
+            <category> 笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+            <tag> 计算几何 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title></title>
+      <url>/2018/01/04/%E9%80%86%E5%85%83/</url>
+      <content type="html"><![CDATA[<p>对于多项式$A(x)$，称其最高项的次数为这个多项式的<strong>度</strong>，记作$degA$</p>
+<p>对于多项式$A(X)$$,B(X)$，存在唯一的$Q(x)$,$R(x)$满足$A(x) = Q(x)B(x) + R(x)$，其中$degR&lt;degB$，称$Q(x)$为$B(x)$除$A(x)$的<strong>商</strong>，$R(x)$为$B(x)$除$A(x)$的<strong>余数</strong>，记作$A(x) \equiv R(x) \pmod {B(x)}$</p>
+<p>对于多项式$A(x)$，如果存在$B(x)$满足$degB≤degA$并且$A(x)B(x) \equiv 1 \pmod {x^n}$，那么称$B(x)$为$A(x)$在$mod$ $x^n$意义下的<strong>逆元</strong>，记作$A^{-1}(x)$</p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[生成树]]></title>
       <url>/2017/12/29/%E7%94%9F%E6%88%90%E6%A0%91/</url>
       <content type="html"><![CDATA[<p> 联通图$G$的生成树是包含$G$中所有顶点的极小连通子图</p>
@@ -224,9 +267,9 @@
         
         <tags>
             
-            <tag> 字符串 </tag>
-            
             <tag> 数据结构 </tag>
+            
+            <tag> 字符串 </tag>
             
             <tag> 后缀 </tag>
             
