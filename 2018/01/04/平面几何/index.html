@@ -125,7 +125,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="计算几何,数学," />
 
 
 
@@ -138,17 +138,18 @@
 
 
 
-<meta name="description" content="对于多项式$A(x)$，称其最高项的次数为这个多项式的度，记作$degA$ 对于多项式$A(X)$$,B(X)$，存在唯一的$Q(x)$,$R(x)$满足$A(x) = Q(x)B(x) + R(x)$，其中$degR&amp;lt;degB$，称$Q(x)$为$B(x)$除$A(x)$的商，$R(x)$为$B(x)$">
+<meta name="description" content="点1234struct Point&amp;#123;	double x,y;	Point(double _,double __)&amp;#123;x=_,y=__;&amp;#125;&amp;#125;; 线12345struct Line&amp;#123;//使用向量式表示，线上的点X满足X=P+tV，直线t">
+<meta name="keywords" content="计算几何,数学">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mmh&#39;s Blog">
-<meta property="og:url" content="http://mmh.ac.cn/2018/01/04/逆元/index.html">
+<meta property="og:title" content="平面几何">
+<meta property="og:url" content="http://mmh.ac.cn/2018/01/04/平面几何/index.html">
 <meta property="og:site_name" content="mmh&#39;s Blog">
-<meta property="og:description" content="对于多项式$A(x)$，称其最高项的次数为这个多项式的度，记作$degA$ 对于多项式$A(X)$$,B(X)$，存在唯一的$Q(x)$,$R(x)$满足$A(x) = Q(x)B(x) + R(x)$，其中$degR&amp;lt;degB$，称$Q(x)$为$B(x)$除$A(x)$的商，$R(x)$为$B(x)$除$A(x)$的余数，记作$A(x) \equiv R(x) \pmod {B(x)}$">
+<meta property="og:description" content="点1234struct Point&amp;#123;	double x,y;	Point(double _,double __)&amp;#123;x=_,y=__;&amp;#125;&amp;#125;; 线12345struct Line&amp;#123;//使用向量式表示，线上的点X满足X=P+tV，直线t∈R,线段t∈[0,1],射线t&amp;gt;0	Point P;//线上一点	Vector V;//方向向量，已知线上两个不">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-03T23:40:41.282Z">
+<meta property="og:updated_time" content="2018-01-04T03:09:49.845Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mmh&#39;s Blog">
-<meta name="twitter:description" content="对于多项式$A(x)$，称其最高项的次数为这个多项式的度，记作$degA$ 对于多项式$A(X)$$,B(X)$，存在唯一的$Q(x)$,$R(x)$满足$A(x) = Q(x)B(x) + R(x)$，其中$degR&amp;lt;degB$，称$Q(x)$为$B(x)$除$A(x)$的商，$R(x)$为$B(x)$除$A(x)$的余数，记作$A(x) \equiv R(x) \pmod {B(x)}$">
+<meta name="twitter:title" content="平面几何">
+<meta name="twitter:description" content="点1234struct Point&amp;#123;	double x,y;	Point(double _,double __)&amp;#123;x=_,y=__;&amp;#125;&amp;#125;; 线12345struct Line&amp;#123;//使用向量式表示，线上的点X满足X=P+tV，直线t∈R,线段t∈[0,1],射线t&amp;gt;0	Point P;//线上一点	Vector V;//方向向量，已知线上两个不">
 
 
 
@@ -178,13 +179,13 @@
 
 
 
-  <link rel="canonical" href="http://mmh.ac.cn/2018/01/04/逆元/"/>
+  <link rel="canonical" href="http://mmh.ac.cn/2018/01/04/平面几何/"/>
 
 
 
 
 
-  <title> | mmh's Blog</title>
+  <title>平面几何 | mmh's Blog</title>
   
 
 
@@ -355,7 +356,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://mmh.ac.cn/2018/01/04/逆元/">
+    <link itemprop="mainEntityOfPage" href="http://mmh.ac.cn/2018/01/04/平面几何/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mmh">
@@ -372,7 +373,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline"></h2>
+          <h2 class="post-title" itemprop="name headline">平面几何</h2>
         
 
         <div class="post-meta">
@@ -384,7 +385,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-04T08:02:17+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-04T11:12:00+08:00">
                 2018-01-04
               </time>
             
@@ -394,6 +395,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -421,7 +444,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  141
+                  933
                 </span>
               
 
@@ -446,9 +469,38 @@
       
 
       
-        <p>对于多项式$A(x)$，称其最高项的次数为这个多项式的<strong>度</strong>，记作$degA$</p>
-<p>对于多项式$A(X)$$,B(X)$，存在唯一的$Q(x)$,$R(x)$满足$A(x) = Q(x)B(x) + R(x)$，其中$degR&lt;degB$，称$Q(x)$为$B(x)$除$A(x)$的<strong>商</strong>，$R(x)$为$B(x)$除$A(x)$的<strong>余数</strong>，记作$A(x) \equiv R(x) \pmod {B(x)}$</p>
-<p>对于多项式$A(x)$，如果存在$B(x)$满足$degB≤degA$并且$A(x)B(x) \equiv 1 \pmod {x^n}$，那么称$B(x)$为$A(x)$在$mod$ $x^n$意义下的<strong>逆元</strong>，记作$A^{-1}(x)$</p>
+        <h2 id="点"><a href="#点" class="headerlink" title="点"></a>点</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Point</span>&#123;</span></span><br><span class="line">	<span class="keyword">double</span> x,y;</span><br><span class="line">	Point(<span class="keyword">double</span> _,<span class="keyword">double</span> __)&#123;x=_,y=__;&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="线"><a href="#线" class="headerlink" title="线"></a>线</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Line</span>&#123;</span><span class="comment">//使用向量式表示，线上的点X满足X=P+tV，直线t∈R,线段t∈[0,1],射线t&gt;0</span></span><br><span class="line">	Point P;<span class="comment">//线上一点</span></span><br><span class="line">	Vector V;<span class="comment">//方向向量，已知线上两个不同点A、B，则V=B-A</span></span><br><span class="line">	Line(Point _,Vector __)&#123;P=_,V=__;&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="圆"><a href="#圆" class="headerlink" title="圆"></a>圆</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Circle</span>&#123;</span></span><br><span class="line">	Point c;</span><br><span class="line">	<span class="keyword">double</span> r;</span><br><span class="line">	Circle(Point _,<span class="keyword">double</span> __)&#123;c=_,r=__;&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="多边形"><a href="#多边形" class="headerlink" title="多边形"></a>多边形</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Polygon</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	Point P[N];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> Point Vector;</span><br></pre></td></tr></table></figure>
+<h3 id="四则运算"><a href="#四则运算" class="headerlink" title="四则运算"></a>四则运算</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Vector <span class="keyword">operator</span> + (Vector A,Vector B)&#123;<span class="keyword">return</span> Vector(A.x+B.x,A.y+B.y);&#125;</span><br><span class="line">Vector <span class="keyword">operator</span> - (Vector A,Vector B)&#123;<span class="keyword">return</span> Vector(A.x-B.x,A.y-B.y);&#125;</span><br><span class="line">Vector <span class="keyword">operator</span> * (Vector A,<span class="keyword">double</span> p)&#123;<span class="keyword">return</span> Vector(A.x*p,A.y*p);&#125;</span><br><span class="line">Vector <span class="keyword">operator</span> / (Vector A,<span class="keyword">double</span> p)&#123;<span class="keyword">return</span> Vector(A.x/p,A.y/p);&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="点积与叉积"><a href="#点积与叉积" class="headerlink" title="点积与叉积"></a>点积与叉积</h3><p>点积几何意义：$U$在$V$上的投影的模长乘$V$的模长，可以判断向量垂直</p>
+<p>叉积几何意义：以$U$、$V$为邻边构成的平行四边形的有向面积，可以判断向量平行</p>
+<p>把点积和叉积组合到一起可以判断两个向量的位置关系</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">Dot</span><span class="params">(Vector A,Vector B)</span></span>&#123;<span class="keyword">return</span> A.x*B.x+A.y*B.y;&#125;</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">Cross</span><span class="params">(Vector A,Vector B)</span></span>&#123;<span class="keyword">return</span> A.x*B.y-A.y*B.x;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="模长、投影与夹角"><a href="#模长、投影与夹角" class="headerlink" title="模长、投影与夹角"></a>模长、投影与夹角</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">Length</span><span class="params">(Vector A)</span></span>&#123;<span class="keyword">return</span> <span class="built_in">sqrt</span>(Dot(A,A));&#125;</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">Shade</span><span class="params">(Vector A,Vector B)</span></span>&#123;<span class="keyword">return</span> Dot(A,B)/Length(B);&#125;</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">Angle</span><span class="params">(Vector A,Vector B)</span></span>&#123;<span class="keyword">return</span> <span class="built_in">acos</span>(Dot(A,B)/Length(A)/Length(B));&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="极角"><a href="#极角" class="headerlink" title="极角"></a>极角</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">Polar</span><span class="params">(Vector A)</span></span>&#123;<span class="keyword">return</span> <span class="built_in">atan2</span>(A.y,A.x);&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="旋转与单位法向量"><a href="#旋转与单位法向量" class="headerlink" title="旋转与单位法向量"></a>旋转与单位法向量</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Vector <span class="title">Rotate</span><span class="params">(Vector A,<span class="keyword">double</span> rad)</span></span>&#123;<span class="keyword">return</span> Vector(A.x*<span class="built_in">cos</span>(rad)-A.y*<span class="built_in">sin</span>(rad),A.x*<span class="built_in">sin</span>(rad)+A.y*<span class="built_in">cos</span>(rad));&#125;</span><br><span class="line"><span class="function">Vector <span class="title">Normal</span><span class="params">(Vector A)</span></span>&#123;<span class="comment">//左转90°，长度归1</span></span><br><span class="line">	<span class="keyword">double</span> L=Length(A);</span><br><span class="line">	<span class="keyword">return</span> Vector(-A.y/L,A.x/L);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="圆-1"><a href="#圆-1" class="headerlink" title="圆"></a>圆</h2><h2 id="距离"><a href="#距离" class="headerlink" title="距离"></a>距离</h2><h3 id="两点间距离"><a href="#两点间距离" class="headerlink" title="两点间距离"></a>两点间距离</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">DistanceToPoint</span><span class="params">(Point A,Point B)</span></span>&#123;<span class="keyword">return</span> Length(A-B);&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="点到直线间距离"><a href="#点到直线间距离" class="headerlink" title="点到直线间距离"></a>点到直线间距离</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">DistanceToLine</span><span class="params">(Line A,Point B)</span></span>&#123;<span class="keyword">return</span> <span class="built_in">fabs</span>(Cross(B-A.P,A.V)/Length(A.V));&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="交点"><a href="#交点" class="headerlink" title="交点"></a>交点</h2><h3 id="两直线交点"><a href="#两直线交点" class="headerlink" title="两直线交点"></a>两直线交点</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Point <span class="title">GetLineIntersection</span><span class="params">(Line A,Line B)</span></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> t=Cross(B.V,A.P-B.P)/Cross(A.V,B.V);</span><br><span class="line">	<span class="keyword">return</span> A.P+A.V*t;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="点在多边形内判定"><a href="#点在多边形内判定" class="headerlink" title="点在多边形内判定"></a>点在多边形内判定</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="面积"><a href="#面积" class="headerlink" title="面积"></a>面积</h2><h4 id="多边形的有向面积"><a href="#多边形的有向面积" class="headerlink" title="多边形的有向面积"></a>多边形的有向面积</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">PolygonArea</span><span class="params">(Point A)</span></span>&#123;</span><br><span class="line">    <span class="keyword">double</span> area=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=A.n;i++)</span><br><span class="line">        area+=Cross(A[i].P-A[<span class="number">1</span>].P,A[i+<span class="number">1</span>].P-A[<span class="number">1</span>].P);</span><br><span class="line">    <span class="keyword">return</span> area/<span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="凸包"><a href="#凸包" class="headerlink" title="凸包"></a>凸包</h2><p>包围给定点集的面积最小的凸多边形</p>
+<h3 id="Andrew算法"><a href="#Andrew算法" class="headerlink" title="Andrew算法"></a>Andrew算法</h3><p>分别维护上下凸壳，然后合并</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">ConvexHull</span><span class="params">(Point *p,<span class="keyword">int</span> n,Point* ch)</span></span>&#123;</span><br><span class="line">    sort(p+<span class="number">1</span>,p+n+<span class="number">1</span>);<span class="comment">//按照x、y为第一、二关键字排序 </span></span><br><span class="line">    <span class="keyword">int</span> m=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="keyword">while</span>(m&gt;<span class="number">1</span>&amp;&amp;Cross(ch[m]-ch[m<span class="number">-1</span>],p[i]-ch[m<span class="number">-1</span>])&lt;=<span class="number">0</span>) m--;</span><br><span class="line">        ch[++m]=p[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> k=m;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=n<span class="number">-1</span>;i&gt;=<span class="number">1</span>;i++)&#123;</span><br><span class="line">        <span class="keyword">while</span>(m&gt;k&amp;&amp;Cross(ch[m]-ch[m<span class="number">-1</span>],p[i]-ch[m<span class="number">-1</span>])&lt;=<span class="number">0</span>) m--;</span><br><span class="line">        ch[++m]=p[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(n&gt;<span class="number">1</span>) m--;</span><br><span class="line">    <span class="keyword">return</span> m;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="半平面交"><a href="#半平面交" class="headerlink" title="半平面交"></a>半平面交</h2><h2 id="旋转卡壳"><a href="#旋转卡壳" class="headerlink" title="旋转卡壳"></a>旋转卡壳</h2><h2 id="公式与性质"><a href="#公式与性质" class="headerlink" title="公式与性质"></a>公式与性质</h2><h3 id="Pick公式"><a href="#Pick公式" class="headerlink" title="Pick公式"></a>Pick公式</h3><p>在格点图上，整点多边形的面积=内部整点个数+边上的整点个数/2−1</p>
+<h3 id="欧拉公式"><a href="#欧拉公式" class="headerlink" title="欧拉公式"></a>欧拉公式</h3><p>简单多面体的顶点数V，面数F与棱数E之间存在如下关系</p>
+<script type="math/tex; mode=display">V-E+F=2</script><p>特别的，在平面图上：点数V，将平面分成的互不联通的区域数F，边数E与联通块个数W之间，有</p>
+<script type="math/tex; mode=display">V-E+F=1+W</script><h3 id="三角形的心"><a href="#三角形的心" class="headerlink" title="三角形的心"></a>三角形的心</h3><ul>
+<li>外心：外接圆圆心，三条中垂线交点 </li>
+<li>内心：内接圆圆心，三条角平分线交点 </li>
+<li>重心：三条中线交点，注意其物理性质</li>
+<li>垂心：三条垂线交点</li>
+<li>旁心：一个外交平分线与另外两个内角平分线交点 </li>
+</ul>
+<p>平面多边形的重心：所以顶点x/y坐标的平均数</p>
 
       
     </div>
@@ -464,6 +516,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/计算几何/" rel="tag"># 计算几何</a>
+          
+            <a href="/tags/数学/" rel="tag"># 数学</a>
+          
+        </div>
+      
 
       
       
@@ -473,8 +533,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/29/生成树/" rel="next" title="生成树">
-                <i class="fa fa-chevron-left"></i> 生成树
+              <a href="/2018/01/04/K-D Tree/" rel="next" title="K-D Tree">
+                <i class="fa fa-chevron-left"></i> K-D Tree
               </a>
             
           </div>
@@ -482,10 +542,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/04/K-D Tree/" rel="prev" title="K-D Tree">
-                K-D Tree <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -537,8 +593,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -640,6 +705,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#点"><span class="nav-number">1.</span> <span class="nav-text">点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线"><span class="nav-number">2.</span> <span class="nav-text">线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#圆"><span class="nav-number">3.</span> <span class="nav-text">圆</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多边形"><span class="nav-number">4.</span> <span class="nav-text">多边形</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#向量"><span class="nav-number">5.</span> <span class="nav-text">向量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#四则运算"><span class="nav-number">5.1.</span> <span class="nav-text">四则运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#点积与叉积"><span class="nav-number">5.2.</span> <span class="nav-text">点积与叉积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模长、投影与夹角"><span class="nav-number">5.3.</span> <span class="nav-text">模长、投影与夹角</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#极角"><span class="nav-number">5.4.</span> <span class="nav-text">极角</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#旋转与单位法向量"><span class="nav-number">5.5.</span> <span class="nav-text">旋转与单位法向量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#圆-1"><span class="nav-number">6.</span> <span class="nav-text">圆</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#距离"><span class="nav-number">7.</span> <span class="nav-text">距离</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#两点间距离"><span class="nav-number">7.1.</span> <span class="nav-text">两点间距离</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#点到直线间距离"><span class="nav-number">7.2.</span> <span class="nav-text">点到直线间距离</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#交点"><span class="nav-number">8.</span> <span class="nav-text">交点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#两直线交点"><span class="nav-number">8.1.</span> <span class="nav-text">两直线交点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#点在多边形内判定"><span class="nav-number">8.1.1.</span> <span class="nav-text">点在多边形内判定</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面积"><span class="nav-number">9.</span> <span class="nav-text">面积</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#多边形的有向面积"><span class="nav-number">9.0.1.</span> <span class="nav-text">多边形的有向面积</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#凸包"><span class="nav-number">10.</span> <span class="nav-text">凸包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Andrew算法"><span class="nav-number">10.1.</span> <span class="nav-text">Andrew算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#半平面交"><span class="nav-number">11.</span> <span class="nav-text">半平面交</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#旋转卡壳"><span class="nav-number">12.</span> <span class="nav-text">旋转卡壳</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#公式与性质"><span class="nav-number">13.</span> <span class="nav-text">公式与性质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Pick公式"><span class="nav-number">13.1.</span> <span class="nav-text">Pick公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#欧拉公式"><span class="nav-number">13.2.</span> <span class="nav-text">欧拉公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三角形的心"><span class="nav-number">13.3.</span> <span class="nav-text">三角形的心</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -667,7 +748,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">7.5k</span>
+    <span title="Site words total count">8.3k</span>
   
 </div>
 
@@ -1200,6 +1281,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

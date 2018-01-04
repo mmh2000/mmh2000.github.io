@@ -3,6 +3,28 @@
 
 
     
+  <url>
+    <loc>http://mmh.ac.cn/2018/01/04/%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95/</loc>
+    <lastmod>2018-01-04T03:09:49.845Z</lastmod>
+    <data>
+        <display>
+        <title>平面几何</title>
+        <pubTime>2018-01-04T03:12:00.000Z</pubTime>
+        
+        <tag>计算几何</tag>
+         
+        <tag>数学</tag>
+         
+         
+           
+             
+              <breadCrumb title="笔记" url="http://mmh.ac.cn/categories/%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://mmh.ac.cn/2018/01/04/K-D%20Tree/</loc>
@@ -21,21 +43,6 @@
              
               <breadCrumb title="笔记" url="http://mmh.ac.cn/categories/%E7%AC%94%E8%AE%B0/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://mmh.ac.cn/2018/01/04/%E9%80%86%E5%85%83/</loc>
-    <lastmod>2018-01-03T23:40:41.282Z</lastmod>
-    <data>
-        <display>
-        <title></title>
-        <pubTime>2018-01-04T00:02:17.477Z</pubTime>
-        
-         
-           
         </display>
     </data>
     </url>
