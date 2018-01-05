@@ -146,10 +146,12 @@
 <meta property="og:site_name" content="mmh&#39;s Blog">
 <meta property="og:description" content="有向无环图如果一个有向图无法从某个顶点出发经过若干条边回到该点，则这个图是一个有向无环图$DAG$的生成树个数等于入度非零节点的入度积 拓扑排序$DAG$顶点的线性序列">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-21T09:06:40.000Z">
+<meta property="og:image" content="http://mmh.ac.cn/img/what-is-cactus.png">
+<meta property="og:updated_time" content="2018-01-05T00:36:09.160Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="各种图">
 <meta name="twitter:description" content="有向无环图如果一个有向图无法从某个顶点出发经过若干条边回到该点，则这个图是一个有向无环图$DAG$的生成树个数等于入度非零节点的入度积 拓扑排序$DAG$顶点的线性序列">
+<meta name="twitter:image" content="http://mmh.ac.cn/img/what-is-cactus.png">
 
 
 
@@ -444,7 +446,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  221
+                  404
                 </span>
               
 
@@ -474,10 +476,26 @@
 <a id="more"></a>
 <h2 id="补图"><a href="#补图" class="headerlink" title="补图"></a>补图</h2><p>将完全图去除图$G$的边集后得到的图</p>
 <h2 id="反向图"><a href="#反向图" class="headerlink" title="反向图"></a>反向图</h2><p>将有向图$G$的边反向后得到的图</p>
-<h2 id="分层图"><a href="#分层图" class="headerlink" title="分层图"></a>分层图</h2><h2 id="平面图-amp-对偶图"><a href="#平面图-amp-对偶图" class="headerlink" title="平面图&amp;对偶图"></a>平面图&amp;对偶图</h2><h2 id="竞赛图"><a href="#竞赛图" class="headerlink" title="竞赛图"></a>竞赛图</h2><p>将一个完全无向图的边定向后得到的有向图</p>
+<h2 id="分层图"><a href="#分层图" class="headerlink" title="分层图"></a>分层图</h2><p>状态多维，层之间拓扑有序</p>
+<p><a href="http://blog.csdn.net/creationaugust/article/details/44311285" target="_blank" rel="noopener">links</a></p>
+<h2 id="平面图-amp-对偶图"><a href="#平面图-amp-对偶图" class="headerlink" title="平面图&amp;对偶图"></a>平面图&amp;对偶图</h2><p>可以画在平面上且边只在顶点处相交的图称为平面图</p>
+<p>平面图的对偶图是将这个平面的每个区域看成点，原图每一条边所属的两个相邻的区域对应在对偶图中的点有连边</p>
+<p><a href="http://blog.miskcoo.com/2015/05/planar-graph-dual-and-point-locate" target="_blank" rel="noopener">links</a></p>
+<h2 id="竞赛图"><a href="#竞赛图" class="headerlink" title="竞赛图"></a>竞赛图</h2><p>将一个完全无向图的边定向后得到的有向图</p>
 <h3 id="兰道定理"><a href="#兰道定理" class="headerlink" title="兰道定理"></a>兰道定理</h3><p>比分序列：把竞赛图每一个点的出度从小到大排列得到的序列<br>一个长度为$n$的序列$s$$(s_1≤s_2≤…≤s_n,n≥1)$是合法的比分序列当且仅当</p>
 <script type="math/tex; mode=display">{\forall}1\leq k \leq n~,~\sum\limits_{i=1}^{k}s_i \geq {k\choose2}</script><p>特别地，当$k=n$时式子取等号</p>
-<h2 id="区间图-amp-弦图-amp-完美图"><a href="#区间图-amp-弦图-amp-完美图" class="headerlink" title="区间图&amp;弦图&amp;完美图"></a>区间图&amp;弦图&amp;完美图</h2><h2 id="仙人掌图"><a href="#仙人掌图" class="headerlink" title="仙人掌图"></a>仙人掌图</h2>
+<h2 id="区间图-amp-弦图-amp-完美图"><a href="#区间图-amp-弦图-amp-完美图" class="headerlink" title="区间图&amp;弦图&amp;完美图"></a>区间图&amp;弦图&amp;完美图</h2><p>弦：连接环中不相邻的两个点的边</p>
+<p>弦图：</p>
+<p>完美消除序列：</p>
+<p>定理：一个无向图是弦图当且仅当它有一个完美消除序列</p>
+<p>最大势算法：</p>
+<p><a href="http://blog.csdn.net/qq_20118433/article/details/44420099" target="_blank" rel="noopener">lk1</a></p>
+<p><a href="https://wenku.baidu.com/view/6f9f2223dd36a32d73758126.html" target="_blank" rel="noopener">lk2</a></p>
+<h2 id="仙人掌图"><a href="#仙人掌图" class="headerlink" title="仙人掌图"></a>仙人掌图</h2><p>如果无向联通图$G$的任意一条边最多属于一个简单环，称$G$为仙人掌</p>
+<p>简单环：不经过重复结点的环</p>
+<p>祭出神图</p>
+<p><img src="/img/what-is-cactus.png" width="90%" height="90%"></p>
+
       
     </div>
     
@@ -607,7 +625,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -618,7 +636,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -629,7 +647,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -677,7 +695,7 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://example.com/" title="Title" target="_blank">Title</a>
+                    <a href="http://lbn187.is-programmer.com/" title="lbn" target="_blank">lbn</a>
                   </li>
                 
               </ul>
@@ -733,7 +751,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">9.1k</span>
+    <span title="Site words total count">11.6k</span>
   
 </div>
 
