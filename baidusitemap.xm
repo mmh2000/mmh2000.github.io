@@ -4,6 +4,50 @@
 
     
   <url>
+    <loc>http://mmh.ac.cn/2018/01/06/%E9%85%B7%E7%82%AB%E5%8F%8D%E6%BC%94%E9%AD%94%E6%9C%AF/</loc>
+    <lastmod>2018-01-06T09:19:09.711Z</lastmod>
+    <data>
+        <display>
+        <title>酷炫反演魔术</title>
+        <pubTime>2018-01-06T06:55:00.000Z</pubTime>
+        
+        <tag>数学</tag>
+         
+        <tag>反演</tag>
+         
+         
+           
+             
+              <breadCrumb title="笔记" url="http://mmh.ac.cn/categories/%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://mmh.ac.cn/2017/12/28/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</loc>
+    <lastmod>2018-01-06T03:12:58.382Z</lastmod>
+    <data>
+        <display>
+        <title>线性代数</title>
+        <pubTime>2017-12-28T15:22:00.000Z</pubTime>
+        
+        <tag>数学</tag>
+         
+        <tag>线性代数</tag>
+         
+         
+           
+             
+              <breadCrumb title="笔记" url="http://mmh.ac.cn/categories/%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://mmh.ac.cn/2018/01/05/%E5%B0%8F%E7%BB%93%EF%BC%9A%E7%BD%91%E7%BB%9C%E6%B5%81/</loc>
     <lastmod>2018-01-05T11:31:20.791Z</lastmod>
     <data>
@@ -104,28 +148,6 @@
         <tag>多项式</tag>
          
         <tag>生成函数</tag>
-         
-         
-           
-             
-              <breadCrumb title="笔记" url="http://mmh.ac.cn/categories/%E7%AC%94%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://mmh.ac.cn/2017/12/28/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</loc>
-    <lastmod>2018-01-05T01:20:25.330Z</lastmod>
-    <data>
-        <display>
-        <title>线性代数</title>
-        <pubTime>2017-12-28T15:22:00.000Z</pubTime>
-        
-        <tag>数学</tag>
-         
-        <tag>线性代数</tag>
          
          
            

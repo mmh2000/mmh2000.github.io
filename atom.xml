@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mmh.ac.cn/"/>
-  <updated>2018-01-05T11:31:20.791Z</updated>
+  <updated>2018-01-06T09:19:09.711Z</updated>
   <id>http://mmh.ac.cn/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>酷炫反演魔术</title>
+    <link href="http://mmh.ac.cn/2018/01/06/%E9%85%B7%E7%82%AB%E5%8F%8D%E6%BC%94%E9%AD%94%E6%9C%AF/"/>
+    <id>http://mmh.ac.cn/2018/01/06/酷炫反演魔术/</id>
+    <published>2018-01-06T06:55:00.000Z</published>
+    <updated>2018-01-06T09:19:09.711Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="数论函数"><a href="#数论函数" class="headerlink" title="数论函数"></a>数论函数</h3><p>若函数$f(n)$满足定义域为正整数域，值域为复数域，即$f$：$Z^+→C$ ，称$f(n)$为数论函数</p><p>若数论函数$f(n)$满足$f(1)=1$；且对于互质的正整数$p$、$q$，有$f(p⋅q)=f(p)⋅f(q)$，称$f(n)$为积性函数</p><p>若数论函数$f(n)$满足$f(1)=1$；且对于任意正整数$p$、$q$，有$f(p⋅q)=f(p)⋅f(q)$，称$f(n)$为完全积性函数</p><a id="more"></a><h4 id="常见的完全积性函数"><a href="#常见的完全积性函数" class="headerlink" title="常见的完全积性函数"></a>常见的完全积性函数</h4><ol><li><strong>元函数</strong> $e(n)=[n=1]$，狄利克雷卷积的乘法单位元</li><li><strong>恒等函数</strong> $I(n)=1$</li><li><strong>单位函数</strong> $id(n)=n$</li><li><strong>幂函数</strong> $id^k(n)=n^k$</li></ol><h4 id="常见的积性函数"><a href="#常见的积性函数" class="headerlink" title="常见的积性函数"></a>常见的积性函数</h4><ol><li><strong>除数函数</strong> $\sigma_k(n)=\sum\limits_{d|n}{d^k}$</li><li><strong>约数个数函数</strong>  $\tau(n)=\sigma_0(n)=\sum\limits_{d|n}{1}$</li><li><strong>约数和函数</strong> $\sigma(n)=\sigma_1(n)=\sum\limits_{d|n}{d}$</li><li><strong>欧拉函数</strong> $\varphi(n)=\sum\limits_{i=1}^{n}{[(n,i)=1]}$</li><li><strong>莫比乌斯函数</strong> 对于无平方因子数$n=\prod\limits_{i=1}^{t}p_i$，$\mu(n)=(-1)^t$；对于有平方因子数$n$，$\mu(n)=0$；在狄利克雷卷积的乘法中与恒等函数互为逆元</li></ol><h3 id="狄利克雷卷积与莫比乌斯反演"><a href="#狄利克雷卷积与莫比乌斯反演" class="headerlink" title="狄利克雷卷积与莫比乌斯反演"></a>狄利克雷卷积与莫比乌斯反演</h3><p>数论函数$f$和$g$的狄利克雷卷积定义为</p><script type="math/tex; mode=display">(f \times g)(n)=\sum\limits_{d|n}{f(d)~g(\frac{n}{d})}</script><p><strong>交换律</strong>：$f \times g=g \times f$</p><p><strong>结合律</strong>：$(f \times g) \times h=f \times (g \times h)$</p><p><strong>单位元</strong>：$f \times e =f$</p><p><strong>加法分配律</strong>：$f \times (g+h)=f \times g+ f\times h$</p><p>在上文数论函数的部分中提到，$\mu \times I = e$，利用这个等式可以解决下面的问题</p><p>已知$g(n)$&amp;$g(n)=\sum\limits_{d|n}{f(d)}$，求$f(n)$</p><p>$\because $  $f \times I=\sum\limits_{d|n}{f(d)~I(\frac{n}{d})}=g$</p><p>$\therefore $ $f \times I \times \mu=g \times \mu$</p><p>即$f=\mu \times g,f(n)=\sum\limits_{d|n}{\mu(d)~ g(\frac{n}{d})}                                                                                        ①$</p><p>类似地，若已知$g(n)$&amp;$g(n)=\sum\limits_{n|d}{f(d)}$</p><p>可以得到$f(n)=\sum\limits_{n|d}{\mu(\frac{d}{n}) ~ g(d)}②$</p><p>以上利用$\mu$实现$f$和$g$互相转化的过程称为莫比乌斯反演</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;数论函数&quot;&gt;&lt;a href=&quot;#数论函数&quot; class=&quot;headerlink&quot; title=&quot;数论函数&quot;&gt;&lt;/a&gt;数论函数&lt;/h3&gt;&lt;p&gt;若函数$f(n)$满足定义域为正整数域，值域为复数域，即$f$：$Z^+→C$ ，称$f(n)$为数论函数&lt;/p&gt;
+&lt;p&gt;若数论函数$f(n)$满足$f(1)=1$；且对于互质的正整数$p$、$q$，有$f(p⋅q)=f(p)⋅f(q)$，称$f(n)$为积性函数&lt;/p&gt;
+&lt;p&gt;若数论函数$f(n)$满足$f(1)=1$；且对于任意正整数$p$、$q$，有$f(p⋅q)=f(p)⋅f(q)$，称$f(n)$为完全积性函数&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="笔记" scheme="http://mmh.ac.cn/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="数学" scheme="http://mmh.ac.cn/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+      <category term="反演" scheme="http://mmh.ac.cn/tags/%E5%8F%8D%E6%BC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>小结：网络流</title>
@@ -231,9 +257,9 @@
     <link href="http://mmh.ac.cn/2017/12/28/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
     <id>http://mmh.ac.cn/2017/12/28/线性代数/</id>
     <published>2017-12-28T15:22:00.000Z</published>
-    <updated>2018-01-05T01:20:25.330Z</updated>
+    <updated>2018-01-06T03:12:58.382Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h2><p>矩阵是一个向量集,描述一个线性变换</p><a id="more"></a><h3 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h3><ul><li>加减：对应元素相加减</li><li>数乘：每个元素乘一个数</li><li>转置：将矩阵的行列交换</li><li><p>乘法：$A:m \times n$ 矩阵，$B:n \times p$ 矩阵，$C=AB:m \times p$ 矩阵<br> $C_{ij}=\sum\limits_{k=1}^{n}A_{ik}B_{kj}$</p><p>结合律：$(AB)C=A(BC)$<br>左分配律：$(A+B)C=AC+BC$<br>右分配律：$C(A+B)=CA+CB$<br>不满足交换律</p></li></ul><h3 id="特殊的矩阵"><a href="#特殊的矩阵" class="headerlink" title="特殊的矩阵"></a>特殊的矩阵</h3><p>单位矩阵$E$</p><p>$<br> \left[<br> \begin{matrix}<br>   1 &amp; 0 &amp; 0 \\\<br>   0 &amp; 1 &amp; 0 \\\<br>   0 &amp; 0 &amp; 1<br>  \end{matrix}<br>  \right]<br>$          </p><p>若$AB=E$，则$A$、$B$互为逆矩阵</p><p>循环矩阵</p><p>$<br> \left[<br> \begin{matrix}<br>   1 &amp; 2 &amp; 3 \\\<br>   3 &amp; 1 &amp; 2 \\\<br>   2 &amp; 3 &amp; 1<br> \end{matrix}<br> \right]<br>$      </p><ol><li>循环矩阵的线性运算及乘积仍是循环矩阵</li><li>满足乘法交换律：$AB=BA$</li><li>循环矩阵的逆仍是循环矩阵</li></ol><h3 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h3><p>对$n$阶方阵</p><p>$<br>\left[<br>\begin{matrix}<br>  a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n}\\<br>  a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n}\\<br>  \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\<br>  a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn}\\<br>\end{matrix}<br>\right]<br>$ $=\sum\limits_{j_1…j_n}^{}(-1)^{r(j_1…j_n)}a_{1j_1}…a_{nj_n}$</p><p>其中$j_1…j_n$为n元排列<br>$r(j_1…j_n)$表示其中的逆序对个数</p><h3 id="特征值与特征向量"><a href="#特征值与特征向量" class="headerlink" title="特征值与特征向量"></a>特征值与特征向量</h3><p>特征多项式</p><p>Cayley–Hamilton 定理</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h2><p>矩阵是一个向量集,描述一个线性变换</p><a id="more"></a><h3 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h3><ul><li>加减：对应元素相加减</li><li>数乘：每个元素乘一个数</li><li>转置：将矩阵的行列交换</li><li><p>乘法：$A:m \times n$ 矩阵，$B:n \times p$ 矩阵，$C=AB:m \times p$ 矩阵<br> $C_{ij}=\sum\limits_{k=1}^{n}A_{ik}B_{kj}$</p><p>结合律：$(AB)C=A(BC)$<br>左分配律：$(A+B)C=AC+BC$<br>右分配律：$C(A+B)=CA+CB$<br>不满足交换律</p></li></ul><h3 id="矩阵的逆"><a href="#矩阵的逆" class="headerlink" title="矩阵的逆"></a>矩阵的逆</h3><h3 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h3><p>对$n$阶方阵</p><p>$<br>\left[<br>\begin{matrix}<br>  a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n}\\<br>  a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n}\\<br>  \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\<br>  a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn}\\<br>\end{matrix}<br>\right]<br>$ $=\sum\limits_{j_1…j_n}^{}(-1)^{r(j_1…j_n)}a_{1j_1}…a_{nj_n}$</p><p>其中$j_1…j_n$为n元排列<br>$r(j_1…j_n)$表示其中的逆序对个数</p><h3 id="特征值与特征向量-amp-特征多项式"><a href="#特征值与特征向量-amp-特征多项式" class="headerlink" title="特征值与特征向量&amp;特征多项式"></a>特征值与特征向量&amp;特征多项式</h3><p>Cayley–Hamilton 定理</p><h3 id="特殊的矩阵"><a href="#特殊的矩阵" class="headerlink" title="特殊的矩阵"></a>特殊的矩阵</h3><p>单位矩阵$E$</p><p>$<br> \left[<br> \begin{matrix}<br>   1 &amp; 0 &amp; 0 \\\<br>   0 &amp; 1 &amp; 0 \\\<br>   0 &amp; 0 &amp; 1<br>  \end{matrix}<br>  \right]<br>$          </p><p>若$AB=E$，则$A$、$B$互为逆矩阵</p><p>循环矩阵</p><p>$<br> \left[<br> \begin{matrix}<br>   1 &amp; 2 &amp; 3 \\\<br>   3 &amp; 1 &amp; 2 \\\<br>   2 &amp; 3 &amp; 1<br> \end{matrix}<br> \right]<br>$      </p><ol><li>循环矩阵的线性运算及乘积仍是循环矩阵</li><li>满足乘法交换律：$AB=BA$</li><li>循环矩阵的逆仍是循环矩阵</li></ol><h3 id="线性方程组"><a href="#线性方程组" class="headerlink" title="线性方程组"></a>线性方程组</h3><h4 id="高斯消元法"><a href="#高斯消元法" class="headerlink" title="高斯消元法"></a>高斯消元法</h4>]]></content>
     
     <summary type="html">
     

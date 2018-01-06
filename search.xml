@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[酷炫反演魔术]]></title>
+    <url>%2F2018%2F01%2F06%2F%E9%85%B7%E7%82%AB%E5%8F%8D%E6%BC%94%E9%AD%94%E6%9C%AF%2F</url>
+    <content type="text"><![CDATA[数论函数若函数$f(n)$满足定义域为正整数域，值域为复数域，即$f$：$Z^+→C$ ，称$f(n)$为数论函数 若数论函数$f(n)$满足$f(1)=1$；且对于互质的正整数$p$、$q$，有$f(p⋅q)=f(p)⋅f(q)$，称$f(n)$为积性函数 若数论函数$f(n)$满足$f(1)=1$；且对于任意正整数$p$、$q$，有$f(p⋅q)=f(p)⋅f(q)$，称$f(n)$为完全积性函数 常见的完全积性函数 元函数 $e(n)=[n=1]$，狄利克雷卷积的乘法单位元 恒等函数 $I(n)=1$ 单位函数 $id(n)=n$ 幂函数 $id^k(n)=n^k$ 常见的积性函数 除数函数 $\sigma_k(n)=\sum\limits_{d|n}{d^k}$ 约数个数函数 $\tau(n)=\sigma_0(n)=\sum\limits_{d|n}{1}$ 约数和函数 $\sigma(n)=\sigma_1(n)=\sum\limits_{d|n}{d}$ 欧拉函数 $\varphi(n)=\sum\limits_{i=1}^{n}{[(n,i)=1]}$ 莫比乌斯函数 对于无平方因子数$n=\prod\limits_{i=1}^{t}p_i$，$\mu(n)=(-1)^t$；对于有平方因子数$n$，$\mu(n)=0$；在狄利克雷卷积的乘法中与恒等函数互为逆元 狄利克雷卷积与莫比乌斯反演数论函数$f$和$g$的狄利克雷卷积定义为 (f \times g)(n)=\sum\limits_{d|n}{f(d)~g(\frac{n}{d})}交换律：$f \times g=g \times f$ 结合律：$(f \times g) \times h=f \times (g \times h)$ 单位元：$f \times e =f$ 加法分配律：$f \times (g+h)=f \times g+ f\times h$ 在上文数论函数的部分中提到，$\mu \times I = e$，利用这个等式可以解决下面的问题 已知$g(n)$&amp;$g(n)=\sum\limits_{d|n}{f(d)}$，求$f(n)$ $\because $ $f \times I=\sum\limits_{d|n}{f(d)~I(\frac{n}{d})}=g$ $\therefore $ $f \times I \times \mu=g \times \mu$ 即$f=\mu \times g,f(n)=\sum\limits_{d|n}{\mu(d)~ g(\frac{n}{d})} ①$ 类似地，若已知$g(n)$&amp;$g(n)=\sum\limits_{n|d}{f(d)}$ 可以得到$f(n)=\sum\limits_{n|d}{\mu(\frac{d}{n}) ~ g(d)}②$ 以上利用$\mu$实现$f$和$g$互相转化的过程称为莫比乌斯反演]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>反演</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[小结：网络流]]></title>
     <url>%2F2018%2F01%2F05%2F%E5%B0%8F%E7%BB%93%EF%BC%9A%E7%BD%91%E7%BB%9C%E6%B5%81%2F</url>
     <content type="text"><![CDATA[remain to be done]]></content>
@@ -100,7 +112,7 @@
   <entry>
     <title><![CDATA[线性代数]]></title>
     <url>%2F2017%2F12%2F28%2F%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%2F</url>
-    <content type="text"><![CDATA[矩阵矩阵是一个向量集,描述一个线性变换 运算 加减：对应元素相加减 数乘：每个元素乘一个数 转置：将矩阵的行列交换 乘法：$A:m \times n$ 矩阵，$B:n \times p$ 矩阵，$C=AB:m \times p$ 矩阵 $C_{ij}=\sum\limits_{k=1}^{n}A_{ik}B_{kj}$ 结合律：$(AB)C=A(BC)$左分配律：$(A+B)C=AC+BC$右分配律：$C(A+B)=CA+CB$不满足交换律 特殊的矩阵单位矩阵$E$ $ \left[ \begin{matrix} 1 &amp; 0 &amp; 0 \\\ 0 &amp; 1 &amp; 0 \\\ 0 &amp; 0 &amp; 1 \end{matrix} \right]$ 若$AB=E$，则$A$、$B$互为逆矩阵 循环矩阵 $ \left[ \begin{matrix} 1 &amp; 2 &amp; 3 \\\ 3 &amp; 1 &amp; 2 \\\ 2 &amp; 3 &amp; 1 \end{matrix} \right]$ 循环矩阵的线性运算及乘积仍是循环矩阵 满足乘法交换律：$AB=BA$ 循环矩阵的逆仍是循环矩阵 行列式对$n$阶方阵 $\left[\begin{matrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n}\\ a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\ a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn}\\\end{matrix}\right]$ $=\sum\limits_{j_1…j_n}^{}(-1)^{r(j_1…j_n)}a_{1j_1}…a_{nj_n}$ 其中$j_1…j_n$为n元排列$r(j_1…j_n)$表示其中的逆序对个数 特征值与特征向量特征多项式 Cayley–Hamilton 定理]]></content>
+    <content type="text"><![CDATA[矩阵矩阵是一个向量集,描述一个线性变换 运算 加减：对应元素相加减 数乘：每个元素乘一个数 转置：将矩阵的行列交换 乘法：$A:m \times n$ 矩阵，$B:n \times p$ 矩阵，$C=AB:m \times p$ 矩阵 $C_{ij}=\sum\limits_{k=1}^{n}A_{ik}B_{kj}$ 结合律：$(AB)C=A(BC)$左分配律：$(A+B)C=AC+BC$右分配律：$C(A+B)=CA+CB$不满足交换律 矩阵的逆行列式对$n$阶方阵 $\left[\begin{matrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n}\\ a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\ a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn}\\\end{matrix}\right]$ $=\sum\limits_{j_1…j_n}^{}(-1)^{r(j_1…j_n)}a_{1j_1}…a_{nj_n}$ 其中$j_1…j_n$为n元排列$r(j_1…j_n)$表示其中的逆序对个数 特征值与特征向量&amp;特征多项式Cayley–Hamilton 定理 特殊的矩阵单位矩阵$E$ $ \left[ \begin{matrix} 1 &amp; 0 &amp; 0 \\\ 0 &amp; 1 &amp; 0 \\\ 0 &amp; 0 &amp; 1 \end{matrix} \right]$ 若$AB=E$，则$A$、$B$互为逆矩阵 循环矩阵 $ \left[ \begin{matrix} 1 &amp; 2 &amp; 3 \\\ 3 &amp; 1 &amp; 2 \\\ 2 &amp; 3 &amp; 1 \end{matrix} \right]$ 循环矩阵的线性运算及乘积仍是循环矩阵 满足乘法交换律：$AB=BA$ 循环矩阵的逆仍是循环矩阵 线性方程组高斯消元法]]></content>
       <categories>
         <category>笔记</category>
       </categories>
