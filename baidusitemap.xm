@@ -3,6 +3,8 @@
 
 
     
+    
+    
   <url>
     <loc>http://mmh.ac.cn/2046/12/29/Test/</loc>
     <lastmod>2018-01-08T03:44:35.071Z</lastmod>
@@ -294,9 +296,9 @@
         <title>分块与莫队</title>
         <pubTime>2018-01-05T11:31:00.000Z</pubTime>
         
-        <tag>暴力</tag>
-         
         <tag>数据结构</tag>
+         
+        <tag>暴力</tag>
          
          
            
@@ -506,8 +508,6 @@
     </data>
     </url>
 
-    
-    
     
     
     
