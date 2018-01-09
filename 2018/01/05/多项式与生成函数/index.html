@@ -146,7 +146,7 @@
 <meta property="og:site_name" content="mmh&#39;s Blog">
 <meta property="og:description" content="多项式表示系数表示法：$F(x)=\sum\limits_{i=0}^{n}a_ix^i$ 点值表示法：$(x_0,y_0),(x_1,y_1),\cdots,(x_n,y_n)$ 对于多项式$A(x)$，称其最高项的次数为这个多项式的度，记作$degA$">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-05T01:53:28.398Z">
+<meta property="og:updated_time" content="2018-01-07T13:46:39.389Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多项式与生成函数">
 <meta name="twitter:description" content="多项式表示系数表示法：$F(x)=\sum\limits_{i=0}^{n}a_ix^i$ 点值表示法：$(x_0,y_0),(x_1,y_1),\cdots,(x_n,y_n)$ 对于多项式$A(x)$，称其最高项的次数为这个多项式的度，记作$degA$">
@@ -444,7 +444,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  616
+                  802
                 </span>
               
 
@@ -484,12 +484,34 @@
 <p><a href="https://www.cnblogs.com/candy99/p/6641972.html" target="_blank" rel="noopener">notes</a></p>
 <p><strong>快速沃尔什变换(FWT)</strong></p>
 <p><a href="http://picks.logdown.com/posts/179290-fast-walsh-hadamard-transform" target="_blank" rel="noopener">orz picks</a></p>
-<h4 id="多项式求逆"><a href="#多项式求逆" class="headerlink" title="多项式求逆"></a>多项式求逆</h4><p>对于多项式$A(X)$$,B(X)$，存在唯一的$Q(x)$,$R(x)$满足$A(x) = Q(x)B(x) + R(x)$，其中$degR&lt;degB$，称$Q(x)$为$B(x)$除$A(x)$的<strong>商</strong>，$R(x)$为$B(x)$除$A(x)$的<strong>余数</strong>，记作$A(x) \equiv R(x) \pmod {B(x)}$</p>
+<h4 id="多项式求逆"><a href="#多项式求逆" class="headerlink" title="多项式求逆"></a>多项式求逆</h4><p>对于多项式$A(X)$,B(X)$，存在唯一的$Q(x)$,$R(x)$满足$A(x) = Q(x)B(x) + R(x)$，其中$degR&lt;degB$，称$Q(x)$为$B(x)$除$A(x)$的<strong>商</strong>，$R(x)$为$B(x)$除$A(x)$的<strong>余数</strong>，记作$A(x) \equiv R(x) \pmod {B(x)}$</p>
 <p>对于多项式$A(x)$，如果存在$B(x)$满足$degB≤degA$并且$A(x)B(x) \equiv 1 \pmod {x^n}$，那么称$B(x)$为$A(x)$在$mod$ $x^n$意义下的<strong>逆元</strong>，记作$A^{-1}(x)$</p>
-<h4 id="多项式除法"><a href="#多项式除法" class="headerlink" title="多项式除法"></a>多项式除法</h4><h4 id="多项式取模"><a href="#多项式取模" class="headerlink" title="多项式取模"></a>多项式取模</h4><h4 id="牛顿迭代"><a href="#牛顿迭代" class="headerlink" title="牛顿迭代"></a>牛顿迭代</h4><h4 id="多项式开方"><a href="#多项式开方" class="headerlink" title="多项式开方"></a>多项式开方</h4><h4 id="多项式对数"><a href="#多项式对数" class="headerlink" title="多项式对数"></a>多项式对数</h4><h4 id="多项式指数"><a href="#多项式指数" class="headerlink" title="多项式指数"></a>多项式指数</h4><h4 id="多项式复合"><a href="#多项式复合" class="headerlink" title="多项式复合"></a>多项式复合</h4><h4 id="多项式多点求值与插值"><a href="#多项式多点求值与插值" class="headerlink" title="多项式多点求值与插值"></a>多项式多点求值与插值</h4><p><strong>多点求值</strong>：给出多项式$A(x)$和$n$个点$x_0, x_1, \cdots, x_{n-1}$，要求求出$A(x_0), A(x_1), \cdots, A(x_{n-1})$</p>
+<p>采用倍增思想，设$B(x)$为$\bmod x^{\lceil \frac{n}{2} \rceil}$意义下$A(x)$的逆元</p>
+<p>经过推导，最后可以得到</p>
+<script type="math/tex; mode=display">A^{-1}(x) \equiv 2B(x) - A(x)B^2(x) \pmod {x^n}</script><p>递归$FFT$就可以搞了,同时易知多项式有逆元的充分必要条件为常数项有逆元</p>
+<p>$O(n \log n)$，常数约为$FFT$的$6$倍</p>
+<p><a href="http://blog.miskcoo.com/2015/05/polynomial-inverse" target="_blank" rel="noopener">推导</a></p>
+<h4 id="多项式除法"><a href="#多项式除法" class="headerlink" title="多项式除法"></a>多项式除法</h4><p>系数反转……</p>
+<h4 id="多项式取模"><a href="#多项式取模" class="headerlink" title="多项式取模"></a>多项式取模</h4><p>………………</p>
+<h4 id="牛顿迭代法"><a href="#牛顿迭代法" class="headerlink" title="牛顿迭代法"></a>牛顿迭代法</h4><p>给出$G(x)$，求$F(x)$，满足</p>
+<script type="math/tex; mode=display">G(f(x)) \equiv 0 \pmod {x^n}</script><p>$O(n \log n)$，常数至少为$FFT$的$18$倍</p>
+<h4 id="多项式开方"><a href="#多项式开方" class="headerlink" title="多项式开方"></a>多项式开方</h4><p>求$B^2(x) \equiv A(x) \pmod {x^n}$</p>
+<p>类似多项式求逆，设$B_0(x)$为$\bmod x^{\lceil \frac{n}{2} \rceil}$意义下$A(x)$的平方根</p>
+<p>整理后得到</p>
+<script type="math/tex; mode=display">B(x)=\frac{B_0(x)+A(x)B_0^{-1}(x)}{2} \pmod {x^n}</script><p>$O(n \log n)$</p>
+<h4 id="多项式求In"><a href="#多项式求In" class="headerlink" title="多项式求In"></a>多项式求In</h4><p>求导……</p>
+<h4 id="多项式求exp"><a href="#多项式求exp" class="headerlink" title="多项式求exp"></a>多项式求exp</h4><p>取对数后使用牛顿迭代法</p>
+<h4 id="多项式k次幂"><a href="#多项式k次幂" class="headerlink" title="多项式k次幂"></a>多项式k次幂</h4><p>……</p>
+<h4 id="多项式复合"><a href="#多项式复合" class="headerlink" title="多项式复合"></a>多项式复合</h4><p>……</p>
+<h4 id="多项式多点求值与插值"><a href="#多项式多点求值与插值" class="headerlink" title="多项式多点求值与插值"></a>多项式多点求值与插值</h4><p><strong>多点求值</strong>：给出多项式$A(x)$和$n$个点$x_0, x_1, \cdots, x_{n-1}$，要求求出$A(x_0), A(x_1), \cdots, A(x_{n-1})$</p>
 <p><strong>插值</strong>：给出n+1个点$(x_0, y_0), (x_1, y_1), \cdots, (x_n, y_n)$，求出一个$n$次多项式，使得这些点都在这个多项式上</p>
-<p><a href="http://blog.miskcoo.com/2015/05/polynomial-multipoint-eval-and-interpolation" target="_blank" rel="noopener">orz</a></p>
-<h2 id="生成函数"><a href="#生成函数" class="headerlink" title="生成函数"></a>生成函数</h2><h3 id="普通型生成函数-OGF"><a href="#普通型生成函数-OGF" class="headerlink" title="普通型生成函数(OGF)"></a>普通型生成函数(OGF)</h3><p>定义序列$a_n$的普通型生成函数 $(Ordinary Generating Function, OGF)$，为</p>
+<p>大力搞搞……</p>
+<p><a href="http://blog.miskcoo.com/" target="_blank" rel="noopener">Orz Miskcoo</a></p>
+<p><a href="http://picks.logdown.com/" target="_blank" rel="noopener">Orz Picks</a></p>
+<p><a href="http://www.cnblogs.com/candy99/p/6744332.html" target="_blank" rel="noopener">Orz Candy?</a></p>
+<p><a href="http://m.blog.csdn.net/semiwaker/article/details/73251486" target="_blank" rel="noopener">参考</a></p>
+<p><a href="http://blog.csdn.net/coldef/article/details/76020530" target="_blank" rel="noopener">参考2</a></p>
+<h2 id="生成函数"><a href="#生成函数" class="headerlink" title="生成函数"></a>生成函数</h2><h3 id="普通型生成函数"><a href="#普通型生成函数" class="headerlink" title="普通型生成函数"></a>普通型生成函数</h3><p>定义序列$a_n$的普通型生成函数 $(Ordinary Generating Function, OGF)$，为</p>
 <script type="math/tex; mode=display">A(x)=\sum_\limits{i=0}^{}a_ix^i</script><h3 id="指数型生成函数"><a href="#指数型生成函数" class="headerlink" title="指数型生成函数"></a>指数型生成函数</h3><p>定义序列$a_n$的指数型生成函数 $ (Exponential Generating Function, EGF) $，为</p>
 <script type="math/tex; mode=display">A(x)=\sum_\limits{i=0}^{}a_i \frac{x^i}{i!}</script>
       
@@ -623,7 +645,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -645,7 +667,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -715,7 +737,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#多项式"><span class="nav-number">1.</span> <span class="nav-text">多项式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#表示"><span class="nav-number">1.1.</span> <span class="nav-text">表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运算"><span class="nav-number">1.2.</span> <span class="nav-text">运算</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式加减"><span class="nav-number">1.2.1.</span> <span class="nav-text">多项式加减</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式乘法"><span class="nav-number">1.2.2.</span> <span class="nav-text">多项式乘法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式求逆"><span class="nav-number">1.2.3.</span> <span class="nav-text">多项式求逆</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式除法"><span class="nav-number">1.2.4.</span> <span class="nav-text">多项式除法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式取模"><span class="nav-number">1.2.5.</span> <span class="nav-text">多项式取模</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#牛顿迭代"><span class="nav-number">1.2.6.</span> <span class="nav-text">牛顿迭代</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式开方"><span class="nav-number">1.2.7.</span> <span class="nav-text">多项式开方</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式对数"><span class="nav-number">1.2.8.</span> <span class="nav-text">多项式对数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式指数"><span class="nav-number">1.2.9.</span> <span class="nav-text">多项式指数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式复合"><span class="nav-number">1.2.10.</span> <span class="nav-text">多项式复合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式多点求值与插值"><span class="nav-number">1.2.11.</span> <span class="nav-text">多项式多点求值与插值</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成函数"><span class="nav-number">2.</span> <span class="nav-text">生成函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#普通型生成函数-OGF"><span class="nav-number">2.1.</span> <span class="nav-text">普通型生成函数(OGF)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指数型生成函数"><span class="nav-number">2.2.</span> <span class="nav-text">指数型生成函数</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#多项式"><span class="nav-number">1.</span> <span class="nav-text">多项式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#表示"><span class="nav-number">1.1.</span> <span class="nav-text">表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运算"><span class="nav-number">1.2.</span> <span class="nav-text">运算</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式加减"><span class="nav-number">1.2.1.</span> <span class="nav-text">多项式加减</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式乘法"><span class="nav-number">1.2.2.</span> <span class="nav-text">多项式乘法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式求逆"><span class="nav-number">1.2.3.</span> <span class="nav-text">多项式求逆</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式除法"><span class="nav-number">1.2.4.</span> <span class="nav-text">多项式除法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式取模"><span class="nav-number">1.2.5.</span> <span class="nav-text">多项式取模</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#牛顿迭代法"><span class="nav-number">1.2.6.</span> <span class="nav-text">牛顿迭代法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式开方"><span class="nav-number">1.2.7.</span> <span class="nav-text">多项式开方</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式求In"><span class="nav-number">1.2.8.</span> <span class="nav-text">多项式求In</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式求exp"><span class="nav-number">1.2.9.</span> <span class="nav-text">多项式求exp</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式k次幂"><span class="nav-number">1.2.10.</span> <span class="nav-text">多项式k次幂</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式复合"><span class="nav-number">1.2.11.</span> <span class="nav-text">多项式复合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式多点求值与插值"><span class="nav-number">1.2.12.</span> <span class="nav-text">多项式多点求值与插值</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成函数"><span class="nav-number">2.</span> <span class="nav-text">生成函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#普通型生成函数"><span class="nav-number">2.1.</span> <span class="nav-text">普通型生成函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指数型生成函数"><span class="nav-number">2.2.</span> <span class="nav-text">指数型生成函数</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -749,7 +771,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">12.1k</span>
+    <span title="Site words total count">14.2k</span>
   
 </div>
 
