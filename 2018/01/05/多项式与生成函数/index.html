@@ -14,13 +14,6 @@
 
 
 
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
-
 
 
 
@@ -138,18 +131,18 @@
 
 
 
-<meta name="description" content="多项式表示系数表示法：$F(x)=\sum\limits_{i=0}^{n}a_ix^i$ 点值表示法：$(x_0,y_0),(x_1,y_1),\cdots,(x_n,y_n)$ 对于多项式$A(x)$，称其最高项的次数为这个多项式的度，记作$degA$">
+<meta name="description" content="多项式 表示系数表示法：$F(x)=\sum\limits_{i=0}^{n}a_ix^i$ 点值表示法：$(x_0,y_0),(x_1,y_1),\cdots,(x_n,y_n)$ 对于多项式$A(x)$，称其最高项的次数为这个多项式的度，记作$degA$">
 <meta name="keywords" content="数学,多项式,生成函数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="多项式与生成函数">
 <meta property="og:url" content="http://mmh.ac.cn/2018/01/05/多项式与生成函数/index.html">
 <meta property="og:site_name" content="mmh&#39;s Blog">
-<meta property="og:description" content="多项式表示系数表示法：$F(x)=\sum\limits_{i=0}^{n}a_ix^i$ 点值表示法：$(x_0,y_0),(x_1,y_1),\cdots,(x_n,y_n)$ 对于多项式$A(x)$，称其最高项的次数为这个多项式的度，记作$degA$">
+<meta property="og:description" content="多项式 表示系数表示法：$F(x)=\sum\limits_{i=0}^{n}a_ix^i$ 点值表示法：$(x_0,y_0),(x_1,y_1),\cdots,(x_n,y_n)$ 对于多项式$A(x)$，称其最高项的次数为这个多项式的度，记作$degA$">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-07T13:46:39.389Z">
+<meta property="og:updated_time" content="2018-01-10T13:06:57.109Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多项式与生成函数">
-<meta name="twitter:description" content="多项式表示系数表示法：$F(x)=\sum\limits_{i=0}^{n}a_ix^i$ 点值表示法：$(x_0,y_0),(x_1,y_1),\cdots,(x_n,y_n)$ 对于多项式$A(x)$，称其最高项的次数为这个多项式的度，记作$degA$">
+<meta name="twitter:description" content="多项式 表示系数表示法：$F(x)=\sum\limits_{i=0}^{n}a_ix^i$ 点值表示法：$(x_0,y_0),(x_1,y_1),\cdots,(x_n,y_n)$ 对于多项式$A(x)$，称其最高项的次数为这个多项式的度，记作$degA$">
 
 
 
@@ -457,7 +450,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  802
+                  914
                 </span>
               
 
@@ -482,51 +475,70 @@
       
 
       
-        <h2 id="多项式"><a href="#多项式" class="headerlink" title="多项式"></a>多项式</h2><h3 id="表示"><a href="#表示" class="headerlink" title="表示"></a>表示</h3><p><strong>系数表示法</strong>：$F(x)=\sum\limits_{i=0}^{n}a_ix^i$</p>
+        <h1 id="多项式"><a href="#多项式" class="headerlink" title="多项式"></a>多项式</h1><p><br></p>
+<h2 id="表示"><a href="#表示" class="headerlink" title="表示"></a>表示</h2><div class="note info"><p><strong>系数表示法</strong>：$F(x)=\sum\limits_{i=0}^{n}a_ix^i$</p>
 <p><strong>点值表示法</strong>：$(x_0,y_0),(x_1,y_1),\cdots,(x_n,y_n)$</p>
-<p>对于多项式$A(x)$，称其最高项的次数为这个多项式的<strong>度</strong>，记作$degA$</p>
+<p>对于多项式$A(x)$，称其最高项的次数为这个多项式的<strong>度</strong>，记作$degA$</p></div>
 <a id="more"></a>
-<h3 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h3><h4 id="多项式加减"><a href="#多项式加减" class="headerlink" title="多项式加减"></a>多项式加减</h4><p>采用系数表示法，进行向量加减</p>
-<p>$O(n)$</p>
-<h4 id="多项式乘法"><a href="#多项式乘法" class="headerlink" title="多项式乘法"></a>多项式乘法</h4><p>采用点值表示法，将点的坐标相乘</p>
-<p>$O(n)$</p>
-<p><strong>快速傅里叶变换(FFT)</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">complex</span>&lt;<span class="keyword">double</span>&gt; C;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pre</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	m=n&lt;&lt;<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(n=<span class="number">1</span>;n&lt;=m;n&lt;&lt;=<span class="number">1</span>) L++;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++) R[i]=(R[i&gt;&gt;<span class="number">1</span>]&gt;&gt;<span class="number">1</span>)|((i&amp;<span class="number">1</span>)&lt;&lt;(L<span class="number">-1</span>));<span class="comment">//求逆序表：末位为0，直接为其前一半逆序表的值右移一位，末位为1，在最高位添加1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">FFT</span><span class="params">(C *a,<span class="keyword">int</span> f)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++) <span class="keyword">if</span>(R[i]&gt;i) swap(a[i],a[R[i]]);<span class="comment">//利用逆序表，快速求逆序</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;i&lt;&lt;=<span class="number">1</span>)&#123;</span><br><span class="line">        C wn(cos(pi/i),f*sin(pi/i));</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n;j+=i&lt;&lt;<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="function">C <span class="title">w</span><span class="params">(<span class="number">1</span>,<span class="number">0</span>)</span></span>;<span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;i;k++,w*=wn)&#123;</span><br><span class="line">                C x=a[j+k],y=w*a[j+k+i];</span><br><span class="line">                a[j+k]=x+y;a[j+k+i]=x-y;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(f==<span class="number">-1</span>) <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++) a[i]/=n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><a href="http://www.gatevin.moe/acm/fft算法学习笔记/" target="_blank" rel="noopener">notes</a></p>
-<p><strong>快速数论变换(NTT)</strong></p>
-<p><a href="https://www.cnblogs.com/candy99/p/6641972.html" target="_blank" rel="noopener">notes</a></p>
-<p><strong>快速沃尔什变换(FWT)</strong></p>
-<p><a href="http://picks.logdown.com/posts/179290-fast-walsh-hadamard-transform" target="_blank" rel="noopener">orz picks</a></p>
-<h4 id="多项式求逆"><a href="#多项式求逆" class="headerlink" title="多项式求逆"></a>多项式求逆</h4><p>对于多项式$A(X)$,B(X)$，存在唯一的$Q(x)$,$R(x)$满足$A(x) = Q(x)B(x) + R(x)$，其中$degR&lt;degB$，称$Q(x)$为$B(x)$除$A(x)$的<strong>商</strong>，$R(x)$为$B(x)$除$A(x)$的<strong>余数</strong>，记作$A(x) \equiv R(x) \pmod {B(x)}$</p>
-<p>对于多项式$A(x)$，如果存在$B(x)$满足$degB≤degA$并且$A(x)B(x) \equiv 1 \pmod {x^n}$，那么称$B(x)$为$A(x)$在$mod$ $x^n$意义下的<strong>逆元</strong>，记作$A^{-1}(x)$</p>
+<p><br></p>
+<h2 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h2><div class="note info"><p><strong>多项式加减</strong>：采用系数表示法，进行向量加减</p>
+<p><strong>多项式乘法</strong>：采用点值表示法，将点的坐标相乘</p></div>
+<p><br></p>
+<h3 id="快速傅里叶变换-FFT"><a href="#快速傅里叶变换-FFT" class="headerlink" title="快速傅里叶变换(FFT)"></a>快速傅里叶变换(FFT)</h3><p>基础知识部分待填坑</p>
+<div class="note info"><p><strong>DTF</strong>：系数表示法-&gt;点值表示法<br><strong>逆DFT</strong>：点值表示法-&gt;系数表示法<br>利用单位复数根的性质，可以在$O(n \log n)$的时间复杂度内完成</p></div>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">complex</span>&lt;<span class="keyword">double</span>&gt; C;<span class="comment">//复数库</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pre</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    m=n&lt;&lt;<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(n=<span class="number">1</span>;n&lt;=m;n&lt;&lt;=<span class="number">1</span>) L++;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++) R[i]=(R[i&gt;&gt;<span class="number">1</span>]&gt;&gt;<span class="number">1</span>)|((i&amp;<span class="number">1</span>)&lt;&lt;(L<span class="number">-1</span>));<span class="comment">//求逆序表：末位为0，直接为其前一半逆序表的值右移一位，末位为1，在最高位添加1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">FFT</span><span class="params">(C *a,<span class="keyword">int</span> f)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++) <span class="keyword">if</span>(R[i]&gt;i) swap(a[i],a[R[i]]);<span class="comment">//利用逆序表，快速求逆序</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;i&lt;&lt;=<span class="number">1</span>)&#123;</span><br><span class="line">        C wn(cos(pi/i),f*sin(pi/i));</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n;j+=i&lt;&lt;<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="function">C <span class="title">w</span><span class="params">(<span class="number">1</span>,<span class="number">0</span>)</span></span>;<span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;i;k++,w*=wn)&#123;</span><br><span class="line">                C x=a[j+k],y=w*a[j+k+i];</span><br><span class="line">                a[j+k]=x+y;a[j+k+i]=x-y;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(f==<span class="number">-1</span>) <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++) a[i]/=n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a class="btn" href="http://www.gatevin.moe/acm/fft算法学习笔记/" target="_blank" rel="noopener"><i class="fa fa-book fa-lg fa-fw"></i>笔记</a>
+<p><br></p>
+<h3 id="快速数论变换-NTT"><a href="#快速数论变换-NTT" class="headerlink" title="快速数论变换(NTT)"></a>快速数论变换(NTT)</h3><div class="note danger"><p>FFT的缺点：常数大，炸精度，无法在模意义下求解</p></div>
+<p><i class="fa fa-key"></i> 新的算法</p>
+<div class="note success"><p>数论意义下</p>
+<p>一般模数$P=a \cdot 2^m +1,a$是一个较小的数</p>
+<p>用原根代替单位复数根</p></div>
+<a class="btn" href="https://www.cnblogs.com/candy99/p/6641972.html算法学习笔记/" target="_blank" rel="noopener"><i class="fa fa-book fa-lg fa-fw"></i>笔记</a>
+<p><br></p>
+<h3 id="快速沃尔什变换-FWT"><a href="#快速沃尔什变换-FWT" class="headerlink" title="快速沃尔什变换(FWT)"></a>快速沃尔什变换(FWT)</h3><p>大坑待填</p>
+<a class="btn" href="http://picks.logdown.com/posts/179290-fast-walsh-hadamard-transform算法学习笔记/" target="_blank" rel="noopener"><i class="fa fa-book fa-lg fa-fw"></i>笔记</a>
+<p><br></p>
+<h3 id="多项式求逆"><a href="#多项式求逆" class="headerlink" title="多项式求逆"></a>多项式求逆</h3><div class="note info"><p>对于多项式$A(x),B(x)$，存在唯一的$Q(x),R(x)$<br>满足$A(x)=Q(x)B(x)+R(x)$，其中$degR&lt;degB$<br>称$Q(x)$为$B(x)$除$A(x)$的<strong>商</strong>，$R(x)$为$B(x)$除$A(x)$的<strong>余数</strong><br>记作$A(x) \equiv R(x) \pmod {B(x)}$</p>
+<p>对于多项式$A(x)$，若存在$B(x)$满足$degB≤degA$，<br>并且$A(x)B(x) \equiv 1 \pmod {x^n}$，那么称$B(x)$为$A(x)$在$mod$ $x^n$意义下的<strong>逆元</strong>，记作$A^{-1}(x)$</p></div>
 <p>采用倍增思想，设$B(x)$为$\bmod x^{\lceil \frac{n}{2} \rceil}$意义下$A(x)$的逆元</p>
 <p>经过推导，最后可以得到</p>
 <script type="math/tex; mode=display">A^{-1}(x) \equiv 2B(x) - A(x)B^2(x) \pmod {x^n}</script><p>递归$FFT$就可以搞了,同时易知多项式有逆元的充分必要条件为常数项有逆元</p>
 <p>$O(n \log n)$，常数约为$FFT$的$6$倍</p>
-<p><a href="http://blog.miskcoo.com/2015/05/polynomial-inverse" target="_blank" rel="noopener">推导</a></p>
-<h4 id="多项式除法"><a href="#多项式除法" class="headerlink" title="多项式除法"></a>多项式除法</h4><p>系数反转……</p>
-<h4 id="多项式取模"><a href="#多项式取模" class="headerlink" title="多项式取模"></a>多项式取模</h4><p>………………</p>
-<h4 id="牛顿迭代法"><a href="#牛顿迭代法" class="headerlink" title="牛顿迭代法"></a>牛顿迭代法</h4><p>给出$G(x)$，求$F(x)$，满足</p>
-<script type="math/tex; mode=display">G(f(x)) \equiv 0 \pmod {x^n}</script><p>$O(n \log n)$，常数至少为$FFT$的$18$倍</p>
-<h4 id="多项式开方"><a href="#多项式开方" class="headerlink" title="多项式开方"></a>多项式开方</h4><p>求$B^2(x) \equiv A(x) \pmod {x^n}$</p>
+<a class="btn" href="http://blog.miskcoo.com/2015/05/polynomial-inverse" target="_blank" rel="noopener"><i class="fa fa-arrows-alt fa-lg fa-fw"></i>推导</a>
+<p><br></p>
+<h3 id="多项式除法"><a href="#多项式除法" class="headerlink" title="多项式除法"></a>多项式除法</h3><p>大坑待填</p>
+<p><br></p>
+<h3 id="多项式取模"><a href="#多项式取模" class="headerlink" title="多项式取模"></a>多项式取模</h3><p>大坑待填</p>
+<p><br></p>
+<h3 id="牛顿迭代法"><a href="#牛顿迭代法" class="headerlink" title="牛顿迭代法"></a>牛顿迭代法</h3><p>给出$G(x)$，求$F(x)$，满足</p>
+<script type="math/tex; mode=display">G(f(x)) \equiv 0 \pmod {x^n}</script><p><br></p>
+<h3 id="多项式开方"><a href="#多项式开方" class="headerlink" title="多项式开方"></a>多项式开方</h3><p>求$B^2(x) \equiv A(x) \pmod {x^n}$</p>
 <p>类似多项式求逆，设$B_0(x)$为$\bmod x^{\lceil \frac{n}{2} \rceil}$意义下$A(x)$的平方根</p>
 <p>整理后得到</p>
 <script type="math/tex; mode=display">B(x)=\frac{B_0(x)+A(x)B_0^{-1}(x)}{2} \pmod {x^n}</script><p>$O(n \log n)$</p>
-<h4 id="多项式求In"><a href="#多项式求In" class="headerlink" title="多项式求In"></a>多项式求In</h4><p>求导……</p>
-<h4 id="多项式求exp"><a href="#多项式求exp" class="headerlink" title="多项式求exp"></a>多项式求exp</h4><p>取对数后使用牛顿迭代法</p>
-<h4 id="多项式k次幂"><a href="#多项式k次幂" class="headerlink" title="多项式k次幂"></a>多项式k次幂</h4><p>……</p>
-<h4 id="多项式复合"><a href="#多项式复合" class="headerlink" title="多项式复合"></a>多项式复合</h4><p>……</p>
-<h4 id="多项式多点求值与插值"><a href="#多项式多点求值与插值" class="headerlink" title="多项式多点求值与插值"></a>多项式多点求值与插值</h4><p><strong>多点求值</strong>：给出多项式$A(x)$和$n$个点$x_0, x_1, \cdots, x_{n-1}$，要求求出$A(x_0), A(x_1), \cdots, A(x_{n-1})$</p>
+<p><br></p>
+<h3 id="多项式In"><a href="#多项式In" class="headerlink" title="多项式In"></a>多项式In</h3><p>求导……</p>
+<p><br></p>
+<h3 id="多项式exp"><a href="#多项式exp" class="headerlink" title="多项式exp"></a>多项式exp</h3><p>取对数后使用牛顿迭代法</p>
+<p><br></p>
+<h3 id="多项式k次幂"><a href="#多项式k次幂" class="headerlink" title="多项式k次幂"></a>多项式k次幂</h3><p>……</p>
+<p><br></p>
+<h3 id="多项式复合"><a href="#多项式复合" class="headerlink" title="多项式复合"></a>多项式复合</h3><p>……</p>
+<p><br></p>
+<h3 id="多项式多点求值与插值"><a href="#多项式多点求值与插值" class="headerlink" title="多项式多点求值与插值"></a>多项式多点求值与插值</h3><p><strong>多点求值</strong>：给出多项式$A(x)$和$n$个点$x_0, x_1, \cdots, x_{n-1}$，要求求出$A(x_0)$, $A(x_1)$, $\cdots$, $A(x_{n-1})$</p>
 <p><strong>插值</strong>：给出n+1个点$(x_0, y_0), (x_1, y_1), \cdots, (x_n, y_n)$，求出一个$n$次多项式，使得这些点都在这个多项式上</p>
 <p>大力搞搞……</p>
-<p><a href="http://blog.miskcoo.com/" target="_blank" rel="noopener">Orz Miskcoo</a></p>
-<p><a href="http://picks.logdown.com/" target="_blank" rel="noopener">Orz Picks</a></p>
-<p><a href="http://www.cnblogs.com/candy99/p/6744332.html" target="_blank" rel="noopener">Orz Candy?</a></p>
-<p><a href="http://m.blog.csdn.net/semiwaker/article/details/73251486" target="_blank" rel="noopener">参考</a></p>
-<p><a href="http://blog.csdn.net/coldef/article/details/76020530" target="_blank" rel="noopener">参考2</a></p>
-<h2 id="生成函数"><a href="#生成函数" class="headerlink" title="生成函数"></a>生成函数</h2><h3 id="普通型生成函数"><a href="#普通型生成函数" class="headerlink" title="普通型生成函数"></a>普通型生成函数</h3><p>定义序列$a_n$的普通型生成函数 $(Ordinary Generating Function, OGF)$，为</p>
-<script type="math/tex; mode=display">A(x)=\sum_\limits{i=0}^{}a_ix^i</script><h3 id="指数型生成函数"><a href="#指数型生成函数" class="headerlink" title="指数型生成函数"></a>指数型生成函数</h3><p>定义序列$a_n$的指数型生成函数 $ (Exponential Generating Function, EGF) $，为</p>
-<script type="math/tex; mode=display">A(x)=\sum_\limits{i=0}^{}a_i \frac{x^i}{i!}</script>
+<p><br></p>
+<p><strong>参考资料</strong><br><div class="note primary"><p><a href="http://blog.miskcoo.com/" target="_blank" rel="noopener">Orz Miskcoo</a>；<a href="http://blog.miskcoo.com/" target="_blank" rel="noopener">Orz Miskcoo</a>；<a href="http://www.cnblogs.com/candy99/p/6744332.html" target="_blank" rel="noopener">Orz Candy?</a></p>
+<p><a href="http://m.blog.csdn.net/semiwaker/article/details/73251486" target="_blank" rel="noopener">总结1</a>；<a href="http://blog.csdn.net/coldef/article/details/76020530" target="_blank" rel="noopener">总结2</a></p></div></p>
+<p><br></p>
+<h1 id="生成函数"><a href="#生成函数" class="headerlink" title="生成函数"></a>生成函数</h1><p><br></p>
+<h2 id="普通型生成函数"><a href="#普通型生成函数" class="headerlink" title="普通型生成函数"></a>普通型生成函数</h2><div class="note info"><p>定义序列$a_n$的普通型生成函数 (Ordinary Generating Function, OGF)，为</p>
+<script type="math/tex; mode=display">A(x)=\sum_\limits{i=0}^{}a_ix^i</script></div>
+<h2 id="指数型生成函数"><a href="#指数型生成函数" class="headerlink" title="指数型生成函数"></a>指数型生成函数</h2><div class="note info"><p>定义序列$a_n$的指数型生成函数 (Exponential Generating Function, EGF) ，为</p>
+<script type="math/tex; mode=display">A(x)=\sum_\limits{i=0}^{}a_i \frac{x^i}{i!}</script></div>
+
       
     </div>
     
@@ -560,18 +572,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/04/平面几何/" rel="next" title="平面几何">
-                <i class="fa fa-chevron-left"></i> 平面几何
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/05/同余/" rel="prev" title="同余">
-                同余 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/01/09/test/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -653,7 +661,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -664,7 +672,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -674,10 +682,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">24</span>
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
@@ -731,7 +739,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#多项式"><span class="nav-number">1.</span> <span class="nav-text">多项式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#表示"><span class="nav-number">1.1.</span> <span class="nav-text">表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运算"><span class="nav-number">1.2.</span> <span class="nav-text">运算</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式加减"><span class="nav-number">1.2.1.</span> <span class="nav-text">多项式加减</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式乘法"><span class="nav-number">1.2.2.</span> <span class="nav-text">多项式乘法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式求逆"><span class="nav-number">1.2.3.</span> <span class="nav-text">多项式求逆</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式除法"><span class="nav-number">1.2.4.</span> <span class="nav-text">多项式除法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式取模"><span class="nav-number">1.2.5.</span> <span class="nav-text">多项式取模</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#牛顿迭代法"><span class="nav-number">1.2.6.</span> <span class="nav-text">牛顿迭代法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式开方"><span class="nav-number">1.2.7.</span> <span class="nav-text">多项式开方</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式求In"><span class="nav-number">1.2.8.</span> <span class="nav-text">多项式求In</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式求exp"><span class="nav-number">1.2.9.</span> <span class="nav-text">多项式求exp</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式k次幂"><span class="nav-number">1.2.10.</span> <span class="nav-text">多项式k次幂</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式复合"><span class="nav-number">1.2.11.</span> <span class="nav-text">多项式复合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式多点求值与插值"><span class="nav-number">1.2.12.</span> <span class="nav-text">多项式多点求值与插值</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成函数"><span class="nav-number">2.</span> <span class="nav-text">生成函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#普通型生成函数"><span class="nav-number">2.1.</span> <span class="nav-text">普通型生成函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指数型生成函数"><span class="nav-number">2.2.</span> <span class="nav-text">指数型生成函数</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#多项式"><span class="nav-number">1.</span> <span class="nav-text">多项式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#表示"><span class="nav-number">1.1.</span> <span class="nav-text">表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运算"><span class="nav-number">1.2.</span> <span class="nav-text">运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#快速傅里叶变换-FFT"><span class="nav-number">1.2.1.</span> <span class="nav-text">快速傅里叶变换(FFT)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速数论变换-NTT"><span class="nav-number">1.2.2.</span> <span class="nav-text">快速数论变换(NTT)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速沃尔什变换-FWT"><span class="nav-number">1.2.3.</span> <span class="nav-text">快速沃尔什变换(FWT)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项式求逆"><span class="nav-number">1.2.4.</span> <span class="nav-text">多项式求逆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项式除法"><span class="nav-number">1.2.5.</span> <span class="nav-text">多项式除法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项式取模"><span class="nav-number">1.2.6.</span> <span class="nav-text">多项式取模</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#牛顿迭代法"><span class="nav-number">1.2.7.</span> <span class="nav-text">牛顿迭代法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项式开方"><span class="nav-number">1.2.8.</span> <span class="nav-text">多项式开方</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项式In"><span class="nav-number">1.2.9.</span> <span class="nav-text">多项式In</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项式exp"><span class="nav-number">1.2.10.</span> <span class="nav-text">多项式exp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项式k次幂"><span class="nav-number">1.2.11.</span> <span class="nav-text">多项式k次幂</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项式复合"><span class="nav-number">1.2.12.</span> <span class="nav-text">多项式复合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项式多点求值与插值"><span class="nav-number">1.2.13.</span> <span class="nav-text">多项式多点求值与插值</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#生成函数"><span class="nav-number">2.</span> <span class="nav-text">生成函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#普通型生成函数"><span class="nav-number">2.1.</span> <span class="nav-text">普通型生成函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指数型生成函数"><span class="nav-number">2.2.</span> <span class="nav-text">指数型生成函数</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -752,8 +760,8 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
+  <span class="with-love" id="heart">
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">mmh</span>
 
@@ -765,7 +773,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">14.2k</span>
+    <span title="Site words total count">2.3k</span>
   
 </div>
 

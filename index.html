@@ -14,13 +14,6 @@
 
 
 
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
-
 
 
 
@@ -368,7 +361,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://mmh.ac.cn/2046/12/29/Test/">
+    <link itemprop="mainEntityOfPage" href="http://mmh.ac.cn/2018/01/10/STL容器/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mmh">
@@ -387,7 +380,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2046/12/29/Test/" itemprop="url">Test</a></h2>
+                <a class="post-title-link" href="/2018/01/10/STL容器/" itemprop="url">STL容器</a></h2>
         
 
         <div class="post-meta">
@@ -399,147 +392,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2046-12-29T09:23:00+08:00">
-                2046-12-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  28
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="一级字体"><a href="#一级字体" class="headerlink" title="一级字体"></a>一级字体</h1><h2 id="二级字体"><a href="#二级字体" class="headerlink" title="二级字体"></a>二级字体</h2><h3 id="三级字体"><a href="#三级字体" class="headerlink" title="三级字体"></a>三级字体</h3><h4 id="四级字体"><a href="#四级字体" class="headerlink" title="四级字体"></a>四级字体</h4><h5 id="五级字体"><a href="#五级字体" class="headerlink" title="五级字体"></a>五级字体</h5><h6 id="六级字体"><a href="#六级字体" class="headerlink" title="六级字体"></a>六级字体</h6><p>正文字体</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://mmh.ac.cn/2018/01/07/回文双子星/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="mmh">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="mmh's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/07/回文双子星/" itemprop="url">回文双子星</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-07T15:29:00+08:00">
-                2018-01-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-10T14:30:00+08:00">
+                2018-01-10
               </time>
             
 
@@ -592,7 +446,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  132
+                  1,029
                 </span>
               
 
@@ -618,364 +472,13 @@
 
       
         
-          
-            <h2 id="Manacher算法"><a href="#Manacher算法" class="headerlink" title="Manacher算法"></a>Manacher算法</h2><p>$Manacher$算法能在线性的时间求得以每个位置为中心，能构成的最长回文串的半径</p>
-<p>&lt;!<del>more</del>&gt;</p>
-<h3 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h3><ol>
-<li>在所有空隙位置(包括首尾)插入一个原串中不会出现的符号，处理偶数长度回文串</li>
-<li>维护$MaxRight$表示当前访问到的回文字串中右端点的$max$，$pos$表示$maxright$对应的回文串的对称轴位置</li>
-<li>利用回文串的对称性进行扩展</li>
-</ol>
-<p><a href="https://segmentfault.com/a/1190000003914228" target="_blank" rel="noopener">notes</a></p>
-<p>$O(n)$</p>
-<h2 id="回文自动机"><a href="#回文自动机" class="headerlink" title="回文自动机"></a>回文自动机</h2>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://mmh.ac.cn/2018/01/06/素数/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="mmh">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="mmh's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/06/素数/" itemprop="url">素数</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-06T20:11:00+08:00">
-                2018-01-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  494
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="素数定理"><a href="#素数定理" class="headerlink" title="素数定理"></a>素数定理</h2><p>$\pi(x) \sim \frac{x}{\ln x}$</p>
-<p>估计不超过x的素数个数</p>
-<h2 id="素性测试"><a href="#素性测试" class="headerlink" title="素性测试"></a>素性测试</h2><h3 id="试除法"><a href="#试除法" class="headerlink" title="试除法"></a>试除法</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isprime</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;<span class="comment">//简单优化：预处理素数表</span></span><br><span class="line">	<span class="keyword">if</span>(x&lt;<span class="number">2</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	<span class="keyword">int</span> m=<span class="built_in">sqrt</span>(x+<span class="number">0.5</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=m;i++)</span><br><span class="line">	<span class="keyword">if</span>(x%i==<span class="number">0</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>$O(\sqrt{n})$</p>
-<h3 id="Miller-Rabin测试"><a href="#Miller-Rabin测试" class="headerlink" title="Miller-Rabin测试"></a>Miller-Rabin测试</h3><h2 id="唯一分解定理"><a href="#唯一分解定理" class="headerlink" title="唯一分解定理"></a>唯一分解定理</h2><p>任何大于１的自然数，都可以唯一分解成有限个质数的乘积</p>
-<p>可以用质因数分解序列表示一个数</p>
-<h3 id="因子数与因子和"><a href="#因子数与因子和" class="headerlink" title="因子数与因子和"></a>因子数与因子和</h3><h2 id="质因数分解"><a href="#质因数分解" class="headerlink" title="质因数分解"></a>质因数分解</h2><h3 id="试除法-1"><a href="#试除法-1" class="headerlink" title="试除法"></a>试除法</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">void</span> <span class="title">resolve</span><span class="params">(<span class="keyword">int</span> x)</span><span class="comment">//简单优化：预处理素数表</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> m=<span class="built_in">sqrt</span>(x+<span class="number">0.5</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=m;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(!(x%i))&#123;</span><br><span class="line">			base[++cnt]=i;</span><br><span class="line">			<span class="keyword">while</span>(!(x%i)) x/=i,++idx[cnt];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(x!=<span class="number">1</span>) base[++cnt]=x,idx[cnt]=<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>$O(\sqrt{n})$</p>
-<h3 id="Pollard-Rho算法"><a href="#Pollard-Rho算法" class="headerlink" title="Pollard Rho算法"></a>Pollard Rho算法</h3><p>非常有趣的算法</p>
-<p>随机化，通过$Birthday$ $Trick$提高概率，$Floyd$判圈法判断</p>
-<p><a href="http://mmh.ac.cn/pdf/Pollard-rho算法详解.pdf">详解</a></p>
-<p>$O(n^{1/4})$</p>
-<h2 id="筛法"><a href="#筛法" class="headerlink" title="筛法"></a>筛法</h2><h3 id="埃式筛"><a href="#埃式筛" class="headerlink" title="埃式筛"></a>埃式筛</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Eratosthenes</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i*i&lt;=n;i++)</span><br><span class="line">    <span class="keyword">if</span>(!vis[i]) <span class="keyword">for</span>(<span class="keyword">int</span> j=i*i;j&lt;=n;j+=i) vis[j]=<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>$O(n \log \log n)$</p>
-<h3 id="线性筛"><a href="#线性筛" class="headerlink" title="线性筛"></a>线性筛</h3><p>筛积性函数</p>
-<p>tricks:筛每个数的最小/最大质因子及其幂指数</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">euler</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;<span class="comment">//全家桶 d[i]:最小质因子幂 cnt[i]:因子数 </span></span><br><span class="line">    	<span class="keyword">if</span>(!vis[i]) p[++p[<span class="number">0</span>]]=i,u[i]=<span class="number">-1</span>,phi[i]=i<span class="number">-1</span>,d[i]=<span class="number">1</span>,cnt[i]=<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=p[<span class="number">0</span>]&amp;&amp;i*p[j]&lt;=n;j++)&#123;</span><br><span class="line">			vis[i*p[j]]=<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">if</span>(i%p[j]==<span class="number">0</span>)&#123;</span><br><span class="line">				u[i*p[j]]=<span class="number">0</span>;</span><br><span class="line">				phi[i*p[j]]=phi[i]*p[j];</span><br><span class="line">				d[i*p[j]]=d[i]+<span class="number">1</span>;</span><br><span class="line">				cnt[i*p[j]]=cnt[i]/(d[i]+<span class="number">1</span>)*(d[i]+<span class="number">2</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			u[i*p[j]]=-u[i];</span><br><span class="line">			phi[i*p[j]]=phi[i]*(p[j]<span class="number">-1</span>);</span><br><span class="line">			d[i*p[j]]=<span class="number">1</span>;</span><br><span class="line">			cnt[i*p[j]]=cnt[i]*<span class="number">2</span>;</span><br><span class="line">		&#125; </span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>$O(n)$</p>
-<p><a href="http://mmh.ac.cn/pdf/贾志鹏线性筛.pdf">经典课件</a></p>
-<h3 id="杜教筛"><a href="#杜教筛" class="headerlink" title="杜教筛"></a>杜教筛</h3><p>解决一类积性函数求前缀和问题</p>
-<p>$O(n^{2/3})$</p>
-<p><a href="http://blog.csdn.net/skywalkert/article/details/50500009" target="_blank" rel="noopener">唐教的介绍</a></p>
-<h3 id="州阁筛"><a href="#州阁筛" class="headerlink" title="州阁筛"></a>州阁筛</h3><p>$O(\frac{n^{3/4}}{\log n})$</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://mmh.ac.cn/2018/01/06/反演/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="mmh">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="mmh's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/06/反演/" itemprop="url">反演</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-06T14:55:00+08:00">
-                2018-01-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  570
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="数论函数"><a href="#数论函数" class="headerlink" title="数论函数"></a>数论函数</h2><p>若函数$f(n)$满足定义域为正整数域，值域为复数域，即$f$：$Z^+→C$ ，称$f(n)$为数论函数</p>
-<p>若数论函数$f(n)$对于互质的两个正整数$p$、$q$，有$f(p⋅q)=f(p)⋅f(q)$，称$f(n)$为积性函数</p>
-<p>若数论函数$f(n)$对于任意两个正整数$p$、$q$，有$f(p⋅q)=f(p)⋅f(q)$，称$f(n)$为完全积性函数</p>
+          <div class="note warning"><ol>
+<li>常数巨大(without O2)</li>
+<li>动态内存,unfriendly for cena</li>
+</ol></div>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/01/06/反演/#more" rel="contents">
+            <a class="btn" href="/2018/01/10/STL容器/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1026,7 +529,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://mmh.ac.cn/2018/01/05/小结：网络流/">
+    <link itemprop="mainEntityOfPage" href="http://mmh.ac.cn/2018/01/09/test/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mmh">
@@ -1045,7 +548,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/05/小结：网络流/" itemprop="url">小结：网络流</a></h2>
+                <a class="post-title-link" href="/2018/01/09/test/" itemprop="url">未命名</a></h2>
         
 
         <div class="post-meta">
@@ -1057,8 +560,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-05T19:32:00+08:00">
-                2018-01-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-09T15:35:46+08:00">
+                2018-01-09
               </time>
             
 
@@ -1067,28 +570,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/小结/" itemprop="url" rel="index">
-                    <span itemprop="name">小结</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -1111,7 +592,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  4
+                  356
                 </span>
               
 
@@ -1137,352 +618,106 @@
 
       
         
-          <p>remain to be done</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/05/小结：网络流/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
+          
+            <p><i class="fa fa-download fa-2x"></i>  </p>
+<p><i class="fa fa-qq"></i> qq</p>
+<p><i class="fa fa-forward"></i> forward</p>
+<p><i class="fa fa-stop"></i> stop</p>
+<p><i class="fa fa-arrows-alt"></i> arrows-alt</p>
+<p><i class="fa fa-arrows"></i> arrows</p>
+<p><i class="fa fa-chevron-down"></i> chevron-down</p>
+<p><i class="fa fa-chevron-left"></i> chevron-left</p>
+<p><i class="fa fa-chevron-right"></i> chevron-right</p>
+<p><i class="fa fa-chevron-up"></i> chevron-up</p>
+<p><i class="fa fa-long-arrow-left"></i> long-arrow-left</p>
+<p><i class="fa fa-long-arrow-down"></i> long-arrow-down</p>
+<p><i class="fa fa-long-arrow-right"></i> long-arrow-right</p>
+<p><i class="fa fa-long-arrow-up"></i> long-arrow-up</p>
+<p><i class="fa fa-exchange"></i> exchange</p>
+<p><i class="fa fa-link"></i> link</p>
+<p><i class="fa fa-align-left"></i> align-left</p>
+<p><i class="fa fa-rotate-right"></i> rotate-right </p>
+<p><i class="fa fa-th-large"></i> th-large</p>
+<p><i class="fa fa-table"></i> table</p>
+<p><i class="fa fa-check-square"></i> check-square</p>
+<p><i class="fa fa-circle"></i> circle</p>
+<p><i class="fa fa-circle-o"></i> circle-o</p>
+<p><i class="fa fa-cog"></i> cog</p>
+<p><i class="fa fa-spinner"></i> spinner</p>
+<p><i class="fa fa-file-code-o"></i> file-code-o</p>
+<p><i class="fa fa-plane"></i> plane</p>
+<p><i class="fa fa-rocket"></i> rocket</p>
+<p><i class="fa fa-fighter-jet"></i> fighter-jet</p>
+<p><i class="fa fa-car"></i> car</p>
+<p><i class="fa fa-thumbs-up"></i> thumbs-up</p>
+<p><i class="fa fa-question-circle-o"></i> question-circle-o</p>
+<p><i class="fa fa-warning"></i> warning</p>
+<p><i class="fa fa-unsorted "></i> unsorted </p>
+<p><i class="fa fa-toggle-on"></i> toggle-on</p>
+<p><i class="fa fa-toggle-off"></i> toggle-off</p>
+<p><i class="fa fa-star"></i> star</p>
+<p><i class="fa fa-sort-amount-desc"></i> sort-amount-desc</p>
+<p><i class="fa fa-smile-o"></i> smile-o</p>
+<p><i class="fa fa-puzzle-piece"></i> puzzle-piece</p>
+<p>others </p>
+<p><i class="fa fa-quote-left"></i> quote-left</p>
+<p><i class="fa fa-adjust"></i> adjust</p>
+<p><i class="fa fa-ban"></i> ban</p>
+<p><i class="fa fa-book"></i> book</p>
+<p><i class="fa fa-key"></i> key</p>
+<p><i class="fa fa-question"></i> question</p>
+<p><i class="fa fa-minus"></i> minus</p>
+<p><i class="fa fa-home"></i> home</p>
+<p><i class="fa fa-globe"></i> globe</p>
+<p><i class="fa fa-commenting"></i> commenting</p>
+<p><i class="fa fa-code"></i> code</p>
+<p><i class="fa fa-cloud"></i> cloud</p>
+<p><i class="fa fa-cube"></i> cube</p>
+<p>调用<a href="http://fontawesome.io/icons/" target="_blank" rel="noopener">Font Awesome</a> </p>
+<p>可以控制大小！</p>
+<blockquote class="blockquote-center"><p>人生乃是一面镜子，</p>
+<p>从镜子里认识自己，</p>
+<p>我要称之为头等大事，</p>
+<p>也只是我们追求的目的！</p>
+</blockquote>
+<p>文本居中引用</p>
+<p>note标签</p>
+<div class="note danger"><p>default</p></div>
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
 
 
-    
-      
+<p>default 黑</p>
+<p>primary 紫</p>
+<p>success 绿</p>
+<p>info 蓝</p>
+<p>danger 红</p>
+<p>warning 橙</p>
+<p>带底色的块</p>
+<div class="note danger no-icon"><p>danger no-icon</p></div>
 
-  
 
-  
-  
-  
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://mmh.ac.cn/2018/01/05/分块与莫队/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="mmh">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="mmh's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/05/分块与莫队/" itemprop="url">分块与莫队</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-05T19:31:00+08:00">
-                2018-01-05
-              </time>
-            
-
-            
-
-            
-          </span>
+<p>去掉+</p>
+<div class="note danger"><p>note danger, note danger, note danger<br>note danger, note danger, note danger<br>note danger, note danger, note danger</p></div>
+<span class="label default">default</span>
+<p>name@文字</p>
+<p>加底色</p>
+<p>tabs</p>
+<div class="tabs" id="选项卡"><ul class="nav-tabs"><li class="tab"><a href="#选项卡-1">选项卡 1</a></li><li class="tab active"><a href="#选项卡-2">选项卡 2</a></li><li class="tab"><a href="#选项卡-3">选项卡 3</a></li></ul><div class="tab-content"><div class="tab-pane" id="选项卡-1"><p><strong>这是选项卡 1</strong> 呵呵哈哈哈哈哈哈哈哈呵呵哈哈哈哈哈哈哈哈呵呵哈哈哈哈哈哈哈哈呵呵哈哈哈哈哈哈哈哈呵呵哈哈哈哈哈哈哈哈呵呵哈哈哈哈哈哈哈哈……</p>
+</div><div class="tab-pane active" id="选项卡-2"><p><strong>这是选项卡 2</strong></p>
+</div><div class="tab-pane" id="选项卡-3"><p><strong>这是选项卡 3</strong> 哇，你找到我了！φ(≧ω≦*)♪～</p>
+</div></div></div>
+<p>然后上面源码中<code>, 2</code>表示一开始在第二个选项卡，非必须，若数值为<code>-1</code>则隐藏选项卡内容。更多用法请查看 </p>
+<div class="tabs" id="sixth-unique-name"><ul class="nav-tabs"><li class="tab active"><a href="#sixth-unique-name-1"><i class="fa fa-text-width" "=""></i>Solution 1</a></li><li class="tab"><a href="#sixth-unique-name-2"><i class="fa fa-amazon" "=""></i>Solution 2</a></li><li class="tab"><a href="#sixth-unique-name-3"><i class="fa fa-bold" "=""></i>Solution 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="sixth-unique-name-1"><p><strong>This is Tab 1.</strong></p>
+</div><div class="tab-pane" id="sixth-unique-name-2"><p><strong>This is Tab 2.</strong></p>
+</div><div class="tab-pane" id="sixth-unique-name-3"><p><strong>This is Tab 3.</strong></p>
+</div></div></div>
+<p>+icon</p>
+<a class="btn" href="https://www.baidu.com" target="_blank" rel="noopener"><i class="fa fa-download fa-lg fa-fw"></i>点击下载百度</a>
+<p>按钮</p>
+<p>use icon</p>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  39
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="分块"><a href="#分块" class="headerlink" title="分块"></a>分块</h2><p>优雅的暴力</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/05/分块与莫队/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://mmh.ac.cn/2018/01/05/同余/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="mmh">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="mmh's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/05/同余/" itemprop="url">同余</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-05T15:44:00+08:00">
-                2018-01-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  402
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="同余式性质"><a href="#同余式性质" class="headerlink" title="同余式性质"></a>同余式性质</h2><ol>
-<li>反身性 $a \equiv a \pmod {m}$</li>
-<li>对称性 $a \equiv b \pmod {m}$ $\Rightarrow$ $ b \equiv a \pmod {m}$</li>
-<li>传递性 $a \equiv b \pmod {m}$,$b \equiv c \pmod {m}$ $\Rightarrow$ $a \equiv c \pmod {m}$</li>
-<li>相加 $a \equiv b \pmod {m}$,$c \equiv d \pmod {m}$ $\Rightarrow$ $a \pm c \equiv b \pm d \pmod {m}$</li>
-<li>相乘 $a \equiv b \pmod {m}$,$c \equiv d \pmod {m}$ $\Rightarrow$ $ac \equiv bd \pmod {m}$</li>
-<li>除法 $ac \equiv bd \pmod {m}$ $\Rightarrow$ $a \equiv b \pmod { \frac{m}{(c,m)}}$</li>
-<li>乘幂 $a \equiv b \pmod {m}$ $\Rightarrow$ $a^n \equiv b^n \pmod {m}$ </li>
-</ol>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/05/同余/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
         
       
     </div>
@@ -1614,7 +849,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  802
+                  914
                 </span>
               
 
@@ -1640,9 +875,10 @@
 
       
         
-          <h2 id="多项式"><a href="#多项式" class="headerlink" title="多项式"></a>多项式</h2><h3 id="表示"><a href="#表示" class="headerlink" title="表示"></a>表示</h3><p><strong>系数表示法</strong>：$F(x)=\sum\limits_{i=0}^{n}a_ix^i$</p>
+          <h1 id="多项式"><a href="#多项式" class="headerlink" title="多项式"></a>多项式</h1><p><br></p>
+<h2 id="表示"><a href="#表示" class="headerlink" title="表示"></a>表示</h2><div class="note info"><p><strong>系数表示法</strong>：$F(x)=\sum\limits_{i=0}^{n}a_ix^i$</p>
 <p><strong>点值表示法</strong>：$(x_0,y_0),(x_1,y_1),\cdots,(x_n,y_n)$</p>
-<p>对于多项式$A(x)$，称其最高项的次数为这个多项式的<strong>度</strong>，记作$degA$</p>
+<p>对于多项式$A(x)$，称其最高项的次数为这个多项式的<strong>度</strong>，记作$degA$</p></div>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/01/05/多项式与生成函数/#more" rel="contents">
@@ -1686,10 +922,6 @@
   </section>
 
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
 
 
           </div>
@@ -1737,7 +969,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1748,7 +980,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1758,10 +990,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">24</span>
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
@@ -1820,8 +1052,8 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
+  <span class="with-love" id="heart">
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">mmh</span>
 
@@ -1833,7 +1065,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">14.2k</span>
+    <span title="Site words total count">2.3k</span>
   
 </div>
 
