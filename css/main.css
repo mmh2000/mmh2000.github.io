@@ -1870,7 +1870,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffdfb1;
+  background: #d5d191;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2854,9 +2854,6 @@ embed {
 .container .header-inner {
   width: 100%;
 }
-.site-meta {
-  background-image: linear-gradient(90deg, #f79533 0%, #f37055 15%, #ef4e7b 30%, #a166ab 44%, #5073b8 58%, #1098ad 72%, #07b39b 86%, #6dba82 100%);
-}
 .brand {
   background-color: rgba(255,255,255,0);
   margin-top: 15px;
@@ -2878,7 +2875,7 @@ embed {
   color: #060505;
   border-bottom-width: 3px;
   border-bottom-style: solid;
-  border-bottom-color: #a166ab;
+  border-bottom-color: #f9f9f9;
 }
 .menu .menu-item a {
   font-size: 18px;
@@ -3005,6 +3002,28 @@ embed {
   transition-property: all;
   color: #87d2ff;
   border-bottom-color: #555;
+}
+a {
+  color: rgba(2,58,1,0.62);
+  text-decoration: none;
+  outline: none;
+  border-bottom: 1px solid #999;
+  word-wrap: break-word;
+}
+body {
+  position: relative;
+  font-family: 'Monda', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "STHeiti", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "Droid Sans Fallback", "Microsoft YaHei", source-han-sans-simplified-c, sans-serif;
+  font-size: 18px;
+  line-height: 2;
+  color: #555;
+  background: #fff;
+}
+p {
+  display: block;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0 m;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
 }
 @-moz-keyframes heartAnimate {
   0%, 100% {
