@@ -1,8 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[组合计数]]></title>
+    <url>%2F2018%2F01%2F11%2F%E7%BB%84%E5%90%88%E8%AE%A1%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[计数原理 加法原理:做一件事情有$n$个办法，第$i$个办法有$p_i$种方案，则一共有$p_1+p_2+…+p_n$种方案 乘法原理:做一件事情有$n$个步骤，第$i$个步骤有$p_i$种方案，则一共有$p_1 \times p_2 \times … \times p_n$种方案 容斥原理先不考虑重叠的情况，计算出所有对象的数目，再把计数时重复计算的数目排斥出去 鸽巢原理把$n+1$个小球放进$n$个盒子，至少有一个盒子包含至少两个小球 一般形式：把$m$个小球放进$n$个盒子，至少有一个盒子包含至少$⌈m/n⌉$个小球 最差原则：考虑所有可能情况中，最不利于某件事情发生的情况 Ramsey定理将$6$个顶点的完全图的边用红、蓝两色任意着色，至少存在一个红色边三角形或蓝色边三角形 排列组合 排列数$n$个不同的数，选$k$个排成一排，每个数最多选一次 由乘法原理，$P(n,k)=\frac{n!}{(n-k)!}$ 特别地，定义$0!=1$，$n$个数的全排列数$P(n,n)=n!$ 组合数$n$个不同的数，选$k$个(顺序无关)，每个数最多选一次 把$n$选$k$的排列问题分成两个步骤： 首先选出$k$个数的组合，然后把这$k$个数进行全排列 $C(n,k)=\frac{P(n,k)}{P(k,k)}=\frac{n!}{(n-k)!k!}$ 性质 $C(n,0)=C(n,n)=1$ $C(n,k)=C(n,n-k)$，$n$选$k$和$n$不选$k$的方案一一对应 $C(n,k)=C(n-1,k)+C(n-1,k-1)$，组合数递推公式，由加法原理推导出 二项式定理：$(a+b)^n=\sum\limits_{k=0}^{n} _{}^{}$ note danger, note danger, note dangernote danger, note danger, note danger 一些计数问题等价类计数置换群群论 http://blog.csdn.net/xym_CSDN/article/details/53456447]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>组合计数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[高精度]]></title>
+    <url>%2F2018%2F01%2F11%2Fdone%20dont'%20see%20them%2F%E9%AB%98%E7%B2%BE%E5%BA%A6%2F</url>
+    <content type="text"><![CDATA[业界毒瘤python大法好(雾 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869#define rad 10000#define B 4//int压4位struct Bi&#123; int s[2005],l; Bi()&#123;memset(s,0,sizeof(s));l=1;&#125;//这里的memset可能会T……&#125;;Bi operator + (Bi a,Bi b)&#123; a.l=a.l&gt;b.l?a.l:b.l; for(int i=1;i&lt;=a.l;i++)&#123; a.s[i]+=b.s[i]; if(a.s[i]&gt;=rad) a.s[i]-=rad,a.s[i+1]++; &#125; if(a.s[a.l+1]) a.l++; return a;&#125;Bi operator - (Bi a,Bi b)&#123;//大减小 for(int i=1;i&lt;=a.l;i++)&#123; a.s[i]-=b.s[i]; if(a.s[i]&lt;0) a.s[i]+=rad,a.s[i+1]--; &#125; while(a.l&gt;1&amp;&amp;!a.s[a.l]) a.l--; return a;&#125;Bi operator * (Bi a,Bi b)&#123;//暴力 Bi c;c.l=a.l+b.l-1; for(int i=1;i&lt;=a.l;i++) for(int j=1;j&lt;=b.l;j++) c.s[i+j-1]+=a.s[i]*b.s[j]; for(int i=1;i&lt;=c.l;i++)&#123; c.s[i+1]+=c.s[i]/rad; c.s[i]%=rad; &#125; if(c.s[c.l+1]) c.l++; return c;&#125;Bi operator / (Bi a,int b)&#123; Bi c;c.l=a.l;int k=0; for(int i=a.l;i&gt;=1;i--)&#123; k=k*rad+a.s[i]; c.s[i]=k/b;k%=b; &#125; while(c.l&gt;1&amp;&amp;!c.s[c.l]) c.l--; return c;&#125;bool operator &lt; (Bi x,Bi y)&#123; if(x.l!=y.l) return x.l&lt;y.l; for(int i=x.l;i&gt;=1;i--) if(x.s[i]!=y.s[i]) return x.s[i]&lt;y.s[i]; return false;&#125;void read(Bi &amp;x)&#123; int i,j; scanf("%s",d+1); int l=strlen(d+1); for(i=1;i&lt;=l;i++) j=(l-i+B)/B,x.s[j]=x.s[j]*10+d[i]-'0'; x.l=(l-1+B)/B;&#125;void print(Bi a)&#123;printf("%d",a.s[a.l]);for(int i=a.l-1;i;i--) printf("%04d",a.s[i]);&#125;//补0输出]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>基础算法</tag>
+        <tag>高精度</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[平衡树]]></title>
+    <url>%2F2018%2F01%2F11%2Fdone%20dont'%20see%20them%2F%E5%B9%B3%E8%A1%A1%E6%A0%91%2F</url>
+    <content type="text"><![CDATA[sbt依靠size域维持平衡，对任意结点$x$满足$size[rs[x]] \geq size[ls[ls[x]]],size[rs[ls[x]]]$$size[ls[x]] \geq size[rs[rs[x]]],size[ls[rs[x]]]$ 安利退化版sbt，a short introduce可能被卡（应该不会有人卡这个吧……） 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374//各种操作，与普通二叉查找树区别不大……#define son(x,y) c[c[x][y]][y]inline void pushup(int x)&#123;sz[x]=sz[c[x][0]]+sz[c[x][1]]+1;sum[x]=sum[c[x][0]]+sum[c[x][1]]+k[x];&#125;inline void node(int &amp;x,int v)&#123;x=++top,c[x][0]=c[x][1]=0,sz[x]=1,k[x]=v;&#125;void rotate(int &amp;x,int k)&#123; int y=c[x][k^1]; c[x][k^1]=c[y][k]; c[y][k]=x;pushup(y); pushup(x);x=y;&#125;void insert(int &amp;x,int v)&#123; if(!x) node(x,v); else &#123; bool m=v&gt;=k[x];//这里把相同元素插入x的右子树 insert(c[x][m],v); if(sz[son(x,m)]&gt;sz[c[x][m^1]])//维护平衡 rotate(x,m^1); &#125; pushup(x);&#125;int pre(int x,int y,int v)&#123; if(!x) return y; if(v&gt;k[x]) return pre(c[x][1],x,v); return pre(c[x][0],y,v); &#125;int suc(int x,int y,int v)&#123; if(!x) return y; if(v&lt;k[x]) return suc(c[x][0],x,v); return suc(c[x][1],y,v); &#125;int rk(int x,int v)//求权值为x的排名 &#123; if(!x) return 1; if(v&gt;k[x]) return sz[c[x][0]]+1+rk(c[x][1],v); return rk(c[x][0],v);&#125;int select(int &amp;x,int w)&#123; int r=sz[c[x][0]]+1; if(w&lt;r) return select(c[x][0],w); if(w&gt;r) return select(c[x][1],w-r); return k[x];&#125;void del(int &amp;x,int v)&#123; if(!x) return ;sz[x]--;sum[x]-=v; if(k[x]!=v) del(c[x][v&gt;k[x]],v); else &#123; int l=c[x][0],r=c[x][1]; if(!l||!r) x=l+r; else &#123; while(c[r][0]) r=c[r][0];//乱搞删除 k[x]=k[r]; del(c[x][1],k[r]); &#125; &#125;&#125;void init()&#123; x=0,top=0;&#125; splay依靠伸展操作维护平衡，复杂度可以势能分析证明使被查询频率高的节点更靠近树根常数巨大 123456789101112131415161718192021222324252627282930313233343536//LCTinline bool f(int x)&#123;return c[fa[x]][1]==x;&#125;//指示方向inline bool isr(int x)&#123;return c[fa[x]][0]!=x&amp;&amp;c[fa[x]][1]!=x;&#125;void pushdown(int x)&#123; if(!rev[x]) return ; int &amp;l=c[x][0],&amp;r=c[x][1]; rev[l]^=1;rev[r]^=1;swap(l,r); rev[x]=0;&#125;void rotate(int x)&#123; int p=fa[x],g=fa[p],r; bool k=f(x),m=f(p);r=c[x][k^1]; if(!isr(p)) c[g][m]=x;//自上而下重新连接 fa[x]=g,c[x][k^1]=p; fa[p]=x,c[p][k]=r; if(r) fa[r]=p;&#125;void maintain(int x)&#123; int top=0;st[++top]=x; for(int i=x;!isr(i);i=fa[i]) st[++top]=fa[i]; for(int i=top;i;i--) pushdown(st[i]);&#125;void splay(int x)&#123; maintain(x); for(;!isr(x);rotate(x)) if(!isr(fa[x])) rotate(f(x)==f(fa[x])?fa[x]:x);//理性理解&#125; fhq treap每个结点有一个附加权，满足堆的性质随机生产附加权，达到期望平衡非旋转，可持久化 12345678910111213141516171819202122232425262728293031int merge(int x,int y)&#123; if(!x||!y) return x+y; pushdown(x);pushdown(y); if(rk[x]&lt;rk[y]) &#123; c[x][1]=merge(c[x][1],y); pushup(x); return x; &#125; else &#123; c[y][0]=merge(x,c[y][0]); pushup(y); return y; &#125;&#125;void split(int now,int k,int &amp;x,int &amp;y)//按前k个分裂&#123; if(!now) x=y=0; else &#123; pushdown(now); if(k&lt;=size[c[now][0]]) y=now,split(c[now][0],k,x,c[now][0]); else x=now,split(c[now][1],k-size[c[now][0]]-1,c[now][1],y); pushup(now); &#125;&#125; link1link2]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+        <tag>树</tag>
+        <tag>平衡树</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[STL容器]]></title>
-    <url>%2F2018%2F01%2F10%2FSTL%E5%AE%B9%E5%99%A8%2F</url>
+    <url>%2F2018%2F01%2F10%2Fdone%20dont'%20see%20them%2FSTL%E5%AE%B9%E5%99%A8%2F</url>
     <content type="text"><![CDATA[常数巨大(without O2) 动态内存,unfriendly for cena queue/stack/priority_queue123头文件:&lt;queue/stack&gt;定义:queue&lt;data&gt; x;小根堆:priority_queue&lt;int,vector&lt;int&gt;,greater&lt;int&gt; &gt;q; 操作123x.push(key) x.pop(key)x.front() x.top()x.size() x.empty() pair12头文件:&lt;iostream&gt;定义:pair&lt;data,data&gt; x; 操作123.first .second//访问make_pair(x,y)//构造重载了&lt;，以first为第一关键字，second为第二关键字升序 set/multiset/hash_set/unordered_set123头文件:&lt;set/unordered_set&gt;//unordered_set was defined in C++11定义:set&lt;data&gt; x;迭代器:set&lt;data&gt;::iterator it; 操作1234567891011x.clear()x.insert(key)//插入一个值keyx.erase(key)//删除键值为key的元素(multiset会全部删除)x.erase(it)//删除迭代器为it的元素x.erase(l,r)//删除地址[l,r)的元素,l,r为两个迭代器指针x.begin() x.end()x.size() x.empty()x.find(key)//返回key的迭代器指针x.count(key)//返回键值等于key的元素的个数(multiset中使用)x.lower_bound(key)x.upper_bound(key) map/multimap/hash_map/unordered_map123头文件:&lt;map/unordered_map&gt;//unordered_map was defined in C++11定义:map&lt;data&gt; x;迭代器:map&lt;data&gt;::iterator it; 操作12345678910111213x.clear()mp[x]=key//插入元素it-&gt;first it-&gt;second//迭代器访问x.erase(key)//删除键值为key的元素(multimap会全部删除)x.erase(it)//删除迭代器为it的元素x.erase(l,r)//删除地址[l,r)的元素,l,r为两个迭代器指针x.swap(x2)//交换x,x2x.begin() x.end()x.size() x.empty()x.find(key)//返回key的迭代器指针x.count(key)//返回键值等于key的元素的个数(multimap中使用)x.lower_bound(key)x.upper_bound(key) 应用树套树（雾 vector123头文件:&lt;vector&gt;定义:vector&lt;data&gt; x;迭代器:vector&lt;data&gt;::iterator it; 操作1234567891011x.clear()x.push_back(key)x.insert(pos,key)//在迭代器指针pos处插入一个值keyx.erase(it)//删除迭代器为it的元素,use it=v.erase(it) instead of it++x.erase(l,r)//删除地址[l,r)的数，l,r为两个迭代器指针x.swap(x2)//交换x,x2x.reverse(l,r) 翻转地址[l,r)的数，l,r为两个迭代器指针x.begin() x.end()x.size() x.empty()x.lower_bound(key)x.upper_bound(key) string123头文件:&lt;string&gt;定义:string x;迭代器:string::iterator it; 操作12345678x.insert(pos,p)//在pos插入一个串px.erase(pos,l)//删除从pos开始l个位置x.replace(pos,l,s)//将从pos开始l个位置替换成串sx.length() x.size()x.substr(pos,l)//截取从pos开始，长为l的子串x.find(s2)//在s中匹配s2，返回位置，不存在返回-1，类似strstr&lt;&lt; &gt;&gt;输入输出流+ 拼接 &lt; 字典序 rope123头文件:&lt;ext/rope&gt;//can't be used in cena声明:using namespace __gnu_cxx;定义:crope x; 操作123456789x.push_back(ch)//在末尾添加字符chx.insert(pos,s)//在pos位置插入字符chx.erase(pos,x)//从pos位置开始删除x个字符x.replace(pos,ch)//将位置为pos的字符换成chx.substr(pos,x)//截取从pos开始，长为l的子串x.length() x.size()&lt;&lt; &gt;&gt;输入输出流-&gt;at(x)/[x]//访问+ 拼接 &lt; 字典序 应用区间翻转同时维护一正一反两个rope……反转即交换两个子串……Orz…… 区间循环位移拆成多个子串连起来就好了…… 可持久化1234//可持久化并查集fa[0]=new rope&lt;int&gt;(a,a+n+1);fa[i]=new rope&lt;int&gt;(*fa[i-1]);它可以实现O(1)的拷贝历史版本，由于rope的底层是平衡树，copy时copy根节点就行了用它就可以轻松实现可持久化数组 bitset12头文件:&lt;bitset&gt;定义:bitset&lt;M&gt; x;//M:长度 操作1234567x.set()//按位清1x.reset()//按位清0x.flip()//逐位取反x.any()//x中存在为1的二进制位返回1x.count()//x中为1的二进制位数x.to_ullong()//把x转为类型为unsigned long long的数支持位运算]]></content>
       <categories>
         <category>笔记</category>
@@ -18,8 +55,21 @@
     <content type="text"><![CDATA[qq forward stop arrows-alt arrows chevron-down chevron-left chevron-right chevron-up long-arrow-left long-arrow-down long-arrow-right long-arrow-up exchange link align-left rotate-right th-large table check-square circle circle-o cog spinner file-code-o plane rocket fighter-jet car thumbs-up question-circle-o warning unsorted toggle-on toggle-off star sort-amount-desc smile-o puzzle-piece others quote-left adjust ban book key question minus home globe commenting code cloud cube 调用Font Awesome 可以控制大小！ 人生乃是一面镜子， 从镜子里认识自己， 我要称之为头等大事， 也只是我们追求的目的！ 文本居中引用 note标签 default default 黑 primary 紫 success 绿 info 蓝 danger 红 warning 橙 带底色的块 danger no-icon 去掉+ note danger, note danger, note dangernote danger, note danger, note dangernote danger, note danger, note danger default name@文字 加底色 tabs 选项卡 1选项卡 2选项卡 3这是选项卡 1 呵呵哈哈哈哈哈哈哈哈呵呵哈哈哈哈哈哈哈哈呵呵哈哈哈哈哈哈哈哈呵呵哈哈哈哈哈哈哈哈呵呵哈哈哈哈哈哈哈哈呵呵哈哈哈哈哈哈哈哈…… 这是选项卡 2 这是选项卡 3 哇，你找到我了！φ(≧ω≦*)♪～ 然后上面源码中, 2表示一开始在第二个选项卡，非必须，若数值为-1则隐藏选项卡内容。更多用法请查看 Solution 2]]></content>
   </entry>
   <entry>
+    <title><![CDATA[二进制]]></title>
+    <url>%2F2018%2F01%2F05%2F%E4%BA%8C%E8%BF%9B%E5%88%B6%2F</url>
+    <content type="text"><![CDATA[位运算的优先级比较奇怪，请加括号使用 C/C++语言提供的位运算符 用$x$表示一个10进制数，记其二进制展开从最右边开始为第$0、1、2…$位 操作 功能 语句 描述 获取$x$的第$i$位 x&amp;(1&lt;&lt;i) 若$x$的第$i$位为$1$，值为$2^i$ bar bar bar 查询$x$中$1$的个数 __builtin_popcount(x) GCC内建函数 提取lowbit(x) x&amp;(-x) 可以遍历$x$中所有$1$ 技巧 功能 语句 描述 判断奇偶性 x&amp;1 值为$1$则$x$为奇数 乘除$2$ &lt;&lt; &amp; &gt;&gt; 根据实际意义 对$2$的幂取模 __builtin_popcount(x) GCC内建函数 交换两个数 a^=b,b^=a,a^=b 根据实际意义 集合用二进制数表示集合，设单个二进制数最大位宽为$w$ 修改&amp;查询&amp;删除直接上…… $O(1)$ 集合交&amp;并&amp;差&amp;补x&amp;yx|yx^(x&amp;y)~x $O(\frac{n}{w})$ 性质位运算每一位相互独立，互不干扰，可以按位考虑，进行dp/贪心]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>黑科技</tag>
+        <tag>二进制</tag>
+        <tag>位运算</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[多项式与生成函数]]></title>
-    <url>%2F2018%2F01%2F05%2F%E5%A4%9A%E9%A1%B9%E5%BC%8F%E4%B8%8E%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0%2F</url>
+    <url>%2F2018%2F01%2F05%2Fdone%20dont'%20see%20them%2F%E5%A4%9A%E9%A1%B9%E5%BC%8F%E4%B8%8E%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0%2F</url>
     <content type="text"><![CDATA[多项式 表示系数表示法：$F(x)=\sum\limits_{i=0}^{n}a_ix^i$ 点值表示法：$(x_0,y_0),(x_1,y_1),\cdots,(x_n,y_n)$ 对于多项式$A(x)$，称其最高项的次数为这个多项式的度，记作$degA$ 运算多项式加减：采用系数表示法，进行向量加减 多项式乘法：采用点值表示法，将点的坐标相乘 快速傅里叶变换(FFT)基础知识部分待填坑 DTF：系数表示法-&gt;点值表示法逆DFT：点值表示法-&gt;系数表示法利用单位复数根的性质，可以在$O(n \log n)$的时间复杂度内完成 12345678910111213141516171819202122typedef complex&lt;double&gt; C;//复数库void pre()&#123; m=n&lt;&lt;1; for(n=1;n&lt;=m;n&lt;&lt;=1) L++; for(int i=0;i&lt;n;i++) R[i]=(R[i&gt;&gt;1]&gt;&gt;1)|((i&amp;1)&lt;&lt;(L-1));//求逆序表：末位为0，直接为其前一半逆序表的值右移一位，末位为1，在最高位添加1&#125;void FFT(C *a,int f)&#123; for(int i=0;i&lt;n;i++) if(R[i]&gt;i) swap(a[i],a[R[i]]);//利用逆序表，快速求逆序 for(int i=1;i&lt;n;i&lt;&lt;=1)&#123; C wn(cos(pi/i),f*sin(pi/i)); for(int j=0;j&lt;n;j+=i&lt;&lt;1)&#123; C w(1,0);for(int k=0;k&lt;i;k++,w*=wn)&#123; C x=a[j+k],y=w*a[j+k+i]; a[j+k]=x+y;a[j+k+i]=x-y; &#125; &#125; &#125; if(f==-1) for(int i=0;i&lt;n;i++) a[i]/=n;&#125; 笔记 快速数论变换(NTT)FFT的缺点：常数大，炸精度，无法在模意义下求解 新的算法 数论意义下 一般模数$P=a \cdot 2^m +1,a$是一个较小的数 用原根代替单位复数根 笔记 快速沃尔什变换(FWT)大坑待填 笔记 多项式求逆对于多项式$A(x),B(x)$，存在唯一的$Q(x),R(x)$满足$A(x)=Q(x)B(x)+R(x)$，其中$degR&lt;degB$称$Q(x)$为$B(x)$除$A(x)$的商，$R(x)$为$B(x)$除$A(x)$的余数记作$A(x) \equiv R(x) \pmod {B(x)}$ 对于多项式$A(x)$，若存在$B(x)$满足$degB≤degA$，并且$A(x)B(x) \equiv 1 \pmod {x^n}$，那么称$B(x)$为$A(x)$在$mod$ $x^n$意义下的逆元，记作$A^{-1}(x)$ 采用倍增思想，设$B(x)$为$\bmod x^{\lceil \frac{n}{2} \rceil}$意义下$A(x)$的逆元 经过推导，最后可以得到 A^{-1}(x) \equiv 2B(x) - A(x)B^2(x) \pmod {x^n}递归$FFT$就可以搞了,同时易知多项式有逆元的充分必要条件为常数项有逆元 $O(n \log n)$，常数约为$FFT$的$6$倍 推导 多项式除法大坑待填 多项式取模大坑待填 牛顿迭代法给出$G(x)$，求$F(x)$，满足 G(f(x)) \equiv 0 \pmod {x^n} 多项式开方求$B^2(x) \equiv A(x) \pmod {x^n}$ 类似多项式求逆，设$B_0(x)$为$\bmod x^{\lceil \frac{n}{2} \rceil}$意义下$A(x)$的平方根 整理后得到 B(x)=\frac{B_0(x)+A(x)B_0^{-1}(x)}{2} \pmod {x^n}$O(n \log n)$ 多项式In求导…… 多项式exp取对数后使用牛顿迭代法 多项式k次幂…… 多项式复合…… 多项式多点求值与插值多点求值：给出多项式$A(x)$和$n$个点$x_0, x_1, \cdots, x_{n-1}$，要求求出$A(x_0)$, $A(x_1)$, $\cdots$, $A(x_{n-1})$ 插值：给出n+1个点$(x_0, y_0), (x_1, y_1), \cdots, (x_n, y_n)$，求出一个$n$次多项式，使得这些点都在这个多项式上 大力搞搞…… 参考资料Orz Miskcoo；Orz Miskcoo；Orz Candy? 总结1；总结2 生成函数 普通型生成函数定义序列$a_n$的普通型生成函数 (Ordinary Generating Function, OGF)，为 A(x)=\sum_\limits{i=0}^{}a_ix^i 指数型生成函数定义序列$a_n$的指数型生成函数 (Exponential Generating Function, EGF) ，为 A(x)=\sum_\limits{i=0}^{}a_i \frac{x^i}{i!}]]></content>
       <categories>
         <category>笔记</category>
@@ -28,6 +78,31 @@
         <tag>数学</tag>
         <tag>多项式</tag>
         <tag>生成函数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[K-D Tree]]></title>
+    <url>%2F2018%2F01%2F04%2Fdone%20dont'%20see%20them%2FK-D%20Tree%2F</url>
+    <content type="text"><![CDATA[$K-D$ $Tree$是一种分割$k$维数据空间的数据结构，主要应用于多维空间关键数据的搜索 基本用法 节点$K-D$ $Tree$中的一个节点储存了一个$K$维空间域和一个$K$维的点坐标 1d:点各维坐标 mi:空间各维坐标的min mx:空间各维坐标的max c:左右儿子 以下以$2-D$ $Tree$为例 构树1234567891011121314151617181920212223242526#define cmin(a,b) (a&gt;b?a=b:a)#define cmax(a,b) (a&lt;b?a=b:a)struct abc&#123; int ww[2]; int&amp; operator[](int x)&#123;return ww[x];&#125; &#125;a[N]; bool operator &lt;(abc x,abc y)&#123;return x[D]&lt;y[D];&#125;void update(int x)&#123; for(int i=0;i&lt;2;i++)&#123; if(c[x][0]) cmin(mi[x][i],mi[c[x][0]][i]),cmax(mx[x][i],mx[c[x][0]][i]); if(c[x][1]) cmin(mi[x][i],mi[c[x][1]][i]),cmax(mx[x][i],mx[c[x][1]][i]); &#125;&#125;int build(int l,int r,int x)//循环选取维度 &#123; D=x;int m=l+r&gt;&gt;1; nth_element(a+l,a+m,a+r+1);//使用某一维坐标的中位数作为切分点 for(int i=0;i&lt;2;i++) d[m][i]=mi[m][i]=mx[m][i]=a[m][i]; if(l&lt;m) c[m][0]=build(l,m-1,x^1); if(r&gt;m) c[m][1]=build(m+1,r,x^1); update(m);return m;&#125; 估价算出目标点到当前查询区域距离的下界或上界 1234567891011//now:需估价的矩形区域 P:目标点//曼哈顿最小for(int i=0;i&lt;2;i++)&#123; ret+=max(mi[now][i]-P[i],0); ret+=max(P[i]-mx[now][i],0);&#125;//曼哈顿最大//欧几里得最小//欧几里得最大 插入123456void insert(int &amp;now,int x)&#123;//同平衡树 if(!now)&#123;now=++n;for(int i=0;i&lt;2;i++) d[now][i]=mi[now][i]=mx[now][i]=P[i];return ;&#125; int tmp=P[x]&gt;=d[now][x]; insert(c[now][tmp],x^1); update(now);&#125; 查询12345678910int Dis(int now)&#123;return abs(d[now][0]-P[0])+abs(d[now][1]-P[1]);&#125;void query(int x)&#123; int tmp=Dis(x),dl[2]; for(int i=0;i&lt;2;i++) dl[i]=c[x][i]?getdis(c[x][i]):INF;//估价函数，走较优的子树 cmin(ans,tmp);tmp=dl[0]&gt;=dl[1]; if(dl[tmp]&lt;ans) query(c[x][tmp]),tmp^=1;//不能更新答案直接跳过 if(dl[tmp]&lt;ans) query(c[x][tmp]);&#125;]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+        <tag>计算几何</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[后缀三姐妹]]></title>
+    <url>%2F2017%2F12%2F26%2F%E5%90%8E%E7%BC%80%E4%B8%89%E5%A7%90%E5%A6%B9%2F</url>
+    <content type="text"><![CDATA[后缀数组 $sa(i)$：排第$i$名的后缀$rank(i)$：$Suffix(i)$在所有后缀中的名次 倍增法对每个字符开始的长度为$2^k$的子字符串进行排序，求出$rank()$，当$2^k&gt;n$后，此时的$rank()$便是最后的结果每一次排序利用上次两个长度为$2^{k-1}$的字符串的$rank()$作为第一、第二关键字，进行基数排序 12345678910111213141516171819int cmp(int *r,int a,int b,int l)&#123;return (r[a]==r[b])&amp;&amp;(r[a+l]==r[b+l]);&#125;//比较第一、二关键字void DA(int n,int m=128)&#123;//n+1并人工添加一个较小的字符以避免cmp越界 int i,k,p,*x=rk,*y=rk2; for(i=0;i&lt;m;i++) c[i]=0;//对长度为1的字符串基数排序 for(i=0;i&lt;n;i++) c[x[i]=s[i]]++; for(i=1;i&lt;m;i++) c[i]+=c[i-1]; for(i=n-1;i&gt;=0;i--) sa[--c[x[i]]]=i; for(k=1,p=1;p&lt;n;k&lt;&lt;=1,m=p)&#123;//max(rank())&lt;p for(p=0,i=n-k;i&lt;n;i++) y[p++]=i;//不存在第二关键字的排在前面 for(i=0;i&lt;n;i++) if(sa[i]&gt;=k) y[p++]=sa[i]-k;//利用上一次求得的SA对第二关键字排序 for(i=0;i&lt;m;i++) c[i]=0;//对第一关键字基数排序 for(i=0;i&lt;n;i++) c[x[y[i]]]++; for(i=1;i&lt;m;i++) c[i]+=c[i-1]; for(i=n-1;i&gt;=0;i--) sa[--c[x[y[i]]]]=y[i]; swap(x,y),p=1,x[sa[0]]=0; for(i=1;i&lt;n;i++) x[sa[i]]=cmp(y,sa[i-1],sa[i],k)?p-1:p++; &#125;//rank()保存在x数组中，p=不同的字符串个数&#125; LCP$height(i)$：$LCP(Suffix(sa[i]),Suffix(sa[i-1]))$$h(i)$：$height(rank[i])$性质： 计算根据$h(i) \geq h(i-1)-1$逐一计算 123456789101112131415161718192021void calh(int n)&#123; int i,j,k=0; for(i=1;i&lt;=n;i++) rk[sa[i]]=i; for(i=0;i&lt;n;height[rk[i++]]=k) for(k?k--:0,j=sa[rk[i]-1];s[i+k]==s[j+k];k++);&#125;void RMQ()&#123; for(int i=1;i&lt;=n;i++) f[i][0]=height[i]; for(int j=1;j&lt;=20;j++) for(int i=1;i+(1&lt;&lt;j)-1&lt;=n;i++) f[i][j]=min(f[i][j-1],f[i+(1&lt;&lt;(j-1))][j-1]); &#125;int lcp(int a,int b)&#123; int x=rk[a],y=rk[b]; if(x&gt;y) swap(x,y);x++; int k=log(y-x+1)/log(2); return min(f[x][k],f[y-(1&lt;&lt;k)+1][k]); &#125; 后缀树 大力搞搞…… notes 后缀自动机 确定性有限状态自动机$DFA$由以下$5$部分组成 $alpha$：字符集 $state$：状态集合 $init$：初始状态集合 $end$：终止状态集合 $trans$：状态转移函数 $DFA$的功能是识别字符串$SAM$本质上是一个$DFA$，可以识别$S$的所有子串 最简状态表示现在需要把$S$建成$SAM$考虑最简单的实现方式：将每个后缀插入一颗$Trie$树但是这样太$naive$了，我们考虑合并状态 right()对于$S$的一个子串$s1$，$right(s1)=s1$在$S$中所有出现的结束位置集合将所有$right()$集相同的状态合并 新的状态考虑其与原先暴力表示状态的不同 代表的子串：新的状态代表的子串为右端点相同，长度递增的多种子串，记长度区间为$[min(x),max(x)]$ 结论：状态的$right()$集合可以构成一个树形结构的关系，称其为$fail$树 其中状态$x$在树上的父亲$fa$满足：$right(fa)\nsupseteqq right(x)$，且$|right(fa)|$最小，并有$min(x)=max(fail(x))+1$ 状态数：可以证明是线性的 性质：一个子串的出现次数，就是其对应状态的$right()$集大小 转移函数$trans(x,str)$为从状态$x$读入字符串$str$后到达的状态记$ST(str)=trans(init,str)$ 构造增量法让新加入的子串都被状态代表，而且$trans$边能够正确转移 1234567891011121314void add(int x)&#123; int c=a[x],np=++tot,p=last;last=np; step[np]=x; for(;p&amp;&amp;!ch[p][c];p=fail[p]) ch[p][c]=np; if(!p) fail[np]=root; else&#123; int q=ch[p][c]; if(step[p]+1==step[q]) fail[np]=q; else&#123; int nq=++tot;step[nq]=step[p]+1; memcpy(ch[nq],ch[q],sizeof(ch[q])); fail[nq]=fail[q],fail[np]=fail[q]=nq; for(;ch[p][c]==q;p=fail[p]) ch[p][c]=nq; &#125; &#125;&#125;]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>字符串</tag>
+        <tag>数据结构</tag>
+        <tag>后缀</tag>
       </tags>
   </entry>
 </search>
