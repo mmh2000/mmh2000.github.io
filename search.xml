@@ -35,12 +35,14 @@
       
         <categories>
             
-            <category> 数学 </category>
+            <category> 笔记 </category>
             
         </categories>
         
         
         <tags>
+            
+            <tag> 数学 </tag>
             
             <tag> 组合计数 </tag>
             
@@ -57,12 +59,14 @@
       
         <categories>
             
-            <category> 基础算法 </category>
+            <category> 笔记 </category>
             
         </categories>
         
         
         <tags>
+            
+            <tag> 基础算法 </tag>
             
             <tag> 高精度 </tag>
             
@@ -91,12 +95,14 @@
       
         <categories>
             
-            <category> 数据结构 </category>
+            <category> 笔记 </category>
             
         </categories>
         
         
         <tags>
+            
+            <tag> 数据结构 </tag>
             
             <tag> 树 </tag>
             
@@ -146,12 +152,14 @@
       
         <categories>
             
-            <category> 数据结构 </category>
+            <category> 笔记 </category>
             
         </categories>
         
         
         <tags>
+            
+            <tag> 数据结构 </tag>
             
             <tag> STL </tag>
             
@@ -175,14 +183,16 @@
       
         <categories>
             
-            <category> 字符串 </category>
+            <category> 笔记 </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> 数据结构反 </tag>
+            <tag> 数据结构 </tag>
+            
+            <tag> 字符串 </tag>
             
             <tag> 回文 </tag>
             
@@ -220,12 +230,14 @@
       
         <categories>
             
-            <category> 数学 </category>
+            <category> 笔记 </category>
             
         </categories>
         
         
         <tags>
+            
+            <tag> 数学 </tag>
             
             <tag> 数论 </tag>
             
@@ -280,12 +292,14 @@
       
         <categories>
             
-            <category> 数学 </category>
+            <category> 笔记 </category>
             
         </categories>
         
         
         <tags>
+            
+            <tag> 数学 </tag>
             
             <tag> 反演 </tag>
             
@@ -378,12 +392,14 @@
       
         <categories>
             
-            <category> 黑科技 </category>
+            <category> 笔记 </category>
             
         </categories>
         
         
         <tags>
+            
+            <tag> 黑科技 </tag>
             
             <tag> 二进制 </tag>
             
@@ -405,7 +421,7 @@
       
         <categories>
             
-            <category> 黑科技 </category>
+            <category> 笔记 </category>
             
         </categories>
         
@@ -413,6 +429,8 @@
         <tags>
             
             <tag> 数据结构 </tag>
+            
+            <tag> 黑科技 </tag>
             
         </tags>
         
@@ -472,12 +490,14 @@ a^{b\%\varphi(m)+\varphi(m)}\qquad \quad (a,m)\neq1,b\geq\varphi(m)
       
         <categories>
             
-            <category> 数学 </category>
+            <category> 笔记 </category>
             
         </categories>
         
         
         <tags>
+            
+            <tag> 数学 </tag>
             
             <tag> 数论 </tag>
             
@@ -555,12 +575,14 @@ a^{b\%\varphi(m)+\varphi(m)}\qquad \quad (a,m)\neq1,b\geq\varphi(m)
       
         <categories>
             
-            <category> 数学 </category>
+            <category> 笔记 </category>
             
         </categories>
         
         
         <tags>
+            
+            <tag> 数学 </tag>
             
             <tag> 多项式 </tag>
             
@@ -626,7 +648,7 @@ a^{b\%\varphi(m)+\varphi(m)}\qquad \quad (a,m)\neq1,b\geq\varphi(m)
       
         <categories>
             
-            <category> 数学 </category>
+            <category> 笔记 </category>
             
         </categories>
         
@@ -634,6 +656,8 @@ a^{b\%\varphi(m)+\varphi(m)}\qquad \quad (a,m)\neq1,b\geq\varphi(m)
         <tags>
             
             <tag> 计算几何 </tag>
+            
+            <tag> 数学 </tag>
             
         </tags>
         
@@ -657,12 +681,14 @@ a^{b\%\varphi(m)+\varphi(m)}\qquad \quad (a,m)\neq1,b\geq\varphi(m)
       
         <categories>
             
-            <category> 数据结构 </category>
+            <category> 笔记 </category>
             
         </categories>
         
         
         <tags>
+            
+            <tag> 数据结构 </tag>
             
             <tag> 计算几何 </tag>
             
@@ -706,12 +732,14 @@ a^{b\%\varphi(m)+\varphi(m)}\qquad \quad (a,m)\neq1,b\geq\varphi(m)
       
         <categories>
             
-            <category> 图论 </category>
+            <category> 笔记 </category>
             
         </categories>
         
         
         <tags>
+            
+            <tag> 图论 </tag>
             
             <tag> 生成树 </tag>
             
@@ -762,12 +790,14 @@ a^{b\%\varphi(m)+\varphi(m)}\qquad \quad (a,m)\neq1,b\geq\varphi(m)
       
         <categories>
             
-            <category> 图论 </category>
+            <category> 笔记 </category>
             
         </categories>
         
         
         <tags>
+            
+            <tag> 图论 </tag>
             
             <tag> 路径 </tag>
             
@@ -819,12 +849,14 @@ a^{b\%\varphi(m)+\varphi(m)}\qquad \quad (a,m)\neq1,b\geq\varphi(m)
       
         <categories>
             
-            <category> 数学 </category>
+            <category> 笔记 </category>
             
         </categories>
         
         
         <tags>
+            
+            <tag> 数学 </tag>
             
             <tag> 线性代数 </tag>
             
@@ -856,7 +888,7 @@ a^{b\%\varphi(m)+\varphi(m)}\qquad \quad (a,m)\neq1,b\geq\varphi(m)
       
         <categories>
             
-            <category> 字符串 </category>
+            <category> 笔记 </category>
             
         </categories>
         
@@ -910,7 +942,7 @@ a^{b\%\varphi(m)+\varphi(m)}\qquad \quad (a,m)\neq1,b\geq\varphi(m)
       
         <categories>
             
-            <category> 字符串 </category>
+            <category> 笔记 </category>
             
         </categories>
         
@@ -918,6 +950,8 @@ a^{b\%\varphi(m)+\varphi(m)}\qquad \quad (a,m)\neq1,b\geq\varphi(m)
         <tags>
             
             <tag> 数据结构 </tag>
+            
+            <tag> 字符串 </tag>
             
             <tag> 后缀 </tag>
             
@@ -973,12 +1007,14 @@ a^{b\%\varphi(m)+\varphi(m)}\qquad \quad (a,m)\neq1,b\geq\varphi(m)
       
         <categories>
             
-            <category> 数学 </category>
+            <category> 笔记 </category>
             
         </categories>
         
         
         <tags>
+            
+            <tag> 数学 </tag>
             
             <tag> 算法 </tag>
             
@@ -1017,12 +1053,14 @@ a^{b\%\varphi(m)+\varphi(m)}\qquad \quad (a,m)\neq1,b\geq\varphi(m)
       
         <categories>
             
-            <category> 图论 </category>
+            <category> 笔记 </category>
             
         </categories>
         
         
         <tags>
+            
+            <tag> 图论 </tag>
             
             <tag> 理性愉悦 </tag>
             
@@ -1044,12 +1082,14 @@ a^{b\%\varphi(m)+\varphi(m)}\qquad \quad (a,m)\neq1,b\geq\varphi(m)
       
         <categories>
             
-            <category> 图论 </category>
+            <category> 笔记 </category>
             
         </categories>
         
         
         <tags>
+            
+            <tag> 图论 </tag>
             
             <tag> 连通性 </tag>
             
@@ -1073,12 +1113,14 @@ a^{b\%\varphi(m)+\varphi(m)}\qquad \quad (a,m)\neq1,b\geq\varphi(m)
       
         <categories>
             
-            <category> 数学 </category>
+            <category> 笔记 </category>
             
         </categories>
         
         
         <tags>
+            
+            <tag> 数学 </tag>
             
             <tag> 数论 </tag>
             
@@ -1202,12 +1244,14 @@ a^{b\%\varphi(m)+\varphi(m)}\qquad \quad (a,m)\neq1,b\geq\varphi(m)
       
         <categories>
             
-            <category> 图论 </category>
+            <category> 笔记 </category>
             
         </categories>
         
         
         <tags>
+            
+            <tag> 图论 </tag>
             
             <tag> 网络流 </tag>
             
@@ -1238,12 +1282,14 @@ a^{b\%\varphi(m)+\varphi(m)}\qquad \quad (a,m)\neq1,b\geq\varphi(m)
       
         <categories>
             
-            <category> 图论 </category>
+            <category> 笔记 </category>
             
         </categories>
         
         
         <tags>
+            
+            <tag> 图论 </tag>
             
             <tag> 二分图 </tag>
             
