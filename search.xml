@@ -55,6 +55,43 @@
     <content type="text"><![CDATA[qq forward stop arrows-alt arrows chevron-down chevron-left chevron-right chevron-up long-arrow-left long-arrow-down long-arrow-right long-arrow-up exchange link align-left rotate-right th-large table check-square circle circle-o cog spinner file-code-o plane rocket fighter-jet car thumbs-up question-circle-o warning unsorted toggle-on toggle-off star sort-amount-desc smile-o puzzle-piece others quote-left adjust ban book key question minus home globe commenting code cloud cube 调用Font Awesome 可以控制大小！ 人生乃是一面镜子， 从镜子里认识自己， 我要称之为头等大事， 也只是我们追求的目的！ 文本居中引用 note标签 default default 黑 primary 紫 success 绿 info 蓝 danger 红 warning 橙 带底色的块 danger no-icon 去掉+ note danger, note danger, note dangernote danger, note danger, note dangernote danger, note danger, note danger default name@文字 加底色 tabs 选项卡 1选项卡 2选项卡 3这是选项卡 1 呵呵哈哈哈哈哈哈哈哈呵呵哈哈哈哈哈哈哈哈呵呵哈哈哈哈哈哈哈哈呵呵哈哈哈哈哈哈哈哈呵呵哈哈哈哈哈哈哈哈呵呵哈哈哈哈哈哈哈哈…… 这是选项卡 2 这是选项卡 3 哇，你找到我了！φ(≧ω≦*)♪～ 然后上面源码中, 2表示一开始在第二个选项卡，非必须，若数值为-1则隐藏选项卡内容。更多用法请查看 Solution 2]]></content>
   </entry>
   <entry>
+    <title><![CDATA[回文双子星]]></title>
+    <url>%2F%E5%9B%9E%E6%96%87%E5%8F%8C%E5%AD%90%E6%98%9F.html</url>
+    <content type="text"><![CDATA[Manacher算法$Manacher$算法能在线性的时间求得以每个位置为中心，能构成的最长回文串的半径 &lt;!more&gt; Step 在所有空隙位置(包括首尾)插入一个原串中不会出现的符号，处理偶数长度回文串 维护$MaxRight$表示当前访问到的回文字串中右端点的$max$，$pos$表示$maxright$对应的回文串的对称轴位置 利用回文串的对称性进行扩展 notes $O(n)$ 回文自动机]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>字符串</tag>
+        <tag>数据结构反</tag>
+        <tag>回文</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[素数]]></title>
+    <url>%2F%E7%B4%A0%E6%95%B0.html</url>
+    <content type="text"><![CDATA[素数定理$\pi(x) \sim \frac{x}{\ln x}$ 估计不超过x的素数个数 素性测试试除法1234567bool isprime(int x)&#123;//简单优化：预处理素数表 if(x&lt;2) return false; int m=sqrt(x+0.5); for(int i=2;i&lt;=m;i++) if(x%i==0) return false; return true;&#125; $O(\sqrt{n})$ Miller-Rabin测试唯一分解定理任何大于１的自然数，都可以唯一分解成有限个质数的乘积 可以用质因数分解序列表示一个数 因子数与因子和质因数分解试除法1234567891011 void resolve(int x)//简单优化：预处理素数表&#123; int m=sqrt(x+0.5); for(int i=2;i&lt;=m;i++)&#123; if(!(x%i))&#123; base[++cnt]=i; while(!(x%i)) x/=i,++idx[cnt]; &#125; &#125; if(x!=1) base[++cnt]=x,idx[cnt]=1;&#125; $O(\sqrt{n})$ Pollard Rho算法非常有趣的算法 随机化，通过$Birthday$ $Trick$提高概率，$Floyd$判圈法判断 详解 $O(n^{1/4})$ 筛法埃式筛1234void Eratosthenes()&#123; for(int i=2;i*i&lt;=n;i++) if(!vis[i]) for(int j=i*i;j&lt;=n;j+=i) vis[j]=1;&#125; $O(n \log \log n)$ 线性筛筛积性函数 tricks:筛每个数的最小/最大质因子及其幂指数 1234567891011121314151617181920void euler()&#123; for(int i=2;i&lt;=n;i++)&#123;//全家桶 d[i]:最小质因子幂 cnt[i]:因子数 if(!vis[i]) p[++p[0]]=i,u[i]=-1,phi[i]=i-1,d[i]=1,cnt[i]=2; for(int j=1;j&lt;=p[0]&amp;&amp;i*p[j]&lt;=n;j++)&#123; vis[i*p[j]]=1; if(i%p[j]==0)&#123; u[i*p[j]]=0; phi[i*p[j]]=phi[i]*p[j]; d[i*p[j]]=d[i]+1; cnt[i*p[j]]=cnt[i]/(d[i]+1)*(d[i]+2); break; &#125; u[i*p[j]]=-u[i]; phi[i*p[j]]=phi[i]*(p[j]-1); d[i*p[j]]=1; cnt[i*p[j]]=cnt[i]*2; &#125; &#125;&#125; $O(n)$ 经典课件 杜教筛解决一类积性函数求前缀和问题 $O(n^{2/3})$ 唐教的介绍 州阁筛$O(\frac{n^{3/4}}{\log n})$]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>数论</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[闷声反大演]]></title>
+    <url>%2F%E9%97%B7%E5%A3%B0%E5%8F%8D%E5%A4%A7%E6%BC%94.html</url>
+    <content type="text"><![CDATA[数论函数若函数$f(n)$满足定义域为正整数域，值域为复数域，即$f$：$Z^+→C$ ，称$f(n)$为数论函数 若数论函数$f(n)$对于互质的两个正整数$p$、$q$，有$f(p⋅q)=f(p)⋅f(q)$，称$f(n)$为积性函数 若数论函数$f(n)$对于任意两个正整数$p$、$q$，有$f(p⋅q)=f(p)⋅f(q)$，称$f(n)$为完全积性函数 常见的完全积性函数 元函数 $e(n)=[n=1]$，狄利克雷卷积的乘法单位元 恒等函数 $I(n)=1$ 单位函数 $id(n)=n$ 幂函数 $id^k(n)=n^k$ 常见的积性函数 除数函数 $\sigma_k(n)=\sum\limits_{d|n}{d^k}$ 约数个数函数 $\tau(n)=\sigma_0(n)=\sum\limits_{d|n}{1}$ 约数和函数 $\sigma(n)=\sigma_1(n)=\sum\limits_{d|n}{d}$ 欧拉函数 $\varphi(n)=\sum\limits_{i=1}^{n}{[(n,i)=1]}$ 莫比乌斯函数 对于无平方因子数$n=\prod\limits_{i=1}^{t}p_i$，$\mu(n)=(-1)^t$；对于有平方因子数$n$，$\mu(n)=0$；在狄利克雷卷积的乘法中与恒等函数互为逆元 一些性质 $\sum\limits_{d|n}{\mu(d)}=[n=1]$ $\sum\limits_{d|n}{\varphi(d)}=n$ $\sum\limits_{d|n}{\frac{\mu(d)}{d}}=\frac{\varphi(n)}{n}$ 此式中为分数 $\sum_{i=1}^{n}i\cdot[(n,i)=1]=\frac{n\varphi(n)+[n=1]}{2}$ 与n互质数的和 狄利克雷卷积与莫比乌斯反演数论函数$f$和$g$的狄利克雷卷积定义为 (f \times g)(n)=\sum\limits_{d|n}{f(d)~g(\frac{n}{d})}交换律：$f \times g=g \times f$ 结合律：$(f \times g) \times h=f \times (g \times h)$ 单位元：$f \times e =f$ 加法分配律：$f \times (g+h)=f \times g+ f\times h$ 在上文数论函数的部分中提到，$\mu \times I = e$，利用这个等式可以解决下面的问题 已知$g(n)$&amp;$g(n)=\sum\limits_{d|n}{f(d)}$，求$f(n)$ $\because $ $f \times I=\sum\limits_{d|n}{f(d)~I(\frac{n}{d})}=g$ $\therefore $ $f \times I \times \mu=g \times \mu$ 即$f=\mu \times g,f(n)=\sum\limits_{d|n}{\mu(d)~ g(\frac{n}{d})} ①$ 类似地，若已知$g(n)$&amp;$g(n)=\sum\limits_{n|d}{f(d)}$ 可以得到$f(n)=\sum\limits_{n|d}{\mu(\frac{d}{n}) ~ g(d)}②$ 以上利用$\mu$实现$f$和$g$互相转化的过程称为莫比乌斯反演 二项式反演]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>反演</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[二进制]]></title>
     <url>%2F%E4%BA%8C%E8%BF%9B%E5%88%B6.html</url>
     <content type="text"><![CDATA[位运算的优先级比较奇怪，请加括号使用 C/C++语言提供的位运算符 用$x$表示一个10进制数，记其二进制展开从最右边开始为第$0、1、2…$位 操作 功能 语句 描述 获取$x$的第$i$位 x&amp;(1&lt;&lt;i) 若$x$的第$i$位为$1$，值为$2^i$ bar bar bar 查询$x$中$1$的个数 __builtin_popcount(x) GCC内建函数 提取lowbit(x) x&amp;(-x) 可以遍历$x$中所有$1$ 技巧 功能 语句 描述 判断奇偶性 x&amp;1 值为$1$则$x$为奇数 乘除$2$ &lt;&lt; &amp; &gt;&gt; 根据实际意义 对$2$的幂取模 __builtin_popcount(x) GCC内建函数 交换两个数 a^=b,b^=a,a^=b 根据实际意义 集合用二进制数表示集合，设单个二进制数最大位宽为$w$ 修改&amp;查询&amp;删除直接上…… $O(1)$ 集合交&amp;并&amp;差&amp;补x&amp;yx|yx^(x&amp;y)~x $O(\frac{n}{w})$ 性质位运算每一位相互独立，互不干扰，可以按位考虑，进行dp/贪心]]></content>
@@ -65,6 +102,30 @@
         <tag>黑科技</tag>
         <tag>二进制</tag>
         <tag>位运算</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[分块与莫队]]></title>
+    <url>%2F%E5%88%86%E5%9D%97%E4%B8%8E%E8%8E%AB%E9%98%9F.html</url>
+    <content type="text"><![CDATA[分块优雅的暴力 均值法合理确定块的大小 核心思想是让两部分时间复杂度划等号 莫队区间]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+        <tag>暴力</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[同余]]></title>
+    <url>%2F%E5%90%8C%E4%BD%99.html</url>
+    <content type="text"><![CDATA[同余式性质 反身性 $a \equiv a \pmod {m}$ 对称性 $a \equiv b \pmod {m}$ $\Rightarrow$ $ b \equiv a \pmod {m}$ 传递性 $a \equiv b \pmod {m}$,$b \equiv c \pmod {m}$ $\Rightarrow$ $a \equiv c \pmod {m}$ 相加 $a \equiv b \pmod {m}$,$c \equiv d \pmod {m}$ $\Rightarrow$ $a \pm c \equiv b \pm d \pmod {m}$ 相乘 $a \equiv b \pmod {m}$,$c \equiv d \pmod {m}$ $\Rightarrow$ $ac \equiv bd \pmod {m}$ 除法 $ac \equiv bd \pmod {m}$ $\Rightarrow$ $a \equiv b \pmod { \frac{m}{(c,m)}}$ 乘幂 $a \equiv b \pmod {m}$ $\Rightarrow$ $a^n \equiv b^n \pmod {m}$ 剩余系完全剩余系：模$n$意义下的完全剩余系$Z_n=${$0,1,…n-1$}，每个元素代表一个同余等价类 缩系：模$n$意义下的缩系$Z_n*=${$x|x \in Z_n,(x,n)=1$} 模m意义下乘法群逆元a存在逆元充要条件:$(a,m)=1$ CalcEuler theorem 若正整数$a$、$m$互质 $a^{\varphi (m)} \equiv 1 \pmod {m}$ Fermat’s little theorem 若正整数$a$、$m$互质且$m$为质数 $a^{m-1} \equiv 1 \pmod {m}$ Or use EX Euclid algorithm 模意义下的运算常见运算取模$a +b \equiv((a \mod m)+(b \mod m)) \pmod {m}$ $a -b \equiv((a \mod m)-(b \mod m)+m)\pmod {m}$ $ab \equiv ((a\mod m)(b \mod m))\pmod {m}$ $a/b \mod m$ $a^b \mod m$ $Case1:$减小a a^b \equiv (a \mod m)^b \pmod {m}$Case2:$减小b a^b\equiv \begin{cases} a^{b\%\varphi(m)}\qquad \quad \qquad (a,m)=1\\ a^b\qquad \qquad \qquad \quad ~(a,m)\neq1,b]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>数论</tag>
       </tags>
   </entry>
   <entry>
@@ -81,6 +142,18 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[平面几何]]></title>
+    <url>%2F%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95.html</url>
+    <content type="text"><![CDATA[点12345struct Point&#123; double x,y; Point()&#123;&#125; Point(double _,double __)&#123;x=_,y=__;&#125;&#125;; 线123456struct Line&#123;//使用向量式表示，线上的点X满足X=P+tV，直线t∈R,线段t∈[0,1],射线t&gt;0 Point P;//线上一点 Vector V;//方向向量，已知线上两个不同点A、B，则V=B-A Line()&#123;&#125; Line(Point _,Vector __)&#123;P=_,V=__;&#125;&#125;; 圆123456789struct Circle&#123; Point c; double r; Circle()&#123;&#125; Circle(Point _,double __)&#123;c=_,r=__;&#125; Point point(double a)&#123;////通过圆心角确定圆上坐标 return Point(c.x+cos(a)*r,c.y+sin(a)*r); &#125;&#125;; 多边形1234struct Polygon&#123; int n; vector&lt;Point&gt; P;&#125;; 向量1typedef Point Vector; 四则运算1234Vector operator + (Vector A,Vector B)&#123;return Vector(A.x+B.x,A.y+B.y);&#125;Vector operator - (Vector A,Vector B)&#123;return Vector(A.x-B.x,A.y-B.y);&#125;Vector operator * (Vector A,double p)&#123;return Vector(A.x*p,A.y*p);&#125;Vector operator / (Vector A,double p)&#123;return Vector(A.x/p,A.y/p);&#125; 点积与叉积点积几何意义：$U$在$V$上的投影的模长乘$V$的模长，可以判断向量垂直 叉积几何意义：以$U$、$V$为邻边构成的平行四边形的有向面积，可以判断向量平行 把点积和叉积组合到一起可以判断两个向量的位置关系 左图点积，右图叉积：对于向量$a$、$b$，$b$在蓝色区域为正，绿色区域为负 12double Dot(Vector A,Vector B)&#123;return A.x*B.x+A.y*B.y;&#125;//|A||B|cos(θ)double Cross(Vector A,Vector B)&#123;return A.x*B.y-A.y*B.x;&#125;//|A||B|sin(θ) 模长、投影与夹角123double Length(Vector A)&#123;return sqrt(Dot(A,A));&#125;double Shade(Vector A,Vector B)&#123;return Dot(A,B)/Length(B);&#125;double Angle(Vector A,Vector B)&#123;return acos(Dot(A,B)/Length(A)/Length(B));&#125; 极角1double Polar(Vector A)&#123;return atan2(A.y,A.x);&#125; 旋转与单位法向量12345Vector Rotate(Vector A,double rad)&#123;return Vector(A.x*cos(rad)-A.y*sin(rad),A.x*sin(rad)+A.y*cos(rad));&#125;Vector Normal(Vector A)&#123;//左转90°，长度归1 double L=Length(A); return Vector(-A.y/L,A.x/L);&#125; 距离两点间距离1double DistanceToPoint(Point A,Point B)&#123;return Length(A-B);&#125; 点到直线间距离1double DistanceToLine(Line A,Point B)&#123;return fabs(Cross(B-A.P,A.V)/Length(A.V));&#125; 点到线段间距离12345678//点到线段的距离double DistanceToSegment(Point P,Point A,Point B)&#123; if(A==B) return Length(P-A); Vector v1=B-A,v2=P-A,v3=P-B; if(dcmp(Dot(v1,v2))&lt;0) return Length(v2); if(dcmp(Dot(v1,v3))&gt;0) return Length(v3); return fabs(Cross(v1,v2))/Length(v1);&#125; 关系两直线交点12345//须确保两直线有唯一交点Point GetLineIntersection(Line A,Line B)&#123; double t=Cross(B.V,A.P-B.P)/Cross(A.V,B.V); return A.P+A.V*t;&#125; 点在多边形内判定1234567891011121314int isPointInPolygon(Point p,Polygon poly)&#123;//转角法 int wn=0; int n=poly.size(); for(int i=0;i&lt;n;i++)&#123; Point C=poly[i],D=poly[(i+1)%n]; if(OnSegment(p,C,D) return -1;//在边界上 int k=dcmp(Cross(D-C,p-C)); int d1=dcmp(C.y-p.y),d2=dcmp(D.y-p.y); if(k&gt;0&amp;&amp;d1&lt;=0&amp;&amp;d2&gt;0) wn++; if(k&lt;0&amp;&amp;d2&lt;=0&amp;&amp;d1&gt;0) wn++; &#125; if(wn!=0) return 1;//内部 return 0;//外部&#125; 线段相交判定123456//线段规范相交判定，即交点不在任何一条线段的端点bool SegmentProperIntersection(Point a1,Point a2,Point b1,Point b2)&#123; double c1=Cross(a2-a1,b1-a1),c2=Cross(a2-a1,b2-a1); double c3=Cross(b2-b1,a1-b1),c4=Cross(b2-b1,a2-b1); return dcmp(c1)*dcmp(c2)&lt;0&amp;&amp;dcmp(c3)*dcmp(c4)&lt;0;&#125; 点在线段上判定1234//判断点是否在线段上，不包含端点bool OnSegment(Point P,Point A,Point B)&#123; return dcmp(Cross(A-P,B-P)==0&amp;&amp;dcmp(Dot(A-P,B-P))&lt;0;&#125; 直线与圆的交点123456789101112131415161718//联立方程组//直线和圆的交点，返回交点个数，结果存在sol中。//该代码没有清空solint getLineCircleIntersecion(Line L,Circle C,double &amp;t1,double &amp;t2,vector&lt;Point&gt; &amp;sol)&#123; double a=L.v.x,b=L.p.x-C.c.x,c=L.v.y,d=L.p.y-C.c.y; double e=a*a+c*c,f=2*(a*b+c*d),g=b*b+d*d-C.r*C.r; double delta=f*f-4*e*g; //判别式 if(dcmp(delta)&lt;0) return 0; //相离 if(dcmp(delta)==0)&#123; //相切 t1=t2=-f/(2*e); sol.push_back(C.point(t1)); return 1; &#125; //相交 t1=(-f-sqrt(delta))/(2*e);sol.push_back(C.point(t1)); t2=(-f+sqrt(delta))/(2*e);sol.push_back(C.point(t2)); return 2;&#125; 两圆相交1234567891011121314151617int getCircleCircleIntersection(Circle C1,Circle C2,vector&lt;Point&gt; &amp;sol)&#123; double d=Length(C1.c-C2.c); if(dcmp(d)==0)&#123; if(dcmp(C1.r-C2.r==0)) return -1;//两圆完全重合 return 0;//两圆为同心圆 &#125; if(dcmp(C1.r+C2.r-d)&lt;0) return 0; if(dcmp(fabs(C1.r-C2.r)==0)) return -1; double a=Angle(C2.c-C1.c);//向量C1C2的极角 double da=acos((C1.r*C1.r+d*d-C2.r*C2.r)/(2*C1.r*d)); //C1C2到C1P1的角 Point p1=C1.point(a-da),p2=C1.point(a+da); sol.push_back(p1); if(p1==p2) return 1; sol.push_back(p2); return 2;&#125; 过定点做圆的切线123456789101112131415int getTangents(Point p,Circle C,Vector *v)&#123; Vector u=C.c-p; double dist=Length(u); if(dist&lt;C.r) return 0; else if(dcmp(dist-C.r)==0)&#123; v[0]=Rotate(u,PI/2); return 1; &#125; else&#123; double ang=asin(C.r/dist); v[0]=Rotate(u,-ang); v[1]=Rotate(u,+ang); return 2; &#125;&#125; 两圆的公切线1234567891011121314151617181920212223242526272829303132//根据圆心距判断//返回切线的个数，-1表示有无数条公切线。//a[i], b[i] 表示第i条切线在圆A，圆B上的切点int getTangents(Circle A,Circle B,Point *a,Point *b)&#123; int cnt=0; if(A.r&lt;B.r)&#123;swap(A,B);swap(a,b);&#125; int d2=(A.c.x-B.c.x)*(A.c.x-B.c.x)+(A.c.y-B.c.y)*(A.c.y-B.c.y); int rdiff=A.r-B.r; int rsum=A.r+B.r; if(d2&lt;rdiff*rdiff) return 0;//内含 double base=atan2(B.c.y-A.c.y,B.c.x-A.c.x); if(d2==0&amp;&amp;A.r==B.r) return -1;//无限多条切线 if(d2==rdiff*rdiff)&#123;//内切,一条切线 a[cnt]=A.point(base),b[cnt]=B.point(base),cnt++; return 1; &#125; //有外共切线 double ang=acos((A.r-B.r)/sqrt(d2)); a[cnt]=A.point(base+ang);b[cnt]=B.point(base+ang);cnt++; a[cnt]=A.point(base-ang);b[cnt]=B.point(base-ang);cnt++; if(d2==rsum*rsum)&#123;//一条内公切线 a[cnt]=A.point(base); b[cnt]=B.point(PI+base); cnt++; &#125; else if(d2&gt;rsum*rsum)&#123;//两条内公切线 double ang=acos((A.r+B.r)/sqrt(d2)); a[cnt]=A.point(base+ang);b[cnt]=B.point(PI+base+ang);cnt++; a[cnt]=A.point(base-ang);b[cnt]=B.point(PI+base-ang);cnt++; &#125; return cnt;&#125; 面积多边形的有向面积123456double PolygonArea(Polygon A)&#123; double area=0; for(int i=1;i&lt;A.size()-1;i++) area+=Cross(A[i].P-A[0].P,A[i+1].P-A[0].P); return area/2;&#125; 凸包包围给定点集的面积最小的凸多边形 Andrew算法分别维护上下凸壳，然后合并 1234567891011121314void ConvexHull(Point *p,int n,Point* ch)&#123; sort(p,p+n,cmp);//按照x、y为第一、二关键字排序 int m=0; for(int i=0;i&lt;n;i++)&#123; while(m&gt;1&amp;&amp;Cross(ch[m-1]-ch[m-2],p[i]-ch[m-2])&lt;=0) m--;//右手定则，直到方向在左边为止 ch[m++]=p[i]; &#125; int k=m; for(int i=n-2;i&gt;=0;i--)&#123; while(m&gt;k&amp;&amp;Cross(ch[m-1]-ch[m-2],p[i]-ch[m-2])&lt;=0) m--; ch[m++]=p[i]; &#125; if(n&gt;1) m--;&#125; 半平面交给出若干个半平面，求它们的公共部分 半平面半平面用有向直线表示，它的左侧就是它所代表的半平面 增量法123456789101112131415161718192021void InitPolygon(Polygon &amp;poly)//初始化答案为整个平面，结束后删除&#123; poly[poly.n++]=Point(INF,INF); poly[poly.n++]=Point(INF,-INF); poly[poly.n++]=Point(-INF,INF); poly[poly.n++]=Point(-INF,-INF);&#125;Polygon CutPolygon(Polygon poly,Point A,Point B)&#123; Polygon newpoly; int n=poly.size(); for(int i=0;i&lt;n;i++)&#123; Point C=poly[i],D=poly[(i+1)%n];//逆时针考虑多边形的所有顶点 if(dcmp(Cross(B-A,C-A))&gt;=0) newpoly.push_back(C); if(dcmp(Cross(B-A,C-D))!=0)&#123; Point ip=GetLineIntersection(A,B-A,C,D-C); if(OnSegment(ip,C,D)) newpoly.push_back(ip); &#125; &#125; return newpoly;&#125; 旋转卡壳凸包上被两条平行直线卡住的点对互为对踵点，对踵点对的数量是$O(n)$的 旋转卡壳目的是求出凸包上所有的对踵点对 给定 $n$ 个点，最远点对一定是凸包上的对踵点对 12 随机增量法最小圆覆盖Voronoi图与Delaunay三角剖分公式与性质Pick公式在格点图上，整点多边形的面积=内部整点个数+边上的整点个数/2−1 欧拉公式简单多面体的顶点数V，面数F与棱数E之间存在如下关系 V-E+F=2特别的，在平面图上：点数V，将平面分成的互不联通的区域数F，边数E与联通块个数W之间，有 V-E+F=1+W三角形的心 外心：外接圆圆心，三条中垂线交点 内心：内接圆圆心，三条角平分线交点 重心：三条中线交点，注意其物理性质 垂心：三条垂线交点 旁心：一个外交平分线与另外两个内角平分线交点 平面多边形的重心：所以顶点x/y坐标的平均数]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>计算几何</tag>
+        <tag>数学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[K-D Tree]]></title>
     <url>%2FK-D%20Tree.html</url>
     <content type="text"><![CDATA[$K-D$ $Tree$是一种分割$k$维数据空间的数据结构，主要应用于多维空间关键数据的搜索 基本用法 节点$K-D$ $Tree$中的一个节点储存了一个$K$维空间域和一个$K$维的点坐标 1d:点各维坐标 mi:空间各维坐标的min mx:空间各维坐标的max c:左右儿子 以下以$2-D$ $Tree$为例 构树1234567891011121314151617181920212223242526#define cmin(a,b) (a&gt;b?a=b:a)#define cmax(a,b) (a&lt;b?a=b:a)struct abc&#123; int ww[2]; int&amp; operator[](int x)&#123;return ww[x];&#125; &#125;a[N]; bool operator &lt;(abc x,abc y)&#123;return x[D]&lt;y[D];&#125;void update(int x)&#123; for(int i=0;i&lt;2;i++)&#123; if(c[x][0]) cmin(mi[x][i],mi[c[x][0]][i]),cmax(mx[x][i],mx[c[x][0]][i]); if(c[x][1]) cmin(mi[x][i],mi[c[x][1]][i]),cmax(mx[x][i],mx[c[x][1]][i]); &#125;&#125;int build(int l,int r,int x)//循环选取维度 &#123; D=x;int m=l+r&gt;&gt;1; nth_element(a+l,a+m,a+r+1);//使用某一维坐标的中位数作为切分点 for(int i=0;i&lt;2;i++) d[m][i]=mi[m][i]=mx[m][i]=a[m][i]; if(l&lt;m) c[m][0]=build(l,m-1,x^1); if(r&gt;m) c[m][1]=build(m+1,r,x^1); update(m);return m;&#125; 估价算出目标点到当前查询区域距离的下界或上界 1234567891011//now:需估价的矩形区域 P:目标点//曼哈顿最小for(int i=0;i&lt;2;i++)&#123; ret+=max(mi[now][i]-P[i],0); ret+=max(P[i]-mx[now][i],0);&#125;//曼哈顿最大//欧几里得最小//欧几里得最大 插入123456void insert(int &amp;now,int x)&#123;//同平衡树 if(!now)&#123;now=++n;for(int i=0;i&lt;2;i++) d[now][i]=mi[now][i]=mx[now][i]=P[i];return ;&#125; int tmp=P[x]&gt;=d[now][x]; insert(c[now][tmp],x^1); update(now);&#125; 查询12345678910int Dis(int now)&#123;return abs(d[now][0]-P[0])+abs(d[now][1]-P[1]);&#125;void query(int x)&#123; int tmp=Dis(x),dl[2]; for(int i=0;i&lt;2;i++) dl[i]=c[x][i]?getdis(c[x][i]):INF;//估价函数，走较优的子树 cmin(ans,tmp);tmp=dl[0]&gt;=dl[1]; if(dl[tmp]&lt;ans) query(c[x][tmp]),tmp^=1;//不能更新答案直接跳过 if(dl[tmp]&lt;ans) query(c[x][tmp]);&#125;]]></content>
@@ -90,6 +163,53 @@
       <tags>
         <tag>数据结构</tag>
         <tag>计算几何</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[生成树]]></title>
+    <url>%2F%E7%94%9F%E6%88%90%E6%A0%91.html</url>
+    <content type="text"><![CDATA[联通图$G$的生成树是包含$G$中所有顶点的极小连通子图 最小生成树性质 切割性质：在各边边权均不相同时，对于连接图$G$中两个非空点集的最短边$e$，$G$的任意$MST$一定包含$e$ 回路性质：在各边边权均不相同时，对于图$G$中的任意回路的最长边$e$，$G$的任意$MST$一定不包含$e$ Kruskal算法对所有边按权值排序，最初每个点都是一个联通块 贪心地合并连接不同联通块的边，并查集维护 $O(m\log m+m\alpha(n))$ Prim算法$Dijkstra$算法的变形，可以堆优化可以处理负权边 增量最小生成树在$MST$中新加入边$e=(u,v)$后，图中恰好包含一个环根据回路性质，删掉$max(e,MST$中$(u,v))$即可 最小瓶颈生成树最小化生成树中最大边权值$MST$就是一棵最小瓶颈生成树 次小生成树次小生成树可以由$MST$加一条边再删一条边得到 枚举不在$MST$中的$m-n+1$条边作为加入的新边，做增量最小生成树 最小树形图给定一个有向带权图$G$和根节点$u$，找出一棵有向生成树，满足$u$的入度为$0$，其他结点入度均为$1$，且从$u$可以到达所有其他结点 朱刘算法预处理：删除自环，判断根节点是否可以到达其他节点，不能的话无解 首先给所有非根结点选一条权最小的入边，并将这些入边的和累加入答案 如果没有环，现在所有的入边就构成了最小树形图 否则，将构成的环缩成一个点，注意n个点n条边只能构成一个最简单的环（因此不需要跑Tarjan强联通分量），找到上面的一个点，进行重标号即可 重复上述过程，直到没有环（显然只剩下一个点的时候也是没有环的） 但是这样是不对的……注意一个环中的某一个点x，再一次找x的最小入边的时候，根据流程要把x的最小入边的边权累加入答案，但是x原来的最小入边也累加入答案，显然这样是会重复的；那么不妨在缩点的时候让所有x的入边都减去当前x的最小入边，相当于去重 1234567891011121314151617181920212223242526272829303132double dirtree(int rt)&#123; double tmp=0; while(1)&#123; for(int i=1;i&lt;=n;i++) in[i]=INF; for(int i=1;i&lt;=m;i++) if(e[i].u!=e[i].v&amp;&amp;e[i].w&lt;in[e[i].v]) pre[e[i].v]=e[i].u,in[e[i].v]=e[i].w;//定入边 in[rt]=0; for(int i=1;i&lt;=n;i++) if(in[i]==INF) return -1;//判断无解 int cnt=0; for(int i=1;i&lt;=n;i++) id[i]=vis[i]=0; for(int j,i=1;i&lt;=n;i++)&#123; tmp+=in[i]; for(j=i;vis[j]!=i&amp;&amp;!id[j]&amp;&amp;j!=rt;j=pre[j]) vis[j]=i;//到根-&gt;环结束 //如果j已有标号或j为根的话就说明i之前的并不是正常的环 if(!id[j]&amp;&amp;j!=rt)&#123; id[j]=++cnt; for(int k=pre[j];k!=j;k=pre[k])//重编号 id[k]=cnt; &#125; &#125; if(!cnt) return tmp;//已经无环 for(int i=1;i&lt;=n;i++) if(!id[i]) id[i]=++cnt;//不在环中的单独点当作一个单点环处理 for(int i=1;i&lt;=m;i++)&#123; f=in[e[i].v]; e[i].u=id[e[i].u],e[i].v=id[e[i].v];//注意这里要用编号 if(e[i].u!=e[i].v) e[i].w-=f; &#125; n=cnt,rt=id[rt];//！ &#125;&#125; $O(nm)$ 最小斯坦纳树使得指定集合中的点联通且权值和最小的生成树 $f[u][i]$表示以$u$为根，指定集合中的点状态为$i$的最小代价 123456789101112memset(f,0x3f,sizeof(f));int all=1&lt;&lt;k;//k:1~k为指定点集for(int i=1;i&lt;=k;i++) f[i][1&lt;&lt;(i-1)]=0;for(int i=0;i&lt;all;i++)&#123; for(int u=1;u&lt;=n;u++) &#123; for(int s=i;s;s=(s-1)&amp;i) f[u][i]=min(f[u][i],f[u][s]+f[u][i^s]);//通过连通状态的子集进行转移 if(f[u][i]&lt;INF) q.push(u),vis[u]=1; &#125; spfa(i);//通过spfa松弛&#125; $O(n3^k+cm2^k)$，其中$cm$为$spfa$的复杂度 生成树计数矩阵树定理prufer序列]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>图论</tag>
+        <tag>生成树</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[大路]]></title>
+    <url>%2F%E5%A4%A7%E8%B7%AF.html</url>
+    <content type="text"><![CDATA[最短路Floyd多源最短路径 本质上是$dp$ $f[k][i][j]$表示从$i$到$j$只经过编号$1…k$点的最短路,可以解决诸如按顺序加点的问题 需要考虑重边(边权取$min$)、自环(读入边后$w[i][i]=0$) Dijkstra单源最短路径 标号设定算法，基于贪心思想，因此只适用于边权非负 两点最短路优化：$T$被标记后直接退出 $O((n+m)\log n)$ 堆优化 Spfa单源最短路径 标号迭代算法，$Bellman-Ford$算法的队列优化，可以处理负权边 两点最短路优化：$if(d[u]&gt;=d[T])$ $continue;$ $SLF$优化：每次入队后，$if(d[q[head+1]]&gt;d[tail])$ $swap(q[head+1],q[tail]);$ $LLL$优化：每次$v$出队后,$if(d[v]&gt;$队列中所有$d$的平均值) $q[++tail]=v,continue ;$ $O(ke)$，其中$k$是一个与出题人$rp$非线性相关的常数 判负环使用$dfs$版$spfa$，比较科学 最短路树&amp;图 case1:跑完最短路后记录一个点由那个点转移而来，形成一棵树 case2:保留图中所有可能成为最短路的边，形成一个图 分层图最短路中，同一层内的顺序可能会与最短路图中的点的拓扑序相关 最短路计数统计点对间的最短路条数，某条边经过的最短路径数，etc Floyd可以方便地实现，当然Dijkstra也可以 次短路枚举在最短路上但不在次短路上的边 k短路$A*$算法 差分约束系统传递闭包大概就是求出所有点对间的联通性 1234bitset&lt;N+5&gt; b[N+5];for(int k=1;k&lt;=n;k++) for(int i=1;i&lt;=n;i++) if(b[i][k]) b[i]|=b[k]; 距离欧几里得距离：两点间的真实距离曼哈顿距离：各维坐标差绝对值的和；各维度独立，可以分开处理切比雪夫距离：各维坐标差绝对值的最大值，坐标系旋转$45°$可以和曼哈顿距离互相转化汉明距离：两个字符串不同的位数 各种距离 路径欧拉通路通过图中每条边一次且仅一次的路径 判定无向联通图：图中只有0个或2个度为奇数的节点 有向联通图：有且仅有两个顶点：其中一个入度数比出度数大1，另一个入度数比出度数小1，其余的顶点入度数等于出度数 欧拉回路通过图中每条边一次且仅一次并回到起点的路径 判定无向联通图：图中所有节点度均为偶数 有向联通图：图中所有节点入度等于出度 输出路径哈密顿回路从给定的起点到给定的终点经过图中所有点的路径]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>图论</tag>
+        <tag>路径</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[线性代数]]></title>
+    <url>%2F%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0.html</url>
+    <content type="text"><![CDATA[矩阵矩阵是一个向量集,描述一个线性变换 运算 加减：对应元素相加减 数乘：每个元素乘一个数 转置：将矩阵的行列交换 乘法：$A:m \times n$ 矩阵，$B:n \times p$ 矩阵，$C=AB:m \times p$ 矩阵 $C_{ij}=\sum\limits_{k=1}^{n}A_{ik}B_{kj}$ 结合律：$(AB)C=A(BC)$左分配律：$(A+B)C=AC+BC$右分配律：$C(A+B)=CA+CB$不满足交换律 矩阵的逆行列式对$n$阶方阵 $\left[\begin{matrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n}\\ a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\ a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn}\\\end{matrix}\right]$ $=\sum\limits_{j_1…j_n}^{}(-1)^{r(j_1…j_n)}a_{1j_1}…a_{nj_n}$ 其中$j_1…j_n$为n元排列$r(j_1…j_n)$表示其中的逆序对个数 特征值与特征向量&amp;特征多项式Cayley–Hamilton 定理 特殊的矩阵单位矩阵$E$ $ \left[ \begin{matrix} 1 &amp; 0 &amp; 0 \\\ 0 &amp; 1 &amp; 0 \\\ 0 &amp; 0 &amp; 1 \end{matrix} \right]$ 若$AB=E$，则$A$、$B$互为逆矩阵 循环矩阵 $ \left[ \begin{matrix} 1 &amp; 2 &amp; 3 \\\ 3 &amp; 1 &amp; 2 \\\ 2 &amp; 3 &amp; 1 \end{matrix} \right]$ 循环矩阵的线性运算及乘积仍是循环矩阵 满足乘法交换律：$AB=BA$ 循环矩阵的逆仍是循环矩阵 线性方程组利用矩阵，可以将以下线性方程组 $a_{11}x_1+a_{12}x_2+ … + a_{1n}x_n=b_1$ $a_{21}x_1+a_{22}x_2+ … + a_{2n}x_n=b_2$ $\vdots $ $a_{n1}x_1+a_{n2}x_2+ … + a_{nn}x_n=b_n$ 记作$Ax=b$ 高斯消元一般方程组 1234567891011void Gauss()&#123;//A[i][n+1]：x-&gt;b的线性变换 for(int i=1;i&lt;=n;i++)&#123; int r=i;//列主元：提高数值稳定性 for(int j=i+1;j&lt;=n;j++) if(fabs(a[r][i])&lt;fabs(a[j][i])) r=j; if(r!=i) for(int j=1;j&lt;=n+1;j++) swap(a[i][j],a[r][j]);//交换 for(int j=n+1;j&gt;=i;j--)//逆序保证精度 for(int k=1;k&lt;=n;k++) if(k!=i) a[k][j]-=a[k][i]/a[i][i]*a[i][j]; &#125; for(int i=1;i&lt;=n;i++) a[i][n+1]/=a[i][i];//回代&#125; 异或方程组 一些地方简化了…… 自由元 线性基$n$个线性无关的向量，通过线性组合可以表示出线性空间内任意一个向量 模线性方程组notes]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>线性代数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[字符串基础]]></title>
+    <url>%2F%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9F%BA%E7%A1%80.html</url>
+    <content type="text"><![CDATA[字符串哈希$hash(i)=(hash(i-1)*B+s[i])$%$P$$B$：进制数 参考：$457,251,2333,149,373$$P$：模数 参考：$987654323,666666667,23456789$ 姿势双模、自然溢出从$i$开始长为$len$子串的哈希值：$hash(i+len-1)-hash(i-1)*fac(len)$$hash$+二分求$LCP$ KMP算法在文本串$S$中匹配模板串$T$ next()函数$next(i)$表示状态$i$失配后应转移到的状态具体来说，$next(i)$表示前$i$位串的前缀和后缀的最长匹配（不包括$i$）预处理$next()$相当于$T$自我匹配性质：若$next(i)!=0$，且$i$%$(i-next(i))=0$，则字符串前$i$位循环，循环节长度为$i-next(i)$，循环次数为$i/(i-next(i))$ 123456789101112131415void getnext()&#123;//start with 1 for(int i=2,j=0;i&lt;=m;i++)&#123; while(j&amp;&amp;p[i]!=p[j+1]) j=nex[j]; if(p[i]==p[j+1]) j++; nex[i]=j; &#125;&#125;void kmp()&#123; for(int i=1,j=0;i&lt;=n;i++)&#123; while(j&amp;&amp;s[i]!=p[j+1]) j=nex[j]; if(s[i]==p[j+1]) j++; if(j==m) ans.push_back(i-m+1); &#125;&#125; 扩展KMP算法对文本串$S$和模板串$T$，记$ext(i)$表示$Suffix(S,i)$与$T$的$LCP$长度 next()函数$next(i)$表示$Suffix(T,i)$与$T$的$LCP$长度 12345678910111213141516171819202122void getnext()&#123;//start with 1 int mx=mxp=0; for(int i=2;i&lt;=n;i++)&#123; mxp=mxp&gt;i?mxp:i; nex[i]=min(mxp-i,nex[i+1-mx]); while(T[nex[i]+1]==T[nex[i]+i]) nex[i]++; if(i+nex[i]&gt;mxp) mx=i; mxp=mx+nex[mx]; &#125;&#125;void exkmp()&#123; int mx=mxp=0; for(int i=1;i&lt;=n;i++)&#123; mxp=mxp&gt;i?mxp:i; ext[i]=min(mxp-i,nex[i+1-mx]); while(T[ext[i]+1]==S[ext[i]+i]) ext[i]++; if(i+ext[i]&gt;mxp) mx=i; mxp=mx+ext[mx]; &#125;&#125; Trie树让$LCP$相同的字符串共用结点，并在叶子结点上附加信息 12345678910#define idx s[i]-'a'void insert(int v=1)&#123; int x=0,len=strlen(s); for(int i=0;i&lt;len;i++)&#123; if(!c[x][idx]) c[x][idx]=++tot; x=c[x][idx]; &#125; dang[x]=v;&#125; AC自动机在文本串$S$中匹配模板串集合$T={T_1,T_2,…,T_k}$将模板串集合$T$建成一颗$Trie$树 转移函数$trans(x,c)$为从状态$x$沿字符$c$的$Trie$边走到的点$fail(x)$，失配函数，指向的点$y$满足：$str(y)$为$str(x)$的最长后缀 构造按$bfs$序构造假设已经得到了$fail(u)$，有$v=trans(u,c)$，现在求$fail(v)$只需要从$u$的后缀中找到第一个有$c$的出边的点 123456789void getfail()&#123; l=0,q[r=1]=0,fail[0]=-1; while(l!=r)&#123; int x=q[++l]; for(int i=0;i&lt;26;i++) if(c[x][i]) q[++r]=c[x][i],fail[c[x][i]]=!x?0:c[fail[x]][i]; else c[x][i]=!x?0:c[fail[x]][i]; &#125; &#125; 最小表示法对于一个环状字符串，将其断开可以得到n个串，其中字典序最小的串称为最小表示 123456789101112int mr()&#123; int i=0,j=1,k=0; while(i&lt;n&amp;&amp;j&lt;n)&#123; for(;k&lt;n&amp;&amp;s[i+k]==s[j+k];k++); if(k==n) return i; if(s[i+k]&gt;s[j+k]) i+=k+1; else j+=k+1; if(i==j) j++; &#125; return min(i,j);&#125;]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>字符串</tag>
       </tags>
   </entry>
   <entry>
@@ -103,6 +223,90 @@
         <tag>数据结构</tag>
         <tag>字符串</tag>
         <tag>后缀</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[线性规划与整数规划]]></title>
+    <url>%2F%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92%E4%B8%8E%E6%95%B4%E6%95%B0%E8%A7%84%E5%88%92.html</url>
+    <content type="text"><![CDATA[线性规划最大化或最小化一个受限于一组有限的线性约束的线性函数 性质标准型最大化$\quad \sum\limits_{j=1}^{n} c_jx_j$ 满足约束$~$ $\sum\limits_{j=1}^{n} a_{ij}x_j \le b_i,\ i=1,2,…,m$ $~$ $~$ $~$ $~$ $~$ $~$ $~$ $x_j \ge 0,\ j=1,2,…,n$ 矩阵表示：${Max\ c^Tx\ :\ Ax \le b,\ x \ge 0}$ 转化 若目标函数要求取最小值，可以取相反数变成取最大值 对于限制条件$f(x_1,x_2,…,x_n)\geq b$，可以用不等式$-f(x_1,x_2,…,x_n)\leq -b$描述 对于限制条件$f(x_1,x_2,…,x_n)=b$，可以用两个不等式$f(x_1,x_2,…,x_n)\leq b$，$f(x_1,x_2,…,x_n)\geq b$描述 对于无限制的变量$x$，可以将其拆成两个非负变量$x_0$，$x_1$，使得$x=x_0-x_1$ 松弛型最大化$\quad \sum\limits_{j=1}^{n} c_jx_j$ 满足约束$~$ $x_{i+n}=b_i - \sum\limits_{j=1}^{n} a_{ij}x_j,~i=1,2,…,m$$~$ $~$ $~$ $~$ $~$ $~$ $~$ $x_j \ge 0,\ j=1,2,…,n+m$ 基变量：等式左侧的所有变量非基变量：等式右侧的所有变量 单纯性法通过变量的代换，实现在解空间内沿着边界朝着目标函数增大的方向移动 基本解：非基变量值为$0$，基变量值为$b_i$可行解：使得$m$个限制条件能够满足的一组非基变量 转轴选择一个基变量$X_l$，将其与非基变量$X_e$互换根据$Bland$法则，选择系数大于$0$且标号最小的非基变量 初始化如果基本解不是可行解，即存在$b_i&lt;0$在所有$bi&lt;0$的约束中随机选一个作为$xl$，再随机选一个$a_{le}&lt;0$的作为$x_e$，然后$Pivot(l,e)$后$b_i$就变正了 对偶性${Max\ c^Tx\ :\ Ax \le b,\ x \ge 0}\ \quad {Min b^Ty\ :\ A^Ty \ge c,\ t \ge 0}$ 最大化最小化互换，常数与目标函数互换，改变不等号，变量与约束对应 Sth 当只有两个变量时，解空间为约束条件的半平面交，可以在半平面交上二分求解 单纯性法在一般情况下可以在多项式时间内出解，当然存在最坏情况可以被卡到指数复杂度 全幺模矩阵全幺模矩阵是指一个满足：任意一个行数和列数相等的满秩子矩阵行列式的值都是$1$或$-1$的矩阵 充分条件 仅有$-1,0,1$构成 每列至多两个非零数 行可分为两个集合： 一列包含两个同号非零数，两行不在同一个集合 一列包含两个异号非零数，两行在同一个集合 性质若线性规划中$A$为全幺模矩阵，则单纯形法过程中所有系数$∈−1,0,1$ 能转化成全幺模矩阵的整数规划问题可以使用相同的线性规划解决 整数规划整数规划指最后解中的变量都必须是整数的线性规划 $NP-hard$问题 0-1 分数规划整数规划的特殊形式，即每个变量$x \in ${$0,1$}]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[各种图]]></title>
+    <url>%2F%E5%90%84%E7%A7%8D%E5%9B%BE.html</url>
+    <content type="text"><![CDATA[有向无环图如果一个有向图无法从某个顶点出发经过若干条边回到该点，则这个图是一个有向无环图$DAG$的生成树个数等于入度非零节点的入度积 拓扑排序$DAG$顶点的线性序列 补图将完全图去除图$G$的边集后得到的图 反向图将有向图$G$的边反向后得到的图 分层图状态多维，层之间拓扑有序 links 平面图&amp;对偶图可以画在平面上且边只在顶点处相交的图称为平面图 平面图的对偶图是将这个平面的每个区域看成点，原图每一条边所属的两个相邻的区域对应在对偶图中的点有连边 links 竞赛图将一个完全无向图的边定向后得到的有向图 兰道定理比分序列：把竞赛图每一个点的出度从小到大排列得到的序列一个长度为$n$的序列$s$$(s_1≤s_2≤…≤s_n,n≥1)$是合法的比分序列当且仅当 {\forall}1\leq k \leq n~,~\sum\limits_{i=1}^{k}s_i \geq {k\choose2}特别地，当$k=n$时式子取等号 区间图&amp;弦图&amp;完美图弦：连接环中不相邻的两个点的边 弦图： 完美消除序列： 定理：一个无向图是弦图当且仅当它有一个完美消除序列 最大势算法： lk1 lk2 仙人掌图如果无向联通图$G$的任意一条边最多属于一个简单环，称$G$为仙人掌 简单环：不经过重复结点的环 祭出神图]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>图论</tag>
+        <tag>理性愉悦</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[图的连通性]]></title>
+    <url>%2F%E5%9B%BE%E7%9A%84%E8%BF%9E%E9%80%9A%E6%80%A7.html</url>
+    <content type="text"><![CDATA[引入联通分量在无向图中，可达关系满足自反性，对称性和传递性，是一个等价关系从等价关系可以定义等价类，把相互可达的节点称为一个联通分量 无向图割点和桥如果删除某个点$x$后，$G$的联通分量数目增加，称$x$为图的割点如果删除某条边$E$后，$G$的联通分量数目增加，称$E$为图的桥 $x$为割点的条件$x$是dfs树的根，且x有两个及以上子节点$x$非根，且$x$存在子节点$v$，满足$low[v]\geq dfn[x]$ $E=(u,v)$为桥的条件$E$不存在重边满足$low[v]&gt; dfn[x]$ 点双联通分量若$G$中无割点，称$G$为点双连通图。$G$中任意两点间存在至少两条不经过重复点的路径若$G$中无桥，称$G$为边双连通图。$G$中任意两点间存在至少两条不经过重复边的路径除了桥外，每条边恰好属于一个边双联通分量，但不同点双联通分量可能会有公共点，可以证明公共点最多只有一个且为割点 有向图强连通分量若$G$中任意两点可达，称$G$为强连通图对$SCC$缩点后原图变为$DAG$]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>图论</tag>
+        <tag>连通性</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[欧几里得相关]]></title>
+    <url>%2F%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%9B%B8%E5%85%B3.html</url>
+    <content type="text"><![CDATA[欧几里得算法不断将两数规模变小，直到能直接判断解依据：$gcd(a,b)=gcd(b,a$%$b)，gcd(a,0)=a$递归次数最多的是斐波那契数$f(n)$和$f(n-1)$ $O(logn)$ 扩展欧几里得算法记$d=gcd(a,b)$，求出$ax+by=d$的一组解$(x,y)$，保证满足$|x|+|y|$最小其任意解为$(x+kb’,y-ka’)$，$a’=a/d$，$b’=b/d$，$k$取任意整数对于一般的线性方程$ax+by=c$，若$!(d|c)$则无解，否则$x \times \frac{c}{d}$，$y \times \frac{c}{d}$即可 $O(logn)$ 类欧几里得算法形式1$f(a,b,c,n)=\sum\limits_{i=0}^n \lfloor \frac{ai+b}{c}\rfloor$ 当$a\geq c$或$b \geq c$时$f(a,b,c,n)=$$\frac{n(n+1)}{2}\lfloor\frac{a}{c}\rfloor+(n+1)\lfloor\frac{b}{c}\rfloor+f(a$%$c,b$%$c,c,n)$ 当$a&lt;c$且$b&lt;c$时令$m= \lfloor \frac{an+b}{c}\rfloor$$f(a,b,c,n)=$$nm-f(c,c-b-1,a,m-1)$ 推导]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+        <tag>数论</tag>
+        <tag>欧几里得</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[网络流]]></title>
+    <url>%2F%E7%BD%91%E7%BB%9C%E6%B5%81.html</url>
+    <content type="text"><![CDATA[概念$V$：点集 $E$：边集 $G=(V,E)$：图 $S$：源点 $T$：汇点 对于每条边$(u,v)$，有容量$c(u,v)$和流量$f(u,v)$，满足$0\leq f(u,v) \leq c(u,v)$ 性质$1、$容量限制：$f(u,v)&lt;=c(u,v)$ $2、$反对称性：$f(u,v)=-f(v,u)$ $3、$流量平衡：$\sum f(u,i)=\sum f(i,v)$ 满足以上三个性质，称为可行流 最大流流量最大的可行流 残量网络定义残量网络的流量$r(u,v)=c(u,v)-f(u,v)$ 即一条弧还能流过的流量 增广路残量网络中一条由$S$到$T$的路径 增广路定理：设$flow$是$G$的一个可行流，若不存在增广路，$flow$即为最大流前向弧&amp;后向弧分别表示残量网络与退流网络 增流&amp;退流推进和修正流量 last最大流的正确性依赖于它的每一条 $S-T$ 流都与一种实际方案一一对应 Isap算法marks$1.d[i]$：$i$到$T$的最短距离，可以$bfs$预处理(似乎没有并什么用)$2.GAP$优化：当$S$和$T$不联通时不存在增广路，可以直接退出循环$num[x]$表示$d[i]=x$的节点数量，初始化$num[0]=$总节点数$3.$当前弧优化：保存一个点已经尝试过的邻接边之前处理过的邻接边是不需要重新处理的(残量网络中的边只会越来越少)$last[i]$表示当前弧的编号 时间复杂度上界：$O(n^2m)$容量均为1：$O(min(n^{2/3},m^{1/2})*m)$二分图：$O(\sqrt{n} m)$ 详解 费用流每条边除流量限制外还有费用$c$，每流一个单位流量就要增加$c$的费用 一般是最小费用最大流或最小费用可行流 $spfa$单/多路增广 最小割割边集$C$使得$V$中的点分为两部分 割的容量割中弧的流量总和 最大流最小割定理一个$S-T$流的最大流等于其$S-T$最小割的容量 判定跑出最大流后，在残量网络上跑$Tarjan$，求$SCC$ 一条满流边$(u,v)$可以出现在最小割集中，当且仅当$u$,$v$不在一个$SCC$中 一条满流边$(u,v)$必定出现在最小割集中，当且仅当$u$与$S$在一个$SCC$里，并且$v$与$T$在一个$SCC$里 易知$S$与$T$一定不在一个$SCC$中 最小割树任意两点之间的最小割，不同的只有$n-1$个，它们构成一个最小割树 定理$1$：$mincut(a,b)\geq min${$mincut(a,c_1),mincut(c_1,c_2),…,mincut(c_k,b)$}定理$2$：令$(s,t)$是$(u,v)$在树上简单路径的所有边中$mincut$最小的，那么$mincut(u,v)=mincut(s,t)$ 求解方法 随便找两个点作为$S$和$T$，跑$mincut$ dfs划分出$S$集和$T$集，更新答案 递归处理$S$集和$T$集 上下界网络流分类 无源汇除$S$、$T$都要求满足流量平衡 有源汇所有点都要求满足流量平衡 无源汇可行流建图 建立附加源点$ss$和附加汇点$tt$ 连边：$(u,v,up-down)$ 记$d(i)=\sum down(x,i)-\sum down(i,y)$ 若$d(i)&gt;0$，连边$(ss,i,d(i))$，否则连边$(i,tt,-d(i))$ 求解方法 跑$ss$到$tt$的最大流 若满流，那么一定存在一种可行流 此时，原图中每一条边的流量应为新图中对应的边的流量$+down$ 有源汇可行流建图 在原图中添加一条边$(T,S)$，流量限制为$[0,INF]$，即让$S$和$T$也满足流量平衡条件，改造成无源汇的网络流图 求解方法 同无源汇可行流 有源汇最大流建图 同有源汇可行流 求解方法 跑有源汇可行流 再跑一次$S$到$T$的最大流，即为答案 有源汇最小流建图 同无源汇可行流 求解方法 跑$ss$到$tt$的最大流 添加$(T,S)$，流量限制为$[0,INF]$ 再跑一次$ss$到$tt$的最大流，判断是否存在可行流 答案即为$(T,S)$的实际流量 有源汇最小费用可行流建图 建立附加源点$ss$和附加汇点$tt$ 连边：$(u,v,up-down,cost)$ 记$d(i)=\sum down(x,i)-\sum down(i,y)$ 若$d(i)&gt;0$，连边$(ss,i,d(i),0)$，否则连边$(i,tt,-d(i),0)$ 添加$(T,S)$，流量限制为$[0,INF]$，费用为$0$ 求解方法 跑$ss$到$tt$的最小费用最大流 答案即为（求出的费用+每条边的$down*cost$） 建模 多源多汇增加超级源汇$S’$和$T’$连边：$(S’,S,INF),(T,T’,INF)$ 结点容量设结点$x$的结点容量为$c$将结点$x$拆成$x_{in}$和$x_{out}$连边：$(x_{in},x_{out},c)$把到达$x$的弧改为到达$x_{in}$,从$x$出发的弧改为从$x_{out}$出发 最大权闭合子图从带点权图$G$中选出一个子图，对于$V$中任意一个结点，其后续节点都在$V$中，最大化$V$的权值和连边：$(S,i,c_i),c_i&gt;0$，$(i,T,-c_i),c_i&lt;0$，$(u,v,INF)$$ans=$正权点和-最小割 最大密度子图从$G$中选出一个子图，最大化$\frac{|E|}{|V|}$考虑$01$分数规划，二分答案为$k$将边作为左侧顶点，权为$1$：点作为右侧顶点，权为$-k$根据边和点的依赖关系转化成最大权闭合子图，$ans&gt;0$则增大$l$ 最小割建图先累加所有收益，再最小化舍弃值一般拆成$S$集和$T$集考虑，对应两种选择。这样就会带来冲突，也就是需要割的边$check$不同情况，检验建图正确性 Tips 技巧 枚举&amp;二分答案 合并流量将起点终点相同的边流量累加起来]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>图论</tag>
+        <tag>网络流</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[二分图]]></title>
+    <url>%2F%E4%BA%8C%E5%88%86%E5%9B%BE.html</url>
+    <content type="text"><![CDATA[把无向图$G$划分为两个不相交顶点集$U$和$V$，使得每一条边都分别连接$U$、$V$ 中的顶点，即不含有奇环的图 概念二分图判定非联通图是二分图当且仅当其每个联通分量都是二分图 匹配边集$E$满足其中任意两条边没有公共顶点 最大匹配所有匹配中所含匹配边数最多的匹配 完备匹配某个匹配中所有的顶点都是匹配点 最大权匹配带权二分图所有匹配中权值最大的匹配 扩展最小点覆盖选出一个点集，使每条边都有顶点在其中，且点数最少最小点覆盖=最大匹配 最小边覆盖选出一个边集，使每个顶点都有边在其中，且边数最少最小边覆盖=二分图点数-最大匹配 最大点独立集选出一个点集，使所有点之间两两无边，且点数最多最大点独立集=二分图点数-最大匹配 最小路径覆盖在有向图$G$中用最少的不相交路径把图中所有点覆盖拆点建二分图：对于$(x,y)$，连边$(x_1,y_2)$最小路径覆盖=二分图点数-最大匹配 最小链覆盖在有向图$G$中用最少的路径把图中所有点覆盖对$DAG$求出传递闭包后，问题转化为最小路径覆盖最小链覆盖=二分图点数-最大匹配 最长反链反链：点集$V$，对于$\forall (u,v)\in V$，满足$u$不能到达$v$且$v$不能到达$u$ $Dilworth$定理：最长反链=最小链覆盖 最大团选出一个点集，使所有点之间两两有边，且点数最多最大团=补图的最大点独立集 以上推广到带权形式也是类似的]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>图论</tag>
+        <tag>二分图</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[noip2016酱油记]]></title>
+    <url>%2Fnoip2016%E9%85%B1%E6%B2%B9%E8%AE%B0.html</url>
+    <content type="text"><![CDATA[Day -INF大概前一个月开始翘部分晚自习，后来出去培训了一周，在校学习了一周，一共停课了两周，每天都有新的收获，感觉信心满满……变得更弱了 Day 0似乎是中午出发的，反正到日照一中已经很晚了……到了之后排了n长时间的队抽考场……抽之前希望在本校考（考点除了日照一中还有曲阜师范大学），抽完后发现在曲师，rp—，跟本校神犇连号，rp—……不过本校在曲师的人比较多，有教练带队……去宿舍只有上铺了……rp—，第一次睡上铺……表示不会爬梯子……rp-=INF Day 0.5似乎看了看板子……反正非常颓……宿舍有人说话……差不多12点睡的觉 Day 1考场环境就不描述了，反正没出什么意外……打开压缩包对着题目名字猜内容……rp—密码为什么这么复杂啊……rp—坐在menci斜对面，太强啦！，rp— 开始看题，第一题为什么这么长啊，花了很长时间读完后发现是sb题……开始看第二题……瞬间吓尿了……完全不可做啊……这才是T2啊……于是发现暴力lca只有25分，我当时lca还不太熟，感觉还需要调，就准备写20分特判……看第三题发现是期望……感觉心态崩了……啥也不会……振作了一下后，发现28分不需要概率知识…… 定下了100+20+28的目标，然后就码码码，但是我太弱了，T1还调试了一会……完成计划后我又YY了一波T2的链部分分做法，GG最后检查了一下出考场了 出考场后发现T3直接输出了int……丢掉了28分……心态再次爆炸 Day 1.5舍友都出去颓了……我大概睡到了3点……睡醒后在校园里游荡，水SDOI群……去洗了个澡冷静了一下……晚上仍然颓颓颓 Day 2在去考场的车上我复习了一下数论……我记得复习了一周以前刚学的杨辉三角…… 看到T1秒想杨辉三角……似乎组合数我只学过这一个东西……我看到T2范围这么大肯定不可做，于是看了看暴力分，我居然开始YY set做法……发现堆就可以了……其实堆暴力能过65，但是我连时间戳都不会打……只写了最暴力的25……我还花了一些时间脑补了一下隔几个输出是为什么……T3完全不会，感觉要爆零…… 看到T2、T3都这么神，我决定花大部分时间肛T1，争取A掉……我大概脑补了1个多小时，终于调好了……发现最后几组数据需要二维前缀和，我觉得我不太会就没加，然后写完T2 25分和T3 乱搞后大概还有半个小时 这时我去检查了一下T1，然后改错了…… 我发现我的考试策略是非常正确的，就是我太弱了…… 回去的路上感觉只有200+（建立在T1能拿大部分分的基础上），感觉心情比较低落，毕竟以前1=最低也要300分 Day INF上了几天课后期中考，翘掉考试去补课……补课期间某天晚上听说menci测的民间成绩我190……我看了一下程序发现day2T1挂掉了……过了几天出成绩了……最后是100+20+0+25+25+5，成功滚粗]]></content>
+      <categories>
+        <category>游记</category>
+      </categories>
+      <tags>
+        <tag>noip</tag>
+        <tag>滚粗</tag>
       </tags>
   </entry>
 </search>

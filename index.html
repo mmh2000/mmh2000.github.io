@@ -1280,7 +1280,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.mmh.ac.cn/二进制.html">
+    <link itemprop="mainEntityOfPage" href="http://www.mmh.ac.cn/回文双子星.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mmh">
@@ -1299,7 +1299,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/二进制.html" itemprop="url">二进制</a></h2>
+                <a class="post-title-link" href="/回文双子星.html" itemprop="url">回文双子星</a></h2>
         
 
         <div class="post-meta">
@@ -1311,8 +1311,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-05T19:56:00+08:00">
-                2018-01-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-07T15:29:00+08:00">
+                2018-01-07
               </time>
             
 
@@ -1365,7 +1365,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  258
+                  132
                 </span>
               
 
@@ -1391,17 +1391,18 @@
 
       
         
-          <div class="note danger"><p>位运算的优先级比较奇怪，请加括号使用</p></div>
-
-<p>C/C++语言提供的位运算符</p>
-<p><img src="/img/2.png" width="100%" height="100%"></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/二进制.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <h2 id="Manacher算法"><a href="#Manacher算法" class="headerlink" title="Manacher算法"></a>Manacher算法</h2><p>$Manacher$算法能在线性的时间求得以每个位置为中心，能构成的最长回文串的半径</p>
+<p>&lt;!<del>more</del>&gt;</p>
+<h3 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h3><ol>
+<li>在所有空隙位置(包括首尾)插入一个原串中不会出现的符号，处理偶数长度回文串</li>
+<li>维护$MaxRight$表示当前访问到的回文字串中右端点的$max$，$pos$表示$maxright$对应的回文串的对称轴位置</li>
+<li>利用回文串的对称性进行扩展</li>
+</ol>
+<p><a href="https://segmentfault.com/a/1190000003914228" target="_blank" rel="noopener">notes</a></p>
+<p>$O(n)$</p>
+<h2 id="回文自动机"><a href="#回文自动机" class="headerlink" title="回文自动机"></a>回文自动机</h2>
+          
         
       
     </div>
@@ -1448,7 +1449,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.mmh.ac.cn/多项式与生成函数.html">
+    <link itemprop="mainEntityOfPage" href="http://www.mmh.ac.cn/素数.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mmh">
@@ -1467,7 +1468,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/多项式与生成函数.html" itemprop="url">多项式与生成函数</a></h2>
+                <a class="post-title-link" href="/素数.html" itemprop="url">素数</a></h2>
         
 
         <div class="post-meta">
@@ -1479,8 +1480,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-05T09:22:00+08:00">
-                2018-01-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-06T20:11:00+08:00">
+                2018-01-06
               </time>
             
 
@@ -1533,7 +1534,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  914
+                  494
                 </span>
               
 
@@ -1559,17 +1560,32 @@
 
       
         
-          <h1 id="多项式"><a href="#多项式" class="headerlink" title="多项式"></a>多项式</h1><p><br></p>
-<h2 id="表示"><a href="#表示" class="headerlink" title="表示"></a>表示</h2><div class="note info"><p><strong>系数表示法</strong>：$F(x)=\sum\limits_{i=0}^{n}a_ix^i$</p>
-<p><strong>点值表示法</strong>：$(x_0,y_0),(x_1,y_1),\cdots,(x_n,y_n)$</p>
-<p>对于多项式$A(x)$，称其最高项的次数为这个多项式的<strong>度</strong>，记作$degA$</p></div>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/多项式与生成函数.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <h2 id="素数定理"><a href="#素数定理" class="headerlink" title="素数定理"></a>素数定理</h2><p>$\pi(x) \sim \frac{x}{\ln x}$</p>
+<p>估计不超过x的素数个数</p>
+<h2 id="素性测试"><a href="#素性测试" class="headerlink" title="素性测试"></a>素性测试</h2><h3 id="试除法"><a href="#试除法" class="headerlink" title="试除法"></a>试除法</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isprime</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;<span class="comment">//简单优化：预处理素数表</span></span><br><span class="line">	<span class="keyword">if</span>(x&lt;<span class="number">2</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	<span class="keyword">int</span> m=<span class="built_in">sqrt</span>(x+<span class="number">0.5</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=m;i++)</span><br><span class="line">	<span class="keyword">if</span>(x%i==<span class="number">0</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>$O(\sqrt{n})$</p>
+<h3 id="Miller-Rabin测试"><a href="#Miller-Rabin测试" class="headerlink" title="Miller-Rabin测试"></a>Miller-Rabin测试</h3><h2 id="唯一分解定理"><a href="#唯一分解定理" class="headerlink" title="唯一分解定理"></a>唯一分解定理</h2><p>任何大于１的自然数，都可以唯一分解成有限个质数的乘积</p>
+<p>可以用质因数分解序列表示一个数</p>
+<h3 id="因子数与因子和"><a href="#因子数与因子和" class="headerlink" title="因子数与因子和"></a>因子数与因子和</h3><h2 id="质因数分解"><a href="#质因数分解" class="headerlink" title="质因数分解"></a>质因数分解</h2><h3 id="试除法-1"><a href="#试除法-1" class="headerlink" title="试除法"></a>试除法</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">void</span> <span class="title">resolve</span><span class="params">(<span class="keyword">int</span> x)</span><span class="comment">//简单优化：预处理素数表</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> m=<span class="built_in">sqrt</span>(x+<span class="number">0.5</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=m;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(!(x%i))&#123;</span><br><span class="line">			base[++cnt]=i;</span><br><span class="line">			<span class="keyword">while</span>(!(x%i)) x/=i,++idx[cnt];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(x!=<span class="number">1</span>) base[++cnt]=x,idx[cnt]=<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>$O(\sqrt{n})$</p>
+<h3 id="Pollard-Rho算法"><a href="#Pollard-Rho算法" class="headerlink" title="Pollard Rho算法"></a>Pollard Rho算法</h3><p>非常有趣的算法</p>
+<p>随机化，通过$Birthday$ $Trick$提高概率，$Floyd$判圈法判断</p>
+<p><a href="http://mmh.ac.cn/pdf/Pollard-rho算法详解.pdf" target="_blank" rel="noopener">详解</a></p>
+<p>$O(n^{1/4})$</p>
+<h2 id="筛法"><a href="#筛法" class="headerlink" title="筛法"></a>筛法</h2><h3 id="埃式筛"><a href="#埃式筛" class="headerlink" title="埃式筛"></a>埃式筛</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Eratosthenes</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i*i&lt;=n;i++)</span><br><span class="line">    <span class="keyword">if</span>(!vis[i]) <span class="keyword">for</span>(<span class="keyword">int</span> j=i*i;j&lt;=n;j+=i) vis[j]=<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>$O(n \log \log n)$</p>
+<h3 id="线性筛"><a href="#线性筛" class="headerlink" title="线性筛"></a>线性筛</h3><p>筛积性函数</p>
+<p>tricks:筛每个数的最小/最大质因子及其幂指数</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">euler</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;<span class="comment">//全家桶 d[i]:最小质因子幂 cnt[i]:因子数 </span></span><br><span class="line">    	<span class="keyword">if</span>(!vis[i]) p[++p[<span class="number">0</span>]]=i,u[i]=<span class="number">-1</span>,phi[i]=i<span class="number">-1</span>,d[i]=<span class="number">1</span>,cnt[i]=<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=p[<span class="number">0</span>]&amp;&amp;i*p[j]&lt;=n;j++)&#123;</span><br><span class="line">			vis[i*p[j]]=<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">if</span>(i%p[j]==<span class="number">0</span>)&#123;</span><br><span class="line">				u[i*p[j]]=<span class="number">0</span>;</span><br><span class="line">				phi[i*p[j]]=phi[i]*p[j];</span><br><span class="line">				d[i*p[j]]=d[i]+<span class="number">1</span>;</span><br><span class="line">				cnt[i*p[j]]=cnt[i]/(d[i]+<span class="number">1</span>)*(d[i]+<span class="number">2</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			u[i*p[j]]=-u[i];</span><br><span class="line">			phi[i*p[j]]=phi[i]*(p[j]<span class="number">-1</span>);</span><br><span class="line">			d[i*p[j]]=<span class="number">1</span>;</span><br><span class="line">			cnt[i*p[j]]=cnt[i]*<span class="number">2</span>;</span><br><span class="line">		&#125; </span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>$O(n)$</p>
+<p><a href="http://mmh.ac.cn/pdf/贾志鹏线性筛.pdf" target="_blank" rel="noopener">经典课件</a></p>
+<h3 id="杜教筛"><a href="#杜教筛" class="headerlink" title="杜教筛"></a>杜教筛</h3><p>解决一类积性函数求前缀和问题</p>
+<p>$O(n^{2/3})$</p>
+<p><a href="http://blog.csdn.net/skywalkert/article/details/50500009" target="_blank" rel="noopener">唐教的介绍</a></p>
+<h3 id="州阁筛"><a href="#州阁筛" class="headerlink" title="州阁筛"></a>州阁筛</h3><p>$O(\frac{n^{3/4}}{\log n})$</p>
+
+          
         
       
     </div>
@@ -1616,7 +1632,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.mmh.ac.cn/K-D Tree.html">
+    <link itemprop="mainEntityOfPage" href="http://www.mmh.ac.cn/闷声反大演.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mmh">
@@ -1635,7 +1651,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/K-D Tree.html" itemprop="url">K-D Tree</a></h2>
+                <a class="post-title-link" href="/闷声反大演.html" itemprop="url">闷声反大演</a></h2>
         
 
         <div class="post-meta">
@@ -1647,8 +1663,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-04T09:08:00+08:00">
-                2018-01-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-06T14:55:00+08:00">
+                2018-01-06
               </time>
             
 
@@ -1701,7 +1717,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  574
+                  570
                 </span>
               
 
@@ -1727,10 +1743,12 @@
 
       
         
-          <p>$K-D$  $Tree$是一种分割$k$维数据空间的数据结构，主要应用于多维空间关键数据的搜索</p>
+          <h2 id="数论函数"><a href="#数论函数" class="headerlink" title="数论函数"></a>数论函数</h2><p>若函数$f(n)$满足定义域为正整数域，值域为复数域，即$f$：$Z^+→C$ ，称$f(n)$为数论函数</p>
+<p>若数论函数$f(n)$对于互质的两个正整数$p$、$q$，有$f(p⋅q)=f(p)⋅f(q)$，称$f(n)$为积性函数</p>
+<p>若数论函数$f(n)$对于任意两个正整数$p$、$q$，有$f(p⋅q)=f(p)⋅f(q)$，称$f(n)$为完全积性函数</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/K-D Tree.html#more" rel="contents">
+            <a class="btn" href="/闷声反大演.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1772,7 +1790,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1822,7 +1840,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1833,7 +1851,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1844,7 +1862,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1918,7 +1936,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">6.1k</span>
+    <span title="Site words total count">18.0k</span>
   
 </div>
 
