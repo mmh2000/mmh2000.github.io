@@ -90,7 +90,7 @@
   
     
     
-    <link href="//fonts.googleapis.cn/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|17:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|Source Code Pro:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.cn/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|18:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|Source Code Pro:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -118,7 +118,7 @@
 
 
 
-  <meta name="keywords" content="黑科技,二进制,位运算," />
+  <meta name="keywords" content="数据结构,字符串,后缀," />
 
 
 
@@ -131,20 +131,18 @@
 
 
 
-<meta name="description" content="位运算的优先级比较奇怪，请加括号使用  C/C++语言提供的位运算符">
-<meta name="keywords" content="黑科技,二进制,位运算">
+<meta name="description" content="后缀数组 $sa(i)$：排第$i$名的后缀$rank(i)$：$Suffix(i)$在所有后缀中的名次">
+<meta name="keywords" content="数据结构,字符串,后缀">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二进制">
-<meta property="og:url" content="http://mmh.ac.cn/2018/01/05/二进制/index.html">
+<meta property="og:title" content="后缀三姐妹">
+<meta property="og:url" content="http://www.mmh.ac.cn/后缀三姐妹.html">
 <meta property="og:site_name" content="mmh&#39;s Blog">
-<meta property="og:description" content="位运算的优先级比较奇怪，请加括号使用  C/C++语言提供的位运算符">
+<meta property="og:description" content="后缀数组 $sa(i)$：排第$i$名的后缀$rank(i)$：$Suffix(i)$在所有后缀中的名次">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://mmh.ac.cn/img/2.png">
-<meta property="og:updated_time" content="2018-01-11T10:27:02.883Z">
+<meta property="og:updated_time" content="2018-01-12T01:15:46.047Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="二进制">
-<meta name="twitter:description" content="位运算的优先级比较奇怪，请加括号使用  C/C++语言提供的位运算符">
-<meta name="twitter:image" content="http://mmh.ac.cn/img/2.png">
+<meta name="twitter:title" content="后缀三姐妹">
+<meta name="twitter:description" content="后缀数组 $sa(i)$：排第$i$名的后缀$rank(i)$：$Suffix(i)$在所有后缀中的名次">
 
 
 
@@ -174,7 +172,7 @@
 
 
 
-  <link rel="canonical" href="http://mmh.ac.cn/2018/01/05/二进制/"/>
+  <link rel="canonical" href="http://www.mmh.ac.cn/后缀三姐妹.html"/>
 
 
 
@@ -183,7 +181,7 @@
 <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
 
 
-  <title>二进制 | mmh's Blog</title>
+  <title>后缀三姐妹 | mmh's Blog</title>
   
 
 
@@ -364,7 +362,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://mmh.ac.cn/2018/01/05/二进制/">
+    <link itemprop="mainEntityOfPage" href="http://www.mmh.ac.cn/后缀三姐妹.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mmh">
@@ -381,7 +379,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">二进制</h2>
+          <h2 class="post-title" itemprop="name headline">后缀三姐妹</h2>
         
 
         <div class="post-meta">
@@ -393,8 +391,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-05T19:56:00+08:00">
-                2018-01-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-26T10:23:00+08:00">
+                2017-12-26
               </time>
             
 
@@ -452,7 +450,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  258
+                  1,089
                 </span>
               
 
@@ -477,85 +475,41 @@
       
 
       
-        <div class="note danger"><p>位运算的优先级比较奇怪，请加括号使用</p></div>
-
-<p>C/C++语言提供的位运算符</p>
-<p><img src="/img/2.png" width="100%" height="100%"></p>
+        <h1 id="后缀数组"><a href="#后缀数组" class="headerlink" title="后缀数组"></a>后缀数组</h1><p><br></p>
+<div class="note info"><p>$sa(i)$：排第$i$名的后缀<br>$rank(i)$：$Suffix(i)$在所有后缀中的名次</p></div>
 <a id="more"></a>
-<p>用$x$表示一个10进制数，记其二进制展开从最右边开始为第$0、1、2…$位</p>
-<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">功能</th>
-<th style="text-align:center">语句</th>
-<th style="text-align:center">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">获取$x$的第$i$位</td>
-<td style="text-align:center">x&amp;(1&lt;&lt;i)</td>
-<td style="text-align:center">若$x$的第$i$位为$1$，值为$2^i$</td>
-</tr>
-<tr>
-<td style="text-align:center">bar</td>
-<td style="text-align:center">bar</td>
-<td style="text-align:center">bar</td>
-</tr>
-<tr>
-<td style="text-align:center">查询$x$中$1$的个数</td>
-<td style="text-align:center">__builtin_popcount(x)</td>
-<td style="text-align:center">GCC内建函数</td>
-</tr>
-<tr>
-<td style="text-align:center">提取lowbit(x)</td>
-<td style="text-align:center">x&amp;(-x)</td>
-<td style="text-align:center">可以遍历$x$中所有$1$</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">功能</th>
-<th style="text-align:center">语句</th>
-<th style="text-align:center">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">判断奇偶性</td>
-<td style="text-align:center">x&amp;1</td>
-<td style="text-align:center">值为$1$则$x$为奇数</td>
-</tr>
-<tr>
-<td style="text-align:center">乘除$2$</td>
-<td style="text-align:center">&lt;&lt; &amp; &gt;&gt;</td>
-<td style="text-align:center">根据实际意义</td>
-</tr>
-<tr>
-<td style="text-align:center">对$2$的幂取模</td>
-<td style="text-align:center">__builtin_popcount(x)</td>
-<td style="text-align:center">GCC内建函数</td>
-</tr>
-<tr>
-<td style="text-align:center">交换两个数</td>
-<td style="text-align:center">a^=b,b^=a,a^=b</td>
-<td style="text-align:center">根据实际意义</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p>用二进制数表示集合，设单个二进制数最大位宽为$w$</p>
-<h3 id="修改-amp-查询-amp-删除"><a href="#修改-amp-查询-amp-删除" class="headerlink" title="修改&amp;查询&amp;删除"></a>修改&amp;查询&amp;删除</h3><p>直接上……</p>
-<p>$O(1)$</p>
-<h3 id="集合交-amp-并-amp-差-amp-补"><a href="#集合交-amp-并-amp-差-amp-补" class="headerlink" title="集合交&amp;并&amp;差&amp;补"></a>集合交&amp;并&amp;差&amp;补</h3><p>x&amp;y<br>x|y<br>x^(x&amp;y)<br>~x</p>
-<p>$O(\frac{n}{w})$</p>
-<h3 id=""><a href="#" class="headerlink" title=" "></a> </h3><h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><p>位运算每一位相互独立，互不干扰，可以按位考虑，进行dp/贪心</p>
-
+<h2 id="倍增法"><a href="#倍增法" class="headerlink" title="倍增法"></a>倍增法</h2><div class="note success"><p>对每个字符开始的长度为$2^k$的子字符串进行排序，求出$rank()$，当$2^k&gt;n$后，此时的$rank()$便是最后的结果<br>每一次排序利用上次两个长度为$2^{k-1}$的字符串的$rank()$作为第一、第二关键字，进行基数排序</p></div>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> *r,<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> l)</span></span>&#123;<span class="keyword">return</span> (r[a]==r[b])&amp;&amp;(r[a+l]==r[b+l]);&#125;<span class="comment">//比较第一、二关键字</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DA</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> m=<span class="number">128</span>)</span></span>&#123;<span class="comment">//n+1并人工添加一个较小的字符以避免cmp越界 </span></span><br><span class="line">    <span class="keyword">int</span> i,k,p,*x=rk,*y=rk2;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;m;i++) c[i]=<span class="number">0</span>;<span class="comment">//对长度为1的字符串基数排序</span></span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++) c[x[i]=s[i]]++;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;m;i++) c[i]+=c[i<span class="number">-1</span>];</span><br><span class="line">    <span class="keyword">for</span>(i=n<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--) sa[--c[x[i]]]=i;</span><br><span class="line">    <span class="keyword">for</span>(k=<span class="number">1</span>,p=<span class="number">1</span>;p&lt;n;k&lt;&lt;=<span class="number">1</span>,m=p)&#123;<span class="comment">//max(rank())&lt;p</span></span><br><span class="line">        <span class="keyword">for</span>(p=<span class="number">0</span>,i=n-k;i&lt;n;i++) y[p++]=i;<span class="comment">//不存在第二关键字的排在前面</span></span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++) <span class="keyword">if</span>(sa[i]&gt;=k) y[p++]=sa[i]-k;<span class="comment">//利用上一次求得的SA对第二关键字排序</span></span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;m;i++) c[i]=<span class="number">0</span>;<span class="comment">//对第一关键字基数排序</span></span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++) c[x[y[i]]]++;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;m;i++) c[i]+=c[i<span class="number">-1</span>];</span><br><span class="line">        <span class="keyword">for</span>(i=n<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--) sa[--c[x[y[i]]]]=y[i];</span><br><span class="line">        swap(x,y),p=<span class="number">1</span>,x[sa[<span class="number">0</span>]]=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;n;i++) x[sa[i]]=cmp(y,sa[i<span class="number">-1</span>],sa[i],k)?p<span class="number">-1</span>:p++;</span><br><span class="line">    &#125;<span class="comment">//rank()保存在x数组中，p=不同的字符串个数</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="LCP"><a href="#LCP" class="headerlink" title="LCP"></a>LCP</h2><p>$height(i)$：$LCP(Suffix(sa[i]),Suffix(sa[i-1]))$<br>$h(i)$：$height(rank[i])$<br>性质：</p>
+<h3 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h3><p>根据$h(i) \geq h(i-1)-1$逐一计算</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">calh</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j,k=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++) rk[sa[i]]=i;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;height[rk[i++]]=k)</span><br><span class="line">        <span class="keyword">for</span>(k?k--:<span class="number">0</span>,j=sa[rk[i]<span class="number">-1</span>];s[i+k]==s[j+k];k++);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">RMQ</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) f[i][<span class="number">0</span>]=height[i];  </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=<span class="number">20</span>;j++)  </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i+(<span class="number">1</span>&lt;&lt;j)<span class="number">-1</span>&lt;=n;i++)  </span><br><span class="line">            f[i][j]=min(f[i][j<span class="number">-1</span>],f[i+(<span class="number">1</span>&lt;&lt;(j<span class="number">-1</span>))][j<span class="number">-1</span>]);  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">lcp</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x=rk[a],y=rk[b];</span><br><span class="line">    <span class="keyword">if</span>(x&gt;y) swap(x,y);x++;</span><br><span class="line">    <span class="keyword">int</span> k=<span class="built_in">log</span>(y-x+<span class="number">1</span>)/<span class="built_in">log</span>(<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">return</span> min(f[x][k],f[y-(<span class="number">1</span>&lt;&lt;k)+<span class="number">1</span>][k]);  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h1 id="后缀树"><a href="#后缀树" class="headerlink" title="后缀树"></a>后缀树</h1><p><br></p>
+<p>大力搞搞……</p>
+<a class="btn" href="https://www.cnblogs.com/gaochundong/p/suffix_tree.html" target="_blank" rel="noopener"><i class="fa fa-book fa-lg fa-fw"></i>notes</a>
+<p><br></p>
+<h1 id="后缀自动机"><a href="#后缀自动机" class="headerlink" title="后缀自动机"></a>后缀自动机</h1><p><br></p>
+<h2 id="确定性有限状态自动机"><a href="#确定性有限状态自动机" class="headerlink" title="确定性有限状态自动机"></a>确定性有限状态自动机</h2><div class="note info"><p>$DFA$由以下$5$部分组成</p>
+<ul>
+<li>$alpha$：字符集</li>
+<li>$state$：状态集合</li>
+<li>$init$：初始状态集合</li>
+<li>$end$：终止状态集合</li>
+<li>$trans$：状态转移函数</li>
+</ul>
+<p>$DFA$的功能是识别字符串<br>$SAM$本质上是一个$DFA$，可以识别$S$的所有子串</p></div>
+<h2 id="最简状态表示"><a href="#最简状态表示" class="headerlink" title="最简状态表示"></a>最简状态表示</h2><p>现在需要把$S$建成$SAM$<br>考虑最简单的实现方式：将每个后缀插入一颗$Trie$树<br>但是这样太$naive$了，我们考虑合并状态</p>
+<h3 id="right"><a href="#right" class="headerlink" title="right()"></a>right()</h3><p>对于$S$的一个子串$s1$，$right(s1)=s1$在$S$中所有出现的结束位置集合<br>将所有$right()$集相同的状态合并</p>
+<h3 id="新的状态"><a href="#新的状态" class="headerlink" title="新的状态"></a>新的状态</h3><p>考虑其与原先暴力表示状态的不同</p>
+<ul>
+<li>代表的子串：新的状态代表的子串为右端点相同，长度递增的多种子串，记长度区间为$[min(x),max(x)]$</li>
+<li>结论：状态的$right()$集合可以构成一个树形结构的关系，称其为$fail$树<br> 其中状态$x$在树上的父亲$fa$满足：$right(fa)\nsupseteqq right(x)$，且$|right(fa)|$最小，并有$min(x)=max(fail(x))+1$</li>
+<li>状态数：可以证明是线性的</li>
+<li>性质：一个子串的出现次数，就是其对应状态的$right()$集大小</li>
+</ul>
+<h2 id="转移函数"><a href="#转移函数" class="headerlink" title="转移函数"></a>转移函数</h2><p>$trans(x,str)$为从状态$x$读入字符串$str$后到达的状态<br>记$ST(str)=trans(init,str)$</p>
+<h2 id="构造"><a href="#构造" class="headerlink" title="构造"></a>构造</h2><h3 id="增量法"><a href="#增量法" class="headerlink" title="增量法"></a>增量法</h3><p>让新加入的子串都被状态代表，而且$trans$边能够正确转移</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> c=a[x],np=++tot,p=last;last=np;</span><br><span class="line">    step[np]=x;</span><br><span class="line">    <span class="keyword">for</span>(;p&amp;&amp;!ch[p][c];p=fail[p]) ch[p][c]=np;</span><br><span class="line">    <span class="keyword">if</span>(!p) fail[np]=root; <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">int</span> q=ch[p][c];</span><br><span class="line">        <span class="keyword">if</span>(step[p]+<span class="number">1</span>==step[q]) fail[np]=q; <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">int</span> nq=++tot;step[nq]=step[p]+<span class="number">1</span>;</span><br><span class="line">            <span class="built_in">memcpy</span>(ch[nq],ch[q],<span class="keyword">sizeof</span>(ch[q]));</span><br><span class="line">            fail[nq]=fail[q],fail[np]=fail[q]=nq;</span><br><span class="line">            <span class="keyword">for</span>(;ch[p][c]==q;p=fail[p]) ch[p][c]=nq;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -572,11 +526,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/黑科技/" rel="tag"># 黑科技</a>
+            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
           
-            <a href="/tags/二进制/" rel="tag"># 二进制</a>
+            <a href="/tags/字符串/" rel="tag"># 字符串</a>
           
-            <a href="/tags/位运算/" rel="tag"># 位运算</a>
+            <a href="/tags/后缀/" rel="tag"># 后缀</a>
           
         </div>
       
@@ -589,18 +543,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/05/多项式与生成函数/" rel="next" title="多项式与生成函数">
-                <i class="fa fa-chevron-left"></i> 多项式与生成函数
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/09/test/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/K-D Tree.html" rel="prev" title="K-D Tree">
+                K-D Tree <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -631,17 +581,9 @@
 </div>
 <div class="-mob-share-ui" style="display: none">
     <ul class="-mob-share-list">
-        <li class="-mob-share-weibo"><p>新浪微博</p></li>
-        <li class="-mob-share-weixin"><p>微信</p></li>
         <li class="-mob-share-qzone"><p>QQ空间</p></li>
-        <li class="-mob-share-qq"><p>QQ好友</p></li>
-        <li class="-mob-share-tencentweibo"><p>腾讯微博</p></li>
-        <li class="-mob-share-renren"><p>人人网</p></li>
-        <li class="-mob-share-kaixin"><p>开心网</p></li>
         <li class="-mob-share-douban"><p>豆瓣</p></li>
         <li class="-mob-share-youdao"><p>有道云笔记</p></li>
-        <li class="-mob-share-mingdao"><p>明道</p></li>
-        <li class="-mob-share-pengyou"><p>朋友网</p></li>
         <li class="-mob-share-facebook"><p>Facebook</p></li>
         <li class="-mob-share-twitter"><p>Twitter</p></li>
         <li class="-mob-share-pocket"><p>Pocket</p></li>
@@ -799,7 +741,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#操作"><span class="nav-number">1.</span> <span class="nav-text">操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#技巧"><span class="nav-number">2.</span> <span class="nav-text">技巧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合"><span class="nav-number">3.</span> <span class="nav-text">集合</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#修改-amp-查询-amp-删除"><span class="nav-number">3.1.</span> <span class="nav-text">修改&amp;查询&amp;删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集合交-amp-并-amp-差-amp-补"><span class="nav-number">3.2.</span> <span class="nav-text">集合交&amp;并&amp;差&amp;补</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#"><span class="nav-number">3.3.</span> <span class="nav-text"> </span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质"><span class="nav-number">4.</span> <span class="nav-text">性质</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#后缀数组"><span class="nav-number">1.</span> <span class="nav-text">后缀数组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#倍增法"><span class="nav-number">1.1.</span> <span class="nav-text">倍增法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LCP"><span class="nav-number">1.2.</span> <span class="nav-text">LCP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#计算"><span class="nav-number">1.2.1.</span> <span class="nav-text">计算</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#后缀树"><span class="nav-number">2.</span> <span class="nav-text">后缀树</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#后缀自动机"><span class="nav-number">3.</span> <span class="nav-text">后缀自动机</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#确定性有限状态自动机"><span class="nav-number">3.1.</span> <span class="nav-text">确定性有限状态自动机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最简状态表示"><span class="nav-number">3.2.</span> <span class="nav-text">最简状态表示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#right"><span class="nav-number">3.2.1.</span> <span class="nav-text">right()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新的状态"><span class="nav-number">3.2.2.</span> <span class="nav-text">新的状态</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#转移函数"><span class="nav-number">3.3.</span> <span class="nav-text">转移函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构造"><span class="nav-number">3.4.</span> <span class="nav-text">构造</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#增量法"><span class="nav-number">3.4.1.</span> <span class="nav-text">增量法</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
