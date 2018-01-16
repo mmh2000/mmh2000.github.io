@@ -118,7 +118,7 @@
 
 
 
-  <meta name="keywords" content="字符串," />
+  <meta name="keywords" content="字符串,hash,KMP,Trie树,AC自动机,最小表示法," />
 
 
 
@@ -131,18 +131,18 @@
 
 
 
-<meta name="description" content="字符串哈希$hash(i)=(hash(i-1)*B+s[i])$%$P$$B$：进制数 参考：$457,251,2333,149,373$$P$：模数 参考：$987654323,666666667,23456789$">
-<meta name="keywords" content="字符串">
+<meta name="description" content="字符串哈希 $hash$思想在字符串上的应用 $hash(i)=(hash(i-1)*B+s[i])$%$P$$B$：进制数 参考：$457,251,2333,149,373$$P$：模数 参考：$987654323,666666667,23456789$">
+<meta name="keywords" content="字符串,hash,KMP,Trie树,AC自动机,最小表示法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="字符串基础">
 <meta property="og:url" content="http://www.mmh.ac.cn/字符串基础.html">
 <meta property="og:site_name" content="mmh&#39;s Blog">
-<meta property="og:description" content="字符串哈希$hash(i)=(hash(i-1)*B+s[i])$%$P$$B$：进制数 参考：$457,251,2333,149,373$$P$：模数 参考：$987654323,666666667,23456789$">
+<meta property="og:description" content="字符串哈希 $hash$思想在字符串上的应用 $hash(i)=(hash(i-1)*B+s[i])$%$P$$B$：进制数 参考：$457,251,2333,149,373$$P$：模数 参考：$987654323,666666667,23456789$">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-14T06:25:35.910Z">
+<meta property="og:updated_time" content="2018-01-14T11:37:10.818Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="字符串基础">
-<meta name="twitter:description" content="字符串哈希$hash(i)=(hash(i-1)*B+s[i])$%$P$$B$：进制数 参考：$457,251,2333,149,373$$P$：模数 参考：$987654323,666666667,23456789$">
+<meta name="twitter:description" content="字符串哈希 $hash$思想在字符串上的应用 $hash(i)=(hash(i-1)*B+s[i])$%$P$$B$：进制数 参考：$457,251,2333,149,373$$P$：模数 参考：$987654323,666666667,23456789$">
 
 
 
@@ -450,7 +450,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  800
+                  876
                 </span>
               
 
@@ -475,22 +475,37 @@
       
 
       
-        <h2 id="字符串哈希"><a href="#字符串哈希" class="headerlink" title="字符串哈希"></a>字符串哈希</h2><p>$hash(i)=(hash(i-1)*B+s[i])$%$P$<br>$B$：进制数 参考：$457,251,2333,149,373$<br>$P$：模数 参考：$987654323,666666667,23456789$</p>
+        <h1 id="字符串哈希"><a href="#字符串哈希" class="headerlink" title="字符串哈希"></a>字符串哈希</h1><p><br></p>
+<div class="note info"><p>$hash$思想在字符串上的应用</p></div>
+<p>$hash(i)=(hash(i-1)*B+s[i])$%$P$<br>$B$：进制数 参考：$457,251,2333,149,373$<br>$P$：模数 参考：$987654323,666666667,23456789$</p>
 <a id="more"></a>
-<h3 id="姿势"><a href="#姿势" class="headerlink" title="姿势"></a>姿势</h3><p>双模、自然溢出<br>从$i$开始长为$len$子串的哈希值：$hash(i+len-1)-hash(i-1)*fac(len)$<br>$hash$+二分求$LCP$</p>
-<h2 id="KMP算法"><a href="#KMP算法" class="headerlink" title="KMP算法"></a>KMP算法</h2><p>在文本串$S$中匹配模板串$T$</p>
-<h3 id="next-函数"><a href="#next-函数" class="headerlink" title="next()函数"></a>next()函数</h3><p>$next(i)$表示状态$i$失配后应转移到的状态<br>具体来说，$next(i)$表示前$i$位串的前缀和后缀的最长匹配（不包括$i$）<br>预处理$next()$相当于$T$自我匹配<br>性质：若$next(i)!=0$，且$i$%$(i-next(i))=0$，则字符串前$i$位循环，循环节长度为$i-next(i)$，循环次数为$i/(i-next(i))$</p>
+<h2 id="姿势"><a href="#姿势" class="headerlink" title="姿势"></a>姿势</h2><p>双模、自然溢出<br>从$i$开始长为$len$子串的哈希值：$hash(i+len-1)-hash(i-1)*fac(len)$<br>$hash$+二分求$LCP$ </p>
+<p><br></p>
+<h1 id="KMP算法"><a href="#KMP算法" class="headerlink" title="KMP算法"></a>KMP算法</h1><p><br></p>
+<div class="note info"><p>在文本串$S$中匹配模板串$T$</p></div>
+<h2 id="next-函数"><a href="#next-函数" class="headerlink" title="next()函数"></a>next()函数</h2><p>$next(i)$表示状态$i$失配后应转移到的状态<br>具体来说，$next(i)$表示前$i$位串的前缀和后缀的最长匹配（不包括$i$）<br>预处理$next()$相当于$T$自我匹配<br>性质：若$next(i)!=0$，且$i$%$(i-next(i))=0$，则字符串前$i$位循环，循环节长度为$i-next(i)$，循环次数为$i/(i-next(i))$</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getnext</span><span class="params">()</span></span>&#123;<span class="comment">//start with 1</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>,j=<span class="number">0</span>;i&lt;=m;i++)&#123;</span><br><span class="line">        <span class="keyword">while</span>(j&amp;&amp;p[i]!=p[j+<span class="number">1</span>]) j=nex[j];</span><br><span class="line">        <span class="keyword">if</span>(p[i]==p[j+<span class="number">1</span>]) j++;</span><br><span class="line">        nex[i]=j;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">kmp</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>,j=<span class="number">0</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="keyword">while</span>(j&amp;&amp;s[i]!=p[j+<span class="number">1</span>]) j=nex[j];</span><br><span class="line">        <span class="keyword">if</span>(s[i]==p[j+<span class="number">1</span>]) j++;</span><br><span class="line">        <span class="keyword">if</span>(j==m) ans.push_back(i-m+<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="扩展KMP算法"><a href="#扩展KMP算法" class="headerlink" title="扩展KMP算法"></a>扩展KMP算法</h2><p>对文本串$S$和模板串$T$，记$ext(i)$表示$Suffix(S,i)$与$T$的$LCP$长度</p>
-<h3 id="next-函数-1"><a href="#next-函数-1" class="headerlink" title="next()函数"></a>next()函数</h3><p>$next(i)$表示$Suffix(T,i)$与$T$的$LCP$长度</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getnext</span><span class="params">()</span></span>&#123;<span class="comment">//start with 1</span></span><br><span class="line">    <span class="keyword">int</span> mx=mxp=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        mxp=mxp&gt;i?mxp:i;</span><br><span class="line">        nex[i]=min(mxp-i,nex[i+<span class="number">1</span>-mx]);</span><br><span class="line">        <span class="keyword">while</span>(T[nex[i]+<span class="number">1</span>]==T[nex[i]+i]) nex[i]++;</span><br><span class="line">        <span class="keyword">if</span>(i+nex[i]&gt;mxp) mx=i;</span><br><span class="line">        mxp=mx+nex[mx];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">exkmp</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> mx=mxp=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        mxp=mxp&gt;i?mxp:i;</span><br><span class="line">        ext[i]=min(mxp-i,nex[i+<span class="number">1</span>-mx]);</span><br><span class="line">        <span class="keyword">while</span>(T[ext[i]+<span class="number">1</span>]==S[ext[i]+i]) ext[i]++;</span><br><span class="line">        <span class="keyword">if</span>(i+ext[i]&gt;mxp) mx=i;</span><br><span class="line">        mxp=mx+ext[mx];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Trie树"><a href="#Trie树" class="headerlink" title="Trie树"></a>Trie树</h2><p>让$LCP$相同的字符串共用结点，并在叶子结点上附加信息</p>
+<p><br></p>
+<h1 id="扩展KMP算法"><a href="#扩展KMP算法" class="headerlink" title="扩展KMP算法"></a>扩展KMP算法</h1><p><br></p>
+<div class="note info"><p>对文本串$S=|n|$和模板串$T=|m|$<br>记$ext(i)$表示$Suffix(S,i)$与$T$的$LCP$长度<br>若$ext(i)=m$，说明找到了一个$T$，因此将其视为$KMP$问题的扩展</p></div>
+<h2 id="next-函数-1"><a href="#next-函数-1" class="headerlink" title="next()函数"></a>next()函数</h2><p>辅助数组$next(i)$表示$Suffix(T,i)$与$T$的$LCP$长度<br>预处理方法类似$KMP$，相当于$T$与自己做$exKMP$</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getnext</span><span class="params">()</span></span>&#123;<span class="comment">//start with 1</span></span><br><span class="line">    <span class="keyword">int</span> mx=mxp=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        mxp=mxp&gt;i?mxp:i;</span><br><span class="line">        nex[i]=min(mxp-i,nex[i+<span class="number">1</span>-mx]);</span><br><span class="line">        <span class="keyword">while</span>(T[nex[i]+<span class="number">1</span>]==T[nex[i]+i]) nex[i]++;</span><br><span class="line">        <span class="keyword">if</span>(i+nex[i]&gt;mxp) mx=i;</span><br><span class="line">        mxp=mx+nex[mx];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">exkmp</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> mx=mxp=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        mxp=mxp&gt;i?mxp:i;</span><br><span class="line">        ext[i]=min(mxp-i,nex[i+<span class="number">1</span>-mx]);</span><br><span class="line">        <span class="keyword">while</span>(T[ext[i]+<span class="number">1</span>]==S[ext[i]+i]) ext[i]++;</span><br><span class="line">        <span class="keyword">if</span>(i+ext[i]&gt;mxp) mx=i;</span><br><span class="line">        mxp=mx+ext[mx];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h1 id="Trie树"><a href="#Trie树" class="headerlink" title="Trie树"></a>Trie树</h1><p><br></p>
+<div class="note info"><p>储存一个字符串集合</p></div>
+<p>让$LCP$相同的字符串共用结点，并在叶子结点上附加信息</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> idx s[i]-<span class="meta-string">'a'</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> v=<span class="number">1</span>)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x=<span class="number">0</span>,len=<span class="built_in">strlen</span>(s);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(!c[x][idx]) c[x][idx]=++tot;</span><br><span class="line">        x=c[x][idx];</span><br><span class="line">    &#125;</span><br><span class="line">    dang[x]=v;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="AC自动机"><a href="#AC自动机" class="headerlink" title="AC自动机"></a>AC自动机</h2><p>在文本串$S$中匹配模板串集合$T={T_1,T_2,…,T_k}$<br>将模板串集合$T$建成一颗$Trie$树</p>
-<h3 id="转移函数"><a href="#转移函数" class="headerlink" title="转移函数"></a>转移函数</h3><p>$trans(x,c)$为从状态$x$沿字符$c$的$Trie$边走到的点<br>$fail(x)$，失配函数，指向的点$y$满足：$str(y)$为$str(x)$的最长后缀</p>
-<h3 id="构造"><a href="#构造" class="headerlink" title="构造"></a>构造</h3><p>按$bfs$序构造<br>假设已经得到了$fail(u)$，有$v=trans(u,c)$，现在求$fail(v)$<br>只需要从$u$的后缀中找到第一个有$c$的出边的点</p>
+<p><br></p>
+<h1 id="AC自动机"><a href="#AC自动机" class="headerlink" title="AC自动机"></a>AC自动机</h1><p><br></p>
+<div class="note info"><p>在文本串$S$中匹配模板串集合$T={T_1,T_2,…,T_k}$</p></div>
+<p>将模板串集合$T$建成一棵$Trie$树</p>
+<h2 id="转移函数"><a href="#转移函数" class="headerlink" title="转移函数"></a>转移函数</h2><p>$trans(x,c)$为从状态$x$沿字符$c$的$Trie$边走到的点<br>$fail(x)$，失配函数，指向的点$y$满足：$str(y)$为$str(x)$的最长后缀</p>
+<h2 id="构造"><a href="#构造" class="headerlink" title="构造"></a>构造</h2><p>按$bfs$序构造<br>假设已经得到了$fail(u)$，有$v=trans(u,c)$，现在求$fail(v)$<br>只需要从$u$的后缀中找到第一个有$c$的出边的点</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getfail</span><span class="params">()</span></span>&#123;  </span><br><span class="line">    l=<span class="number">0</span>,q[r=<span class="number">1</span>]=<span class="number">0</span>,fail[<span class="number">0</span>]=<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">while</span>(l!=r)&#123;  </span><br><span class="line">        <span class="keyword">int</span> x=q[++l];  </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">26</span>;i++)  </span><br><span class="line">            <span class="keyword">if</span>(c[x][i]) q[++r]=c[x][i],fail[c[x][i]]=!x?<span class="number">0</span>:c[fail[x]][i];  </span><br><span class="line">            <span class="keyword">else</span> c[x][i]=!x?<span class="number">0</span>:c[fail[x]][i];   </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="最小表示法"><a href="#最小表示法" class="headerlink" title="最小表示法"></a>最小表示法</h2><p>对于一个环状字符串，将其断开可以得到n个串，其中字典序最小的串称为最小表示</p>
+<p><br></p>
+<h1 id="最小表示法"><a href="#最小表示法" class="headerlink" title="最小表示法"></a>最小表示法</h1><p><br></p>
+<div class="note info"><p>对于一个环状字符串，将其断开可以得到n个串，其中字典序最小的串称为最小表示</p></div>
+<p>通过维护两个指针实现</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">mr</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i=<span class="number">0</span>,j=<span class="number">1</span>,k=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(i&lt;n&amp;&amp;j&lt;n)&#123;</span><br><span class="line">        <span class="keyword">for</span>(;k&lt;n&amp;&amp;s[i+k]==s[j+k];k++);</span><br><span class="line">        <span class="keyword">if</span>(k==n) <span class="keyword">return</span> i;</span><br><span class="line">        <span class="keyword">if</span>(s[i+k]&gt;s[j+k]) i+=k+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> j+=k+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(i==j) j++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> min(i,j);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
@@ -510,6 +525,16 @@
         <div class="post-tags">
           
             <a href="/tags/字符串/" rel="tag"># 字符串</a>
+          
+            <a href="/tags/hash/" rel="tag"># hash</a>
+          
+            <a href="/tags/KMP/" rel="tag"># KMP</a>
+          
+            <a href="/tags/Trie树/" rel="tag"># Trie树</a>
+          
+            <a href="/tags/AC自动机/" rel="tag"># AC自动机</a>
+          
+            <a href="/tags/最小表示法/" rel="tag"># 最小表示法</a>
           
         </div>
       
@@ -668,7 +693,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">36</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -724,7 +749,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串哈希"><span class="nav-number">1.</span> <span class="nav-text">字符串哈希</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#姿势"><span class="nav-number">1.1.</span> <span class="nav-text">姿势</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#KMP算法"><span class="nav-number">2.</span> <span class="nav-text">KMP算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#next-函数"><span class="nav-number">2.1.</span> <span class="nav-text">next()函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#扩展KMP算法"><span class="nav-number">3.</span> <span class="nav-text">扩展KMP算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#next-函数-1"><span class="nav-number">3.1.</span> <span class="nav-text">next()函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Trie树"><span class="nav-number">4.</span> <span class="nav-text">Trie树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC自动机"><span class="nav-number">5.</span> <span class="nav-text">AC自动机</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#转移函数"><span class="nav-number">5.1.</span> <span class="nav-text">转移函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构造"><span class="nav-number">5.2.</span> <span class="nav-text">构造</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最小表示法"><span class="nav-number">6.</span> <span class="nav-text">最小表示法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串哈希"><span class="nav-number">1.</span> <span class="nav-text">字符串哈希</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#姿势"><span class="nav-number">1.1.</span> <span class="nav-text">姿势</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#KMP算法"><span class="nav-number">2.</span> <span class="nav-text">KMP算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#next-函数"><span class="nav-number">2.1.</span> <span class="nav-text">next()函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#扩展KMP算法"><span class="nav-number">3.</span> <span class="nav-text">扩展KMP算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#next-函数-1"><span class="nav-number">3.1.</span> <span class="nav-text">next()函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Trie树"><span class="nav-number">4.</span> <span class="nav-text">Trie树</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#AC自动机"><span class="nav-number">5.</span> <span class="nav-text">AC自动机</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#转移函数"><span class="nav-number">5.1.</span> <span class="nav-text">转移函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构造"><span class="nav-number">5.2.</span> <span class="nav-text">构造</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最小表示法"><span class="nav-number">6.</span> <span class="nav-text">最小表示法</span></a></li></ol></div>
             
 
           </div>
@@ -758,7 +783,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">17.6k</span>
+    <span title="Site words total count">18.1k</span>
   
 </div>
 

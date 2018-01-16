@@ -2,3 +2,24 @@ http://www.mmh.ac.cn/组合计数.html
 http://www.mmh.ac.cn/高精度.html
 http://www.mmh.ac.cn/平衡树.html
 http://www.mmh.ac.cn/STL容器.html
+http://www.mmh.ac.cn/回文双子星.html
+http://www.mmh.ac.cn/素数.html
+http://www.mmh.ac.cn/闷声反大演.html
+http://www.mmh.ac.cn/二进制.html
+http://www.mmh.ac.cn/分块与莫队.html
+http://www.mmh.ac.cn/同余.html
+http://www.mmh.ac.cn/多项式与生成函数.html
+http://www.mmh.ac.cn/平面几何.html
+http://www.mmh.ac.cn/K-D Tree.html
+http://www.mmh.ac.cn/生成树.html
+http://www.mmh.ac.cn/大路.html
+http://www.mmh.ac.cn/线性代数.html
+http://www.mmh.ac.cn/字符串基础.html
+http://www.mmh.ac.cn/后缀三姐妹.html
+http://www.mmh.ac.cn/线性规划与整数规划.html
+http://www.mmh.ac.cn/各种图.html
+http://www.mmh.ac.cn/图的连通性.html
+http://www.mmh.ac.cn/欧几里得相关.html
+http://www.mmh.ac.cn/网络流.html
+http://www.mmh.ac.cn/二分图.html
+http://www.mmh.ac.cn/noip2016酱油记.html

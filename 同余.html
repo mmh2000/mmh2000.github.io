@@ -131,18 +131,18 @@
 
 
 
-<meta name="description" content="同余式性质 反身性 $a \equiv a \pmod {m}$ 对称性 $a \equiv b \pmod {m}$ $\Rightarrow$ $ b \equiv a \pmod {m}$ 传递性 $a \equiv b \pmod {m}$,$b \equiv c \pmod {m}$ $\Rightarrow$ $a \equiv c \pmod {m}$ 相加 $a \equiv b">
+<meta name="description" content="同余式性质 $a\equiv b \pmod{m}$  反身性 $a \equiv a \pmod {m}$ 对称性 $a \equiv b \pmod {m}$ $\Rightarrow$ $ b \equiv a \pmod {m}$ 传递性 $a \equiv b \pmod {m}$,$b \equiv c \pmod {m}$ $\Rightarrow$ $a \equiv c \pmo">
 <meta name="keywords" content="数学,数论">
 <meta property="og:type" content="article">
 <meta property="og:title" content="同余">
 <meta property="og:url" content="http://www.mmh.ac.cn/同余.html">
 <meta property="og:site_name" content="mmh&#39;s Blog">
-<meta property="og:description" content="同余式性质 反身性 $a \equiv a \pmod {m}$ 对称性 $a \equiv b \pmod {m}$ $\Rightarrow$ $ b \equiv a \pmod {m}$ 传递性 $a \equiv b \pmod {m}$,$b \equiv c \pmod {m}$ $\Rightarrow$ $a \equiv c \pmod {m}$ 相加 $a \equiv b">
+<meta property="og:description" content="同余式性质 $a\equiv b \pmod{m}$  反身性 $a \equiv a \pmod {m}$ 对称性 $a \equiv b \pmod {m}$ $\Rightarrow$ $ b \equiv a \pmod {m}$ 传递性 $a \equiv b \pmod {m}$,$b \equiv c \pmod {m}$ $\Rightarrow$ $a \equiv c \pmo">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-14T06:24:26.496Z">
+<meta property="og:updated_time" content="2018-01-14T12:25:28.776Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="同余">
-<meta name="twitter:description" content="同余式性质 反身性 $a \equiv a \pmod {m}$ 对称性 $a \equiv b \pmod {m}$ $\Rightarrow$ $ b \equiv a \pmod {m}$ 传递性 $a \equiv b \pmod {m}$,$b \equiv c \pmod {m}$ $\Rightarrow$ $a \equiv c \pmod {m}$ 相加 $a \equiv b">
+<meta name="twitter:description" content="同余式性质 $a\equiv b \pmod{m}$  反身性 $a \equiv a \pmod {m}$ 对称性 $a \equiv b \pmod {m}$ $\Rightarrow$ $ b \equiv a \pmod {m}$ 传递性 $a \equiv b \pmod {m}$,$b \equiv c \pmod {m}$ $\Rightarrow$ $a \equiv c \pmo">
 
 
 
@@ -450,7 +450,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  443
+                  593
                 </span>
               
 
@@ -475,7 +475,9 @@
       
 
       
-        <h2 id="同余式性质"><a href="#同余式性质" class="headerlink" title="同余式性质"></a>同余式性质</h2><ol>
+        <h1 id="同余式性质"><a href="#同余式性质" class="headerlink" title="同余式性质"></a>同余式性质</h1><p><br></p>
+<div class="note info"><p>$a\equiv b \pmod{m}$</p></div>
+<ol>
 <li>反身性 $a \equiv a \pmod {m}$</li>
 <li>对称性 $a \equiv b \pmod {m}$ $\Rightarrow$ $ b \equiv a \pmod {m}$</li>
 <li>传递性 $a \equiv b \pmod {m}$,$b \equiv c \pmod {m}$ $\Rightarrow$ $a \equiv c \pmod {m}$</li>
@@ -485,43 +487,68 @@
 <li>乘幂 $a \equiv b \pmod {m}$ $\Rightarrow$ $a^n \equiv b^n \pmod {m}$ </li>
 </ol>
 <a id="more"></a>
-<h2 id="剩余系"><a href="#剩余系" class="headerlink" title="剩余系"></a>剩余系</h2><p><strong>完全剩余系</strong>：模$n$意义下的完全剩余系$Z_n=${$0,1,…n-1$}，每个元素代表一个同余等价类</p>
-<p><strong>缩系</strong>：模$n$意义下的缩系$Z_n*=${$x|x \in Z_n,(x,n)=1$}</p>
-<h2 id="模m意义下乘法群逆元"><a href="#模m意义下乘法群逆元" class="headerlink" title="模m意义下乘法群逆元"></a>模m意义下乘法群逆元</h2><p>a存在逆元充要条件:$(a,m)=1$</p>
+<p><br></p>
+<h1 id="剩余系"><a href="#剩余系" class="headerlink" title="剩余系"></a>剩余系</h1><p><br></p>
+<div class="note info"><p><strong>完全剩余系</strong>：模$n$意义下的完全剩余系$Z_n=${$0,1,…n-1$}，每个元素代表一个同余等价类<br><strong>缩系</strong>：模$n$意义下的缩系$Z_n*=${$x|x \in Z_n,(x,n)=1$}</p></div>
+<h2 id="模m意义下乘法群逆元"><a href="#模m意义下乘法群逆元" class="headerlink" title="模m意义下乘法群逆元"></a>模m意义下乘法群逆元</h2><p>$ax\equiv 1 \pmod{m}$</p>
+<p>$(a,m)=1 \Rightarrow x$存在</p>
+<h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><ol>
+<li>存在唯一性</li>
+<li>完全积性函数</li>
+<li>$a/b\equiv a\times inv(b) \pmod{m}$</li>
+</ol>
 <h3 id="Calc"><a href="#Calc" class="headerlink" title="Calc"></a><strong>Calc</strong></h3><p><strong>Euler theorem</strong></p>
 <p>若正整数$a$、$m$互质</p>
 <p>$a^{\varphi (m)} \equiv 1 \pmod {m}$</p>
 <p><strong>Fermat’s little theorem</strong></p>
 <p>若正整数$a$、$m$互质且$m$为质数</p>
 <p>$a^{m-1} \equiv 1 \pmod {m}$</p>
-<p>Or use EX Euclid algorithm </p>
-<h2 id="模意义下的运算"><a href="#模意义下的运算" class="headerlink" title="模意义下的运算"></a>模意义下的运算</h2><h3 id="常见运算取模"><a href="#常见运算取模" class="headerlink" title="常见运算取模"></a>常见运算取模</h3><p>$a +b \equiv((a \mod m)+(b \mod m)) \pmod {m}$</p>
+<p><strong>EX Euclid algorithm</strong></p>
+<p>根据定义求解同余方程</p>
+<p><strong>线性递推</strong></p>
+<p>$inv(i) \equiv (m-\frac{m}{i})\times inv(m \% i) \pmod{m}$</p>
+<a class="btn" href="http://blog.csdn.net/y20070316/article/details/50578435" target="_blank" rel="noopener"><i class="fa fa-key fa-lg fa-fw"></i>推导与证明</a>
+<p><br></p>
+<h1 id="模意义下的运算"><a href="#模意义下的运算" class="headerlink" title="模意义下的运算"></a>模意义下的运算</h1><p><br></p>
+<h2 id="常见运算取模"><a href="#常见运算取模" class="headerlink" title="常见运算取模"></a>常见运算取模</h2><div class="note info"><p>$+、-、\times、\div、$^</p></div>
+<p>$a +b \equiv((a \mod m)+(b \mod m)) \pmod {m}$</p>
 <p>$a -b \equiv((a \mod m)-(b \mod m)+m)\pmod {m}$</p>
 <p>$ab \equiv ((a\mod m)(b \mod m))\pmod {m}$</p>
+<p><br></p>
 <p>$a/b \mod m$</p>
+<p>$Case1:a|b$</p>
+<p>if((b,m)=1) 乘法逆元求解<br>else $a/b \equiv (a\% bm)/b \pmod{m}$ </p>
+<p>$Case2:!(a|b)$</p>
+<p>$c=a \% b,a/b \equiv ((a-c)\% bm)/b\pmod{m}$</p>
+<p><br></p>
 <p>$a^b \mod m$</p>
 <p>$Case1:$减小a</p>
-<script type="math/tex; mode=display">a^b \equiv (a \mod m)^b \pmod {m}</script><p>$Case2:$减小b</p>
+<script type="math/tex; mode=display">a^b \equiv (a \% m)^b \pmod {m}</script><p>$Case2:$减小b</p>
 <script type="math/tex; mode=display">a^b\equiv
 \begin{cases}
 a^{b\%\varphi(m)}\qquad \quad \qquad (a,m)=1\\
 a^b\qquad \qquad \qquad \quad ~(a,m)\neq1,b<\varphi(m)\\
 a^{b\%\varphi(m)+\varphi(m)}\qquad \quad (a,m)\neq1,b\geq\varphi(m)
 \end{cases}\qquad (mod~m)</script><p>(EX Euler theorem)</p>
-<h3 id="组合数取模"><a href="#组合数取模" class="headerlink" title="组合数取模"></a>组合数取模</h3><p>$C_{n}^{m} \mod P$</p>
+<h2 id="组合数取模"><a href="#组合数取模" class="headerlink" title="组合数取模"></a>组合数取模</h2><div class="note info"><p>$C_{n}^{m} \mod P$</p></div>
 <p>$Case1:$$n,m \leq 1000,P \leq 10^9$</p>
 <p>杨辉三角递推求解</p>
 <p>$Case2:$$n,m \leq 10^6$</p>
 <p>分解质因数/预处理逆元和逆元的阶乘根据定义计算</p>
 <p>$Case3:$$n,m \leq 10^{18},P \leq 10^5$</p>
-<p>P is a Prime</p>
-<p><strong>Lucas定理</strong></p>
-<p>$C(n,m) \equiv C(n\mod P,m \mod P) \times C(n/P,m/P)$</p>
-<p>P is not a Prime</p>
-<p>EX Lucas 定理</p>
-<p>对P进行质因数分解，对每个质因子得到一个同余方程，CRT合并</p>
-<p>求(n,m) % $p_i^{e_i}$</p>
-<p><a href="https://www.cnblogs.com/candy99/p/6637629.html" target="_blank" rel="noopener">notes</a></p>
+<p><strong>if P is a Prime</strong></p>
+<h3 id="Lucas定理"><a href="#Lucas定理" class="headerlink" title="Lucas定理"></a>Lucas定理</h3><p>$C(n,m) \equiv C(n\% P,m \% P) \times C(n/P,m/P)$</p>
+<p><strong>if P is not a Prime</strong></p>
+<h3 id="EX-Lucas-定理"><a href="#EX-Lucas-定理" class="headerlink" title="EX Lucas 定理"></a>EX Lucas 定理</h3><p>对$P$进行质因数分解，对每个质因子得到一个同余方程，使用$CRT$合并</p>
+<p>现在需要求$C_{n}^{m} \% p_i^{e_i}$，也即$n! \% p_i^{e_i}$</p>
+<p>分三部分求解</p>
+<ol>
+<li>$p_i$的幂，直接求解</li>
+<li>一个新的阶乘，递归求解</li>
+<li>剩下的暴力求解</li>
+</ol>
+<a class="btn" href="https://www.cnblogs.com/candy99/p/6637629.html" target="_blank" rel="noopener"><i class="fa fa-book fa-lg fa-fw"></i>笔记</a>
+<a class="btn" href="http://blog.csdn.net/clove_unique/article/details/54571216" target="_blank" rel="noopener"><i class="fa fa-key fa-lg fa-fw"></i>推导与证明</a>
 
       
     </div>
@@ -700,7 +727,7 @@ a^{b\%\varphi(m)+\varphi(m)}\qquad \quad (a,m)\neq1,b\geq\varphi(m)
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">36</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -756,7 +783,7 @@ a^{b\%\varphi(m)+\varphi(m)}\qquad \quad (a,m)\neq1,b\geq\varphi(m)
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#同余式性质"><span class="nav-number">1.</span> <span class="nav-text">同余式性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#剩余系"><span class="nav-number">2.</span> <span class="nav-text">剩余系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模m意义下乘法群逆元"><span class="nav-number">3.</span> <span class="nav-text">模m意义下乘法群逆元</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Calc"><span class="nav-number">3.1.</span> <span class="nav-text">Calc</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模意义下的运算"><span class="nav-number">4.</span> <span class="nav-text">模意义下的运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常见运算取模"><span class="nav-number">4.1.</span> <span class="nav-text">常见运算取模</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组合数取模"><span class="nav-number">4.2.</span> <span class="nav-text">组合数取模</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#同余式性质"><span class="nav-number">1.</span> <span class="nav-text">同余式性质</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#剩余系"><span class="nav-number">2.</span> <span class="nav-text">剩余系</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#模m意义下乘法群逆元"><span class="nav-number">2.1.</span> <span class="nav-text">模m意义下乘法群逆元</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#性质"><span class="nav-number">2.1.1.</span> <span class="nav-text">性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Calc"><span class="nav-number">2.1.2.</span> <span class="nav-text">Calc</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#模意义下的运算"><span class="nav-number">3.</span> <span class="nav-text">模意义下的运算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常见运算取模"><span class="nav-number">3.1.</span> <span class="nav-text">常见运算取模</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组合数取模"><span class="nav-number">3.2.</span> <span class="nav-text">组合数取模</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Lucas定理"><span class="nav-number">3.2.1.</span> <span class="nav-text">Lucas定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#EX-Lucas-定理"><span class="nav-number">3.2.2.</span> <span class="nav-text">EX Lucas 定理</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -790,7 +817,7 @@ a^{b\%\varphi(m)+\varphi(m)}\qquad \quad (a,m)\neq1,b\geq\varphi(m)
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">17.6k</span>
+    <span title="Site words total count">18.1k</span>
   
 </div>
 
