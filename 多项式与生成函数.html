@@ -139,7 +139,7 @@
 <meta property="og:site_name" content="mmh&#39;s Blog">
 <meta property="og:description" content="多项式 表示系数表示法：$F(x)=\sum\limits_{i=0}^{n}a_ix^i$ 点值表示法：$(x_0,y_0),(x_1,y_1),\cdots,(x_n,y_n)$ 对于多项式$A(x)$，称其最高项的次数为这个多项式的度，记作$degA$">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-14T06:21:10.654Z">
+<meta property="og:updated_time" content="2018-01-29T11:59:15.372Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多项式与生成函数">
 <meta name="twitter:description" content="多项式 表示系数表示法：$F(x)=\sum\limits_{i=0}^{n}a_ix^i$ 点值表示法：$(x_0,y_0),(x_1,y_1),\cdots,(x_n,y_n)$ 对于多项式$A(x)$，称其最高项的次数为这个多项式的度，记作$degA$">
@@ -180,7 +180,22 @@
 
 <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
 
-
+<script src="/js/src/instantclick.min.js" data-no-instant></script>
+   <script data-no-instant>
+   InstantClick.on('change', function(isInitialLoad) {
+     if (isInitialLoad === false) {
+       if (typeof MathJax !== 'undefined') // support MathJax
+         MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+       if (typeof prettyPrint !== 'undefined') // support google code prettify
+         prettyPrint();
+       if (typeof _hmt !== 'undefined')  // support 百度统计
+         _hmt.push(['_trackPageview', location.pathname + location.search]);
+       if (typeof ga !== 'undefined')  // support google analytics
+           ga('send', 'pageview', location.pathname + location.search);
+     }
+   });
+   InstantClick.init();
+   </script>
   <title>多项式与生成函数 | mmh's Blog</title>
   
 
@@ -450,7 +465,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  914
+                  1,066
                 </span>
               
 
@@ -534,10 +549,21 @@
 <p><a href="http://m.blog.csdn.net/semiwaker/article/details/73251486" target="_blank" rel="noopener">总结1</a>；<a href="http://blog.csdn.net/coldef/article/details/76020530" target="_blank" rel="noopener">总结2</a></p></div></p>
 <p><br></p>
 <h1 id="生成函数"><a href="#生成函数" class="headerlink" title="生成函数"></a>生成函数</h1><p><br></p>
-<h2 id="普通型生成函数"><a href="#普通型生成函数" class="headerlink" title="普通型生成函数"></a>普通型生成函数</h2><div class="note info"><p>定义序列$a_n$的普通型生成函数 (Ordinary Generating Function, OGF)，为</p>
-<script type="math/tex; mode=display">A(x)=\sum_\limits{i=0}^{}a_ix^i</script></div>
+<p>考虑一类组合对象组成的集合 $A$，其中，<br>每个元素$a ∈ A$都被定义了“大小”$|a|$，它是一个非负整数<br>对于给定的$n$，大小为$n$的元素的数量是有限的，记作$A_n$</p>
+<h2 id="普通型生成函数"><a href="#普通型生成函数" class="headerlink" title="普通型生成函数"></a>普通型生成函数</h2><p>定义序列$a_n$的普通型生成函数 (Ordinary Generating Function, OGF)，为</p>
+<script type="math/tex; mode=display">A(x)=\sum_\limits{i=0}^{}a_ix^i</script><h2 id="基本运算"><a href="#基本运算" class="headerlink" title="基本运算"></a>基本运算</h2><p>有两类组合对象$A$和$B$</p>
+<ul>
+<li><p>定义$ C $为$A$和$B$的并集</p>
+<p>$C(x) = A(x) + B(x)$</p>
+</li>
+<li><p>定义$ D $为$ A $和$ B $的笛卡尔积</p>
+<p>$D $的每个元素 $d $都是$ A $的某元素$ a $与$ B $的某元素$ b $拼成的二元<br>组$ (a, b)$，其大小$ |d| $定义为$ |a| + |b|$</p>
+<p>$D(x) = A(x)B(x)$</p>
+</li>
+</ul>
 <h2 id="指数型生成函数"><a href="#指数型生成函数" class="headerlink" title="指数型生成函数"></a>指数型生成函数</h2><div class="note info"><p>定义序列$a_n$的指数型生成函数 (Exponential Generating Function, EGF) ，为</p>
 <script type="math/tex; mode=display">A(x)=\sum_\limits{i=0}^{}a_i \frac{x^i}{i!}</script></div>
+<p>伯努利数</p>
 
       
     </div>
@@ -696,7 +722,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -774,7 +800,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#多项式"><span class="nav-number">1.</span> <span class="nav-text">多项式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#表示"><span class="nav-number">1.1.</span> <span class="nav-text">表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运算"><span class="nav-number">1.2.</span> <span class="nav-text">运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#快速傅里叶变换-FFT"><span class="nav-number">1.2.1.</span> <span class="nav-text">快速傅里叶变换(FFT)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速数论变换-NTT"><span class="nav-number">1.2.2.</span> <span class="nav-text">快速数论变换(NTT)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速沃尔什变换-FWT"><span class="nav-number">1.2.3.</span> <span class="nav-text">快速沃尔什变换(FWT)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项式求逆"><span class="nav-number">1.2.4.</span> <span class="nav-text">多项式求逆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项式除法"><span class="nav-number">1.2.5.</span> <span class="nav-text">多项式除法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项式取模"><span class="nav-number">1.2.6.</span> <span class="nav-text">多项式取模</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#牛顿迭代法"><span class="nav-number">1.2.7.</span> <span class="nav-text">牛顿迭代法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项式开方"><span class="nav-number">1.2.8.</span> <span class="nav-text">多项式开方</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项式In"><span class="nav-number">1.2.9.</span> <span class="nav-text">多项式In</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项式exp"><span class="nav-number">1.2.10.</span> <span class="nav-text">多项式exp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项式k次幂"><span class="nav-number">1.2.11.</span> <span class="nav-text">多项式k次幂</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项式复合"><span class="nav-number">1.2.12.</span> <span class="nav-text">多项式复合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项式多点求值与插值"><span class="nav-number">1.2.13.</span> <span class="nav-text">多项式多点求值与插值</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#生成函数"><span class="nav-number">2.</span> <span class="nav-text">生成函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#普通型生成函数"><span class="nav-number">2.1.</span> <span class="nav-text">普通型生成函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指数型生成函数"><span class="nav-number">2.2.</span> <span class="nav-text">指数型生成函数</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#多项式"><span class="nav-number">1.</span> <span class="nav-text">多项式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#表示"><span class="nav-number">1.1.</span> <span class="nav-text">表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运算"><span class="nav-number">1.2.</span> <span class="nav-text">运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#快速傅里叶变换-FFT"><span class="nav-number">1.2.1.</span> <span class="nav-text">快速傅里叶变换(FFT)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速数论变换-NTT"><span class="nav-number">1.2.2.</span> <span class="nav-text">快速数论变换(NTT)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速沃尔什变换-FWT"><span class="nav-number">1.2.3.</span> <span class="nav-text">快速沃尔什变换(FWT)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项式求逆"><span class="nav-number">1.2.4.</span> <span class="nav-text">多项式求逆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项式除法"><span class="nav-number">1.2.5.</span> <span class="nav-text">多项式除法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项式取模"><span class="nav-number">1.2.6.</span> <span class="nav-text">多项式取模</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#牛顿迭代法"><span class="nav-number">1.2.7.</span> <span class="nav-text">牛顿迭代法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项式开方"><span class="nav-number">1.2.8.</span> <span class="nav-text">多项式开方</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项式In"><span class="nav-number">1.2.9.</span> <span class="nav-text">多项式In</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项式exp"><span class="nav-number">1.2.10.</span> <span class="nav-text">多项式exp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项式k次幂"><span class="nav-number">1.2.11.</span> <span class="nav-text">多项式k次幂</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项式复合"><span class="nav-number">1.2.12.</span> <span class="nav-text">多项式复合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项式多点求值与插值"><span class="nav-number">1.2.13.</span> <span class="nav-text">多项式多点求值与插值</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#生成函数"><span class="nav-number">2.</span> <span class="nav-text">生成函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#普通型生成函数"><span class="nav-number">2.1.</span> <span class="nav-text">普通型生成函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本运算"><span class="nav-number">2.2.</span> <span class="nav-text">基本运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指数型生成函数"><span class="nav-number">2.3.</span> <span class="nav-text">指数型生成函数</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -808,7 +834,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">18.1k</span>
+    <span title="Site words total count">19.2k</span>
   
 </div>
 

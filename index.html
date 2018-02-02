@@ -178,7 +178,22 @@
 
 <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
 
-
+<script src="/js/src/instantclick.min.js" data-no-instant></script>
+   <script data-no-instant>
+   InstantClick.on('change', function(isInitialLoad) {
+     if (isInitialLoad === false) {
+       if (typeof MathJax !== 'undefined') // support MathJax
+         MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+       if (typeof prettyPrint !== 'undefined') // support google code prettify
+         prettyPrint();
+       if (typeof _hmt !== 'undefined')  // support 百度统计
+         _hmt.push(['_trackPageview', location.pathname + location.search]);
+       if (typeof ga !== 'undefined')  // support google analytics
+           ga('send', 'pageview', location.pathname + location.search);
+     }
+   });
+   InstantClick.init();
+   </script>
   <title>mmh's Blog</title>
   
 
@@ -361,6 +376,197 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.mmh.ac.cn/数学分析.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="mmh">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="mmh's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/数学分析.html" itemprop="url">数学分析</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-30T14:53:00+08:00">
+                2018-01-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  397
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="数列"><a href="#数列" class="headerlink" title="数列"></a>数列</h1><h2 id="等差数列"><a href="#等差数列" class="headerlink" title="等差数列"></a>等差数列</h2><p>首项为$a_1$，公差为$d$</p>
+<p>$a_n=a_1+(n-1)d$</p>
+<h3 id="等差数列求和公式"><a href="#等差数列求和公式" class="headerlink" title="等差数列求和公式"></a>等差数列求和公式</h3><p>$S_n=\frac{n(a_1+a_n)}{2}$</p>
+<h2 id="等比数列"><a href="#等比数列" class="headerlink" title="等比数列"></a>等比数列</h2><p>首项为$a_1$，公比为$q$</p>
+<p>$a_n=a_1q^{n-1}$</p>
+<h3 id="等比数列求和公式"><a href="#等比数列求和公式" class="headerlink" title="等比数列求和公式"></a>等比数列求和公式</h3><p>$ S_n=\left\{<br>\begin{aligned}<br>na_1 \qquad q=1\\<br>               \\<br>\frac{a_1(1-q^n)}{1-q} \qquad q \neq 1\\<br>\end{aligned}<br>\right.<br>$</p>
+<h3 id="无穷递降等比数列求和公式"><a href="#无穷递降等比数列求和公式" class="headerlink" title="无穷递降等比数列求和公式"></a>无穷递降等比数列求和公式</h3><p>若$|q|&lt;1$，当$n→∞$时$q^n→0$</p>
+<p>$S_n=\frac{a_1}{1-q}$</p>
+<h1 id="级数"><a href="#级数" class="headerlink" title="级数"></a>级数</h1><p>级数是将数列的项依次用加号连接起来的函数</p>
+<h2 id="幂级数"><a href="#幂级数" class="headerlink" title="幂级数"></a>幂级数</h2><p>无穷阶的多项式</p>
+<p>$\sum\limits_{i=0}^{}a_ix^i$</p>
+<h2 id="形式幂级数"><a href="#形式幂级数" class="headerlink" title="形式幂级数"></a>形式幂级数</h2><p>不讨论收敛性和取值的幂级数<br>它构成了一个环.</p>
+<h2 id="调和级数"><a href="#调和级数" class="headerlink" title="调和级数"></a>调和级数</h2><p>$\sum\limits_{i=1}^{∞} \frac{1}{i}$</p>
+<p>变形：$S_n=\sum\limits_{i=1}^{n} \frac{n}{i}  \approx n \log n$</p>
+<h2 id="泰勒级数"><a href="#泰勒级数" class="headerlink" title="泰勒级数"></a>泰勒级数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">泰勒级数是函数展开成有限项的幂级数</span><br></pre></td></tr></table></figure>
+<p>多项式逼近~~~</p>
+<p>泰勒展开</p>
+<p>拉格朗日余项</p>
+<h2 id="麦克劳林级数"><a href="#麦克劳林级数" class="headerlink" title="麦克劳林级数"></a>麦克劳林级数</h2><p>talar的特殊情况</p>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>非空数集之间的映射</p>
+<h1 id="函数的特性"><a href="#函数的特性" class="headerlink" title="函数的特性"></a>函数的特性</h1><p>记$f(x)$的定义域为$D$，$X \subset D$</p>
+<p>有界性：对于$ \forall x \in X$，若均满足$|f(x)|\leq M(M&gt;0)$，称$f(x)$在$X$上有界</p>
+<p>单调性：对于$x \in X$，若$f(x)$随$x$的增大（减小）而增大（减小），称$f(x)$在$X$上单调</p>
+<p>奇偶性：对于$\forall x \in D$，若均满足$f(x)=f(-x)$称$f(x)$为偶函数，若均满足<br>$f(x)=-f(-x)$称x为奇函数</p>
+<p>周期性：</p>
+<p>连续性：</p>
+<p>凹凸性：</p>
+<p>极限</p>
+<p>导数与求导法则</p>
+<p>简单应用</p>
+<p>不定积分与定积分</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.mmh.ac.cn/组合计数.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -446,7 +652,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  491
+                  499
                 </span>
               
 
@@ -497,8 +703,9 @@
 <li>二项式定理：$(a+b)^n=\sum\limits_{k=0}^{n} _{}^{}$</li>
 </ol>
 <p>note danger, note danger, note danger<br>note danger, note danger, note danger</p></div>
-<h1 id="一些计数问题"><a href="#一些计数问题" class="headerlink" title="一些计数问题"></a>一些计数问题</h1><h1 id="等价类计数"><a href="#等价类计数" class="headerlink" title="等价类计数"></a>等价类计数</h1><h2 id="置换群"><a href="#置换群" class="headerlink" title="置换群"></a>置换群</h2><p>群论</p>
-<p><a href="http://blog.csdn.net/xym_CSDN/article/details/53456447" target="_blank" rel="noopener">http://blog.csdn.net/xym_CSDN/article/details/53456447</a></p>
+<h1 id="一些计数问题"><a href="#一些计数问题" class="headerlink" title="一些计数问题"></a>一些计数问题</h1><p>// copy from youdao note</p>
+<h1 id="等价类计数"><a href="#等价类计数" class="headerlink" title="等价类计数"></a>等价类计数</h1><p>群论基础知识</p>
+<h2 id="置换群"><a href="#置换群" class="headerlink" title="置换群"></a>置换群</h2><p><a href="http://blog.csdn.net/xym_CSDN/article/details/53456447" target="_blank" rel="noopener">http://blog.csdn.net/xym_CSDN/article/details/53456447</a></p>
 
           
         
@@ -1299,7 +1506,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  752
+                  795
                 </span>
               
 
@@ -1535,174 +1742,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.mmh.ac.cn/二进制.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="mmh">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="mmh's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/二进制.html" itemprop="url">二进制</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-05T19:56:00+08:00">
-                2018-01-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  258
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <div class="note danger"><p>位运算的优先级比较奇怪，请加括号使用</p></div>
-
-<p>C/C++语言提供的位运算符</p>
-<p><img src="/img/2.png" width="100%" height="100%"></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/二进制.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1757,7 +1796,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1853,7 +1892,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">18.1k</span>
+    <span title="Site words total count">19.2k</span>
   
 </div>
 

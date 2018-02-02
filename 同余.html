@@ -139,7 +139,7 @@
 <meta property="og:site_name" content="mmh&#39;s Blog">
 <meta property="og:description" content="同余式性质 $a\equiv b \pmod{m}$  反身性 $a \equiv a \pmod {m}$ 对称性 $a \equiv b \pmod {m}$ $\Rightarrow$ $ b \equiv a \pmod {m}$ 传递性 $a \equiv b \pmod {m}$,$b \equiv c \pmod {m}$ $\Rightarrow$ $a \equiv c \pmo">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-14T12:25:28.776Z">
+<meta property="og:updated_time" content="2018-01-20T13:44:48.196Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="同余">
 <meta name="twitter:description" content="同余式性质 $a\equiv b \pmod{m}$  反身性 $a \equiv a \pmod {m}$ 对称性 $a \equiv b \pmod {m}$ $\Rightarrow$ $ b \equiv a \pmod {m}$ 传递性 $a \equiv b \pmod {m}$,$b \equiv c \pmod {m}$ $\Rightarrow$ $a \equiv c \pmo">
@@ -180,7 +180,22 @@
 
 <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
 
-
+<script src="/js/src/instantclick.min.js" data-no-instant></script>
+   <script data-no-instant>
+   InstantClick.on('change', function(isInitialLoad) {
+     if (isInitialLoad === false) {
+       if (typeof MathJax !== 'undefined') // support MathJax
+         MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+       if (typeof prettyPrint !== 'undefined') // support google code prettify
+         prettyPrint();
+       if (typeof _hmt !== 'undefined')  // support 百度统计
+         _hmt.push(['_trackPageview', location.pathname + location.search]);
+       if (typeof ga !== 'undefined')  // support google analytics
+           ga('send', 'pageview', location.pathname + location.search);
+     }
+   });
+   InstantClick.init();
+   </script>
   <title>同余 | mmh's Blog</title>
   
 
@@ -450,7 +465,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  593
+                  631
                 </span>
               
 
@@ -509,6 +524,10 @@
 <p>$inv(i) \equiv (m-\frac{m}{i})\times inv(m \% i) \pmod{m}$</p>
 <a class="btn" href="http://blog.csdn.net/y20070316/article/details/50578435" target="_blank" rel="noopener"><i class="fa fa-key fa-lg fa-fw"></i>推导与证明</a>
 <p><br></p>
+<p>同余方程</p>
+<p>方程组</p>
+<p>CRT</p>
+<p>两两合并</p>
 <h1 id="模意义下的运算"><a href="#模意义下的运算" class="headerlink" title="模意义下的运算"></a>模意义下的运算</h1><p><br></p>
 <h2 id="常见运算取模"><a href="#常见运算取模" class="headerlink" title="常见运算取模"></a>常见运算取模</h2><div class="note info"><p>$+、-、\times、\div、$^</p></div>
 <p>$a +b \equiv((a \mod m)+(b \mod m)) \pmod {m}$</p>
@@ -549,6 +568,11 @@ a^{b\%\varphi(m)+\varphi(m)}\qquad \quad (a,m)\neq1,b\geq\varphi(m)
 </ol>
 <a class="btn" href="https://www.cnblogs.com/candy99/p/6637629.html" target="_blank" rel="noopener"><i class="fa fa-book fa-lg fa-fw"></i>笔记</a>
 <a class="btn" href="http://blog.csdn.net/clove_unique/article/details/54571216" target="_blank" rel="noopener"><i class="fa fa-key fa-lg fa-fw"></i>推导与证明</a>
+<p>高次剩余</p>
+<p>阶、原根、指标</p>
+<p>离散对数BSGS</p>
+<p>EXBSGS</p>
+<p>模质数二次剩余的 Cipolla 算法</p>
 
       
     </div>
@@ -705,7 +729,7 @@ a^{b\%\varphi(m)+\varphi(m)}\qquad \quad (a,m)\neq1,b\geq\varphi(m)
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -817,7 +841,7 @@ a^{b\%\varphi(m)+\varphi(m)}\qquad \quad (a,m)\neq1,b\geq\varphi(m)
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">18.1k</span>
+    <span title="Site words total count">19.2k</span>
   
 </div>
 

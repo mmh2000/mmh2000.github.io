@@ -139,7 +139,7 @@
 <meta property="og:site_name" content="mmh&#39;s Blog">
 <meta property="og:description" content="高斯素数定理 估计不超过x的素数个数，比真实值略小 $\pi(x) \sim \frac{x}{\ln x}$">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-14T13:31:49.166Z">
+<meta property="og:updated_time" content="2018-01-20T13:37:44.243Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="素数">
 <meta name="twitter:description" content="高斯素数定理 估计不超过x的素数个数，比真实值略小 $\pi(x) \sim \frac{x}{\ln x}$">
@@ -180,7 +180,22 @@
 
 <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
 
-
+<script src="/js/src/instantclick.min.js" data-no-instant></script>
+   <script data-no-instant>
+   InstantClick.on('change', function(isInitialLoad) {
+     if (isInitialLoad === false) {
+       if (typeof MathJax !== 'undefined') // support MathJax
+         MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+       if (typeof prettyPrint !== 'undefined') // support google code prettify
+         prettyPrint();
+       if (typeof _hmt !== 'undefined')  // support 百度统计
+         _hmt.push(['_trackPageview', location.pathname + location.search]);
+       if (typeof ga !== 'undefined')  // support google analytics
+           ga('send', 'pageview', location.pathname + location.search);
+     }
+   });
+   InstantClick.init();
+   </script>
   <title>素数 | mmh's Blog</title>
   
 
@@ -450,7 +465,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  752
+                  795
                 </span>
               
 
@@ -487,6 +502,7 @@
 <h2 id="Wilson-theorem"><a href="#Wilson-theorem" class="headerlink" title="Wilson theorem"></a>Wilson theorem</h2><p>$(P-1)! \equiv -1 \pmod{P}\Rightarrow P$为素数</p>
 <p>由于阶乘爆炸增长，无法实际应用</p>
 <h2 id="Miller-Rabin测试"><a href="#Miller-Rabin测试" class="headerlink" title="Miller-Rabin测试"></a>Miller-Rabin测试</h2><p>基于一定概率的快速判断方法</p>
+<p>以下为两个素数的定理（逆定理不成立，但正确率很高）</p>
 <p>定理一：费马小定理的逆定理</p>
 <p>$(a,P)=1$且$a^{P-1} \equiv 1 \pmod{P}\Rightarrow P$为素数</p>
 <p>但是这是不正确的</p>
@@ -521,9 +537,11 @@
 <p>$O(n)$</p>
 <a class="btn" href="http://mmh.ac.cn/pdf/贾志鹏线性筛.pdf" target="_blank" rel="noopener"><i class="fa fa-book fa-lg fa-fw"></i>经典课件</a>
 <h2 id="杜教筛"><a href="#杜教筛" class="headerlink" title="杜教筛"></a>杜教筛</h2><p>解决一类积性函数求前缀和问题</p>
+<p>需要表示为两个积性函数卷积的形式</p>
 <p>$O(n^{2/3})$</p>
 <a class="btn" href="http://blog.csdn.net/skywalkert/article/details/50500009" target="_blank" rel="noopener"><i class="fa fa-book fa-lg fa-fw"></i>唐教的介绍</a>
-<h2 id="州阁筛"><a href="#州阁筛" class="headerlink" title="州阁筛"></a>州阁筛</h2><p>$O(\frac{n^{3/4}}{\log n})$</p>
+<h2 id="州阁筛"><a href="#州阁筛" class="headerlink" title="州阁筛"></a>州阁筛</h2><p>要求比较低</p>
+<p>$O(\frac{n^{3/4}}{\log n})$</p>
 
       
     </div>
@@ -680,7 +698,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -792,7 +810,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">18.1k</span>
+    <span title="Site words total count">19.2k</span>
   
 </div>
 

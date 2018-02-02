@@ -139,7 +139,7 @@
 <meta property="og:site_name" content="mmh&#39;s Blog">
 <meta property="og:description" content="计数原理 加法原理:做一件事情有$n$个办法，第$i$个办法有$p_i$种方案，则一共有$p_1+p_2+…+p_n$种方案 乘法原理:做一件事情有$n$个步骤，第$i$个步骤有$p_i$种方案，则一共有$p_1 \times p_2 \times … \times p_n$种方案 容斥原理先不考虑重叠的情况，计算出所有对象的数目，再把计数时重复计算的数目排斥出去 鸽巢原理把$n+1$个小球放进$">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-14T06:25:48.825Z">
+<meta property="og:updated_time" content="2018-01-20T13:33:29.539Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="组合计数">
 <meta name="twitter:description" content="计数原理 加法原理:做一件事情有$n$个办法，第$i$个办法有$p_i$种方案，则一共有$p_1+p_2+…+p_n$种方案 乘法原理:做一件事情有$n$个步骤，第$i$个步骤有$p_i$种方案，则一共有$p_1 \times p_2 \times … \times p_n$种方案 容斥原理先不考虑重叠的情况，计算出所有对象的数目，再把计数时重复计算的数目排斥出去 鸽巢原理把$n+1$个小球放进$">
@@ -180,7 +180,22 @@
 
 <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
 
-
+<script src="/js/src/instantclick.min.js" data-no-instant></script>
+   <script data-no-instant>
+   InstantClick.on('change', function(isInitialLoad) {
+     if (isInitialLoad === false) {
+       if (typeof MathJax !== 'undefined') // support MathJax
+         MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+       if (typeof prettyPrint !== 'undefined') // support google code prettify
+         prettyPrint();
+       if (typeof _hmt !== 'undefined')  // support 百度统计
+         _hmt.push(['_trackPageview', location.pathname + location.search]);
+       if (typeof ga !== 'undefined')  // support google analytics
+           ga('send', 'pageview', location.pathname + location.search);
+     }
+   });
+   InstantClick.init();
+   </script>
   <title>组合计数 | mmh's Blog</title>
   
 
@@ -450,7 +465,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  491
+                  499
                 </span>
               
 
@@ -499,8 +514,9 @@
 <li>二项式定理：$(a+b)^n=\sum\limits_{k=0}^{n} _{}^{}$</li>
 </ol>
 <p>note danger, note danger, note danger<br>note danger, note danger, note danger</p></div>
-<h1 id="一些计数问题"><a href="#一些计数问题" class="headerlink" title="一些计数问题"></a>一些计数问题</h1><h1 id="等价类计数"><a href="#等价类计数" class="headerlink" title="等价类计数"></a>等价类计数</h1><h2 id="置换群"><a href="#置换群" class="headerlink" title="置换群"></a>置换群</h2><p>群论</p>
-<p><a href="http://blog.csdn.net/xym_CSDN/article/details/53456447" target="_blank" rel="noopener">http://blog.csdn.net/xym_CSDN/article/details/53456447</a></p>
+<h1 id="一些计数问题"><a href="#一些计数问题" class="headerlink" title="一些计数问题"></a>一些计数问题</h1><p>// copy from youdao note</p>
+<h1 id="等价类计数"><a href="#等价类计数" class="headerlink" title="等价类计数"></a>等价类计数</h1><p>群论基础知识</p>
+<h2 id="置换群"><a href="#置换群" class="headerlink" title="置换群"></a>置换群</h2><p><a href="http://blog.csdn.net/xym_CSDN/article/details/53456447" target="_blank" rel="noopener">http://blog.csdn.net/xym_CSDN/article/details/53456447</a></p>
 
       
     </div>
@@ -542,6 +558,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/数学分析.html" rel="prev" title="数学分析">
+                数学分析 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -653,7 +673,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -765,7 +785,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">18.1k</span>
+    <span title="Site words total count">19.2k</span>
   
 </div>
 
